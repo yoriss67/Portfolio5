@@ -1,0 +1,14 @@
+/* zoom 70% */
+
+.avatar {
+    width: 35%;
+    height: 40vh;
+    margin: 10vh auto;
+    position: relative;
+    border: 1px solid black;
+
+  }
+/* 
+  canvas {
+    border-radius: 20px;
+  } */

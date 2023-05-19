@@ -40,6 +40,8 @@
 .read-the-docs {
   color: #888;
 } */
+
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -47,6 +49,7 @@ body {
   box-sizing: border-box;
 }
 
+/* zoom 50% */
 
 .spline {
   width: 80%;
