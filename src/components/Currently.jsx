@@ -5,22 +5,25 @@ import './Currently.css';
 
 function Bio() {
   useEffect(() => {
-    const animeLeftElement = document.querySelector('.anime_left');
-    const animeRightElement = document.querySelector('.anime_right');
+    const currentlyLeftElement = document.querySelector('.currently_left');
+    const currentlyMiddleElement = document.querySelector('.currently_middle');
+    const currentlyRightElement = document.querySelector('.currently_right');
 
-    animeLeftElement.addEventListener('animationend', () => {
-      animeRightElement.style.opacity = 1;
-      animeRightElement.style.left = '50%'; // anime_rightの初期位置（画面の中央）に設定
+    currentlyLeftElement.addEventListener('animationend', () => {
+      currentlyMiddleElement.style.opacity = 1;
+      // currentlyMiddleElement.style.left = '35%'; // currently_rightの初期位置（画面の中央）に設定
+      
     });
   }, []);
 
   return (
-    <div>
-      <div className="anime_pa">
-        <div className="anime_left"></div>
-        <div className="anime_right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore blanditiis minima, eaque optio tenetur aspernatur qui fugit ut id repudiandae itaque in repellendus officiis hic cum quisquam saepe quia veritatis.</div>
+    <>
+      <div className="currently_pa">
+        <img src='netlify-digital-card.png' className="slideAndRotate currently_left " />
+        <img src='netlify-travel-journal.png' className="slideAndRotate currently_middle" />.
+        <img src='netlify-meme.png' className="slideAndRotate currently_right " />
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,89 +1,132 @@
-/* .anime_pa {
-position: relative;
-border: 1px solid black;
-width: 80vw;
-height: 30vh;
-margin: 10vh auto;
 
-}
-
-.anime_left {
-position: absolute;
-width: 20vw;
-height: 20vh;
-border: 1px solid salmon;
-border-radius: 50%;
-
-}
-
-.anime_right {
-position: absolute;
-
-} */
 
 /* 🌸 だめだめだあ😵😵 */
-.anime_pa {
+.currently_pa {
     position: relative;
     border: 1px solid black;
     width: 80vw;
-    height: 30vh;
+    height: 50vh;
     margin: 10vh auto;
     /* perspective: 800px; 3D効果を設定するための透視距離 */
   }
   
-  .anime_left {
-    position: absolute;
+  .currently_left {
+    /* position: absolute;
     width: 100px;
     height: 100px;
     border: 1px solid salmon;
-    border-radius: 50%;
+    border-radius: 50%; */
   
-    /* anime_leftのアニメーション定義 */
-    animation-name: slideAndRotate;
+    /* currently_leftのアニメーション定義 */
+    animation-name: slideAndRotateLeft;
     animation-duration: 5s;
     animation-fill-mode: forwards;
   }
   
-  @keyframes slideAndRotate {
+  @keyframes slideAndRotateLeft {
     0% {
       opacity: 0;
       transform: translateY(1000%); /* 初期位置 */
-      left: 45%;
+      left: 37.5%;
     }
     50% {
       opacity: 0.5;
-      transform: translateY(25%); /* 移動後の位置と角度 */
-      left: 45%;
+      transform: translateY(30%); /* 移動後の位置と角度 */
+      left: 37.5%;
     }
     100% {
       opacity: 1;
-      left: 10%;
-      transform: translateY(25%);
+      left: 5%;
+      transform: translateY(30%);
     }
   }
   
-  .anime_right {
-    position: absolute;
-    opacity: 0; /* 最初は見えないように設定 */
-    /* left: 100%; 初期位置は画面外に設定 これに最終的になるように */
-    top: 20%;
+
+
+  .currently_middle {
+    /* position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid salmon;
+    border-radius: 50%; */
+
+    left: 37.5%;
   
-    /* anime_rightのフェードインのアニメーション定義 */
-    animation-name: fadeIn;
+    /* currently_leftのアニメーション定義 */
+    animation-name: slideAndRotateMiddle;
     animation-duration: 5s;
-    animation-delay: 3s; /* anime_leftのアニメーションと同期させるために遅延させる */
     animation-fill-mode: forwards;
-  
-    width: 40vw;
   }
   
-  @keyframes fadeIn {
+  @keyframes slideAndRotateMiddle {
     0% {
       opacity: 0;
-      left: 10%; /*初期位置*/
+      transform: translateY(1000%); /* 初期位置 */
+      
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(30%); /* 移動後の位置と角度 */
+      
     }
     100% {
       opacity: 1;
-      left: 40%; /*移動後の位置（画面の中央）*/
+      
+      transform: translateY(30%);
     }
   }
+
+
+
+
+
+
+
+
+
+  .currently_right {
+    /* position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid salmon;
+    border-radius: 50%; */
+  
+    /* currently_leftのアニメーション定義 */
+    animation-name: slideAndRotateRight;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideAndRotateRight {
+    0% {
+      opacity: 0;
+      transform: translateY(1000%); /* 初期位置 */
+      left: 37.5%;
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(30%); /* 移動後の位置と角度 */
+      left: 37.5%;
+    }
+    100% {
+      opacity: 1;
+      left: 70%;
+      transform: translateY(30%);
+    }
+  }
+
+
+
+
+.slideAndRotate {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid salmon;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%
+  ;
+  
+}
+

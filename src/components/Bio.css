@@ -1,4 +1,4 @@
-/* .anime_pa {
+/* .bio_pa {
 position: relative;
 border: 1px solid black;
 width: 80vw;
@@ -7,7 +7,7 @@ margin: 10vh auto;
 
 }
 
-.anime_left {
+.bio_left {
 position: absolute;
 width: 20vw;
 height: 20vh;
@@ -16,13 +16,13 @@ border-radius: 50%;
 
 }
 
-.anime_right {
+.bio_right {
 position: absolute;
 
 } */
 
 /* 🌸 だめだめだあ😵😵 */
-.anime_pa {
+.bio_pa {
     position: relative;
     border: 1px solid black;
     width: 80vw;
@@ -31,14 +31,14 @@ position: absolute;
     /* perspective: 800px; 3D効果を設定するための透視距離 */
   }
   
-  .anime_left {
+  .bio_left {
     position: absolute;
     width: 100px;
     height: 100px;
     border: 1px solid salmon;
     border-radius: 50%;
   
-    /* anime_leftのアニメーション定義 */
+    /* bio_leftのアニメーション定義 */
     animation-name: slideAndRotate;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -62,16 +62,16 @@ position: absolute;
     }
   }
   
-  .anime_right {
+  .bio_right {
     position: absolute;
     opacity: 0; /* 最初は見えないように設定 */
     /* left: 100%; 初期位置は画面外に設定 これに最終的になるように */
     top: 20%;
   
-    /* anime_rightのフェードインのアニメーション定義 */
+    /* bio_rightのフェードインのアニメーション定義 */
     animation-name: fadeIn;
     animation-duration: 5s;
-    animation-delay: 3s; /* anime_leftのアニメーションと同期させるために遅延させる */
+    animation-delay: 3s; /* bio_leftのアニメーションと同期させるために遅延させる */
     animation-fill-mode: forwards;
   
     width: 40vw;
