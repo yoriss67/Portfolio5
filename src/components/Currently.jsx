@@ -3,17 +3,17 @@
 import React, { useEffect } from 'react';
 import './Currently.css';
 
-function Bio() {
+function Currently() {
   useEffect(() => {
-    const currentlyLeftElement = document.querySelector('.currently_left');
-    const currentlyMiddleElement = document.querySelector('.currently_middle');
-    const currentlyRightElement = document.querySelector('.currently_right');
+    // const currentlyLeftElement = document.querySelector('.currently_left');
+    // const currentlyMiddleElement = document.querySelector('.currently_middle');
+    // const currentlyRightElement = document.querySelector('.currently_right');
 
-    currentlyLeftElement.addEventListener('animationend', () => {
-      currentlyMiddleElement.style.opacity = 1;
-      // currentlyMiddleElement.style.left = '35%'; // currently_rightの初期位置（画面の中央）に設定
+    // currentlyLeftElement.addEventListener('animationend', () => {
+    //   currentlyMiddleElement.style.opacity = 1;
+    //   // currentlyMiddleElement.style.left = '35%'; // currently_rightの初期位置（画面の中央）に設定
       
-    });
+    // });
   }, []);
 
   return (
@@ -27,4 +27,4 @@ function Bio() {
   );
 }
 
-export default Bio;
+export default Currently;

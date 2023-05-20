@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import reactLogo from '../assets/react.svg';
 // import viteLogo from '/vite.svg';
-import './Avatar.css';
+// import './Avatar.css';
 import Spline from '@splinetool/react-spline';
 
 function Avatar() {

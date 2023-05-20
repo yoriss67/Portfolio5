@@ -18,7 +18,7 @@
 
 // 🌸
 import React, { useEffect } from 'react';
-import './Bio.css';
+// import './Bio.css';
 
 function Bio() {
   useEffect(() => {

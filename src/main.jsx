@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {App, Bio, Avatar, Currently} from "./index"
+import {Board, Bio, Avatar, Currently, Projects} from "./index"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
+    {/* <Board /> */}
     <Bio />
-    <Avatar />
+    <Projects />
+    {/* <Avatar /> */}
     <Currently />
   </React.StrictMode>,
 )

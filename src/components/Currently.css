@@ -1,23 +1,16 @@
 
 
-/* 🌸 だめだめだあ😵😵 */
+/* 🌸 だめだめだあtたので自作😵😵 */
 .currently_pa {
     position: relative;
     border: 1px solid black;
     width: 80vw;
     height: 50vh;
     margin: 10vh auto;
-    /* perspective: 800px; 3D効果を設定するための透視距離 */
   }
   
   .currently_left {
-    /* position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid salmon;
-    border-radius: 50%; */
   
-    /* currently_leftのアニメーション定義 */
     animation-name: slideAndRotateLeft;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -26,12 +19,12 @@
   @keyframes slideAndRotateLeft {
     0% {
       opacity: 0;
-      transform: translateY(1000%); /* 初期位置 */
+      transform: translateY(1000%); 
       left: 37.5%;
     }
     50% {
       opacity: 0.5;
-      transform: translateY(30%); /* 移動後の位置と角度 */
+      transform: translateY(30%); 
       left: 37.5%;
     }
     100% {
@@ -43,16 +36,16 @@
   
 
 
+
+
+
+
+
   .currently_middle {
-    /* position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid salmon;
-    border-radius: 50%; */
 
     left: 37.5%;
   
-    /* currently_leftのアニメーション定義 */
+
     animation-name: slideAndRotateMiddle;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -61,12 +54,12 @@
   @keyframes slideAndRotateMiddle {
     0% {
       opacity: 0;
-      transform: translateY(1000%); /* 初期位置 */
+      transform: translateY(1000%); 
       
     }
     50% {
       opacity: 0.5;
-      transform: translateY(30%); /* 移動後の位置と角度 */
+      transform: translateY(30%); 
       
     }
     100% {
@@ -85,13 +78,7 @@
 
 
   .currently_right {
-    /* position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 1px solid salmon;
-    border-radius: 50%; */
   
-    /* currently_leftのアニメーション定義 */
     animation-name: slideAndRotateRight;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -100,18 +87,19 @@
   @keyframes slideAndRotateRight {
     0% {
       opacity: 0;
-      transform: translateY(1000%); /* 初期位置 */
+      transform: translateY(1000%); 
       left: 37.5%;
     }
     50% {
       opacity: 0.5;
-      transform: translateY(30%); /* 移動後の位置と角度 */
+      /* 🤔なぜここだけ30%でも高さが違うのか */
+      transform: translateY(22%); 
       left: 37.5%;
     }
     100% {
       opacity: 1;
       left: 70%;
-      transform: translateY(30%);
+      transform: translateY(22%);
     }
   }
 
@@ -125,8 +113,7 @@
     border: 1px solid salmon;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 20%
-  ;
+    object-position: center 20%;
   
 }
 
