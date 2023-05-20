@@ -5,7 +5,7 @@ import {App, Bio, Avatar, Currently} from "./index"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <Bio />
     <Avatar />
     <Currently />
