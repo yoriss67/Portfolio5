@@ -1,4 +1,5 @@
-{/* <div class="works section-wrapper">
+{
+  /* <div class="works section-wrapper">
 <h2>works</h2>
 
 <div class="works__flex travelBlog">
@@ -289,13 +290,8 @@
     <p>JavaScript</p>
   </div>
 </div>
-</div> */}
-
-
-
-
-
-
+</div> */
+}
 
 // import React from 'react';
 // import  './Projects.css';
@@ -354,10 +350,6 @@
 
 // export default Projects;
 
-
-
-
-
 import React from 'react';
 import ProjectsData from './ProjectsData'; // replace with the actual path to your data file
 import './Projects.css';
@@ -367,11 +359,20 @@ const Projects = () => {
     <div className="works section-wrapper">
       <h2>works</h2>
 
-      {ProjectsData.map(work => (
-        <div key={work.id} className={`works__flex ${work.title.replace(/\s+/g, '').toLowerCase()}`}>
+      {ProjectsData.map((work) => (
+        <div
+          key={work.id}
+          className={`works__flex ${work.title
+            .replace(/\s+/g, '')
+            .toLowerCase()}`}
+        >
           <div className="works__image">
             {Object.values(work.images).map((image, index) => (
-              <img key={index} src={image} alt={`${work.title} image ${index + 1}`} />
+              <img
+                key={index}
+                src={image}
+                alt={`${work.title} image ${index + 1}`}
+              />
             ))}
           </div>
 
@@ -380,7 +381,14 @@ const Projects = () => {
               <h3>{work.title}</h3>
               <div className="eye-container">
                 <img src="images/eye.png" alt="" />
-                <a className="eye-text" href={work.siteLink} target="_blank" rel="noopener noreferrer">view site</a>
+                <a
+                  className="eye-text"
+                  href={work.siteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view site
+                </a>
               </div>
             </div>
 
@@ -389,15 +397,64 @@ const Projects = () => {
               <p className="left-align">{work.descriptionJp}</p>
             </div>
 
-            <div className="language-meter">
-              {work.languages.html && <div className="meter-html"></div>}
+            {/* <div className="language-meter">
+              {work.languages.html && <div className="meter-html" style={{ width: work.languageDistribution.html }}></div>}
               {work.languages.css && <div className="meter-css"></div>}
               {work.languages.js && <div className="meter-js"></div>}
+            </div> */}
+
+{/* 🤔 */}
+            <div className="language-meter">
+              {work.languages.html && (
+                <div
+                  className={`${work.title
+                    .replace(/\s+/g, '')
+                    .toLowerCase()}-meter-html meter-html`}
+                  style={{ width: work.languageDistribution.html }}
+                ></div>
+              )}
+
+              {work.languages.css && (
+                <div
+                  className={`${work.title
+                    .replace(/\s+/g, '')
+                    .toLowerCase()}-meter-css meter-css`}
+                  style={{ width: work.languageDistribution.css }}
+                ></div>
+              )}
+
+              {work.languages.js && (
+                <div
+                  className={`${work.title
+                    .replace(/\s+/g, '')
+                    .toLowerCase()}-meter-js meter-js`}
+                  style={{ width: work.languageDistribution.js }}
+                ></div>
+              )}
             </div>
+
+
+
+
             <div className="language-meter-info">
-              {work.languages.html && <><div className="html-circle"></div><p>HTML</p></>}
-              {work.languages.css && <><div className="css-circle"></div><p>CSS</p></>}
-              {work.languages.js && <><div className="js-circle"></div><p>JavaScript</p></>}
+              {work.languages.html && (
+                <>
+                  <div className="html-circle"></div>
+                  <p>HTML</p>
+                </>
+              )}
+              {work.languages.css && (
+                <>
+                  <div className="css-circle"></div>
+                  <p>CSS</p>
+                </>
+              )}
+              {work.languages.js && (
+                <>
+                  <div className="js-circle"></div>
+                  <p>JavaScript</p>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -407,4 +464,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

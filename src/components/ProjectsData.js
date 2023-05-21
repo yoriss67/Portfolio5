@@ -49,6 +49,11 @@ const ProjectsData = [
             css: true,
             js: true,
         },
+        languageDistribution: {
+            html: "71.3%",
+            css: "26.0%",
+            js: "2.7%", // Set to 0% as js is not used in this project
+        },
         on: false,
     },
     {
@@ -70,6 +75,11 @@ const ProjectsData = [
             css: true,
             js: true,
         },
+        languageDistribution: {
+            html: "41.6%",
+            css: "50.1%",
+            js: "8.3%", // Set to 0% as js is not used in this project
+        },
         on: true,
     },
     {
@@ -86,6 +96,11 @@ const ProjectsData = [
             css: true,
             js: true,
         },
+        languageDistribution: {
+            html: "32.7%",
+            css: "61.7%",
+            js: "5.6%", // Set to 0% as js is not used in this project
+        },
         on: true,
     },
     {
@@ -101,6 +116,11 @@ const ProjectsData = [
             html: true,
             css: true,
             js: true,
+        },
+        languageDistribution: {
+            html: "71.5%",
+            css: "18.5%",
+            js: "10%", // Set to 0% as js is not used in this project
         },
         on: true,
     }
