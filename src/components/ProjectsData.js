@@ -38,9 +38,9 @@ const ProjectsData = [
     //         "./images/screencapture-cart.png",
     //     ],
     // },
-    images: {
-      image1: '/public/e-commerce.png',
-    },
+
+    image: '/public/e-commerce.png',
+
     siteLink: 'https://yoriss67.github.io/Tech2-etc-Ecommerce-Website/',
     descriptionEn:
       'This project is free open tutorial by Tech2 etc on YouTube. I enjoyed and learned how to structure code by guessing before watching his instructions. The most important takeaway from this project is to develop solid foundation in advance.',
@@ -54,7 +54,7 @@ const ProjectsData = [
     languageDistribution: {
       html: '71.3%',
       css: '26.0%',
-      js: '2.7%', // Set to 0% as js is not used in this project
+      js: '2.7%',
     },
     on: false,
   },
@@ -66,9 +66,7 @@ const ProjectsData = [
     //     tablet: "./images/easybank-tablet.jpg",
     //     mobile: "./images/easybank-mobile.jpg",
     // },
-    images: {
-      image2: '/public/easybank-desktop.jpg',
-    },
+    image: '/public/easybank-desktop.jpg',
     siteLink:
       'https://yoriss67.github.io/Frontend-mentor-Easybank-landing-page/',
     descriptionEn:
@@ -83,16 +81,15 @@ const ProjectsData = [
     languageDistribution: {
       html: '41.6%',
       css: '50.1%',
-      js: '8.3%', // Set to 0% as js is not used in this project
+      js: '8.3%',
     },
     on: true,
   },
   {
     id: 3,
     title: 'Reference Site for Assignments',
-    images: {
-      image3: '/public/ReTribe16.png',
-    },
+    image: '/public/ReTribe16.png',
+
     siteLink: 'https://retribe16.netlify.app/',
     descriptionEn:
       'I could contribute to a project to create a reference website for an assignment, a simple one-page creation using HTML, CSS and JavaScript.',
@@ -106,30 +103,28 @@ const ProjectsData = [
     languageDistribution: {
       html: '32.7%',
       css: '61.7%',
-      js: '5.6%', // Set to 0% as js is not used in this project
+      js: '5.6%',
     },
     on: true,
   },
   {
     id: 4,
-    title: 'voluntary sale site',
-    images: {
-      image4: '/public/netlify-travel-journal.png',
-    },
-    siteLink: 'https://retribe16.netlify.app/',
+    title: 'Ninbai-profession',
+    image: '/public/ninbai.png',
+    siteLink: 'https://ninbai-profession.com/',
     descriptionEn:
-      'I could contribute to a project to create a reference website for an assignment, a simple one-page creation using HTML, CSS and JavaScript.',
+      'I created a landing page for a real estate consultation service for the voluntary sale of real estate. I not only created the pages, but also learned a lot about servers, file transfer, and other practical matters.',
     descriptionJp:
-      '課題用参考サイトの制作の仕事をいただきました。HTML、CSS、JavaScriptを使用したシンプルな1ページの作りです。',
+      '不動産の任意売却の相談サービスのランディングページ制作をさせていただきました。 ページの作成だけでなく、サーバーやファイル転送など実務の学びも多くさせていただきました。',
     languages: {
       html: true,
       css: true,
       js: true,
     },
     languageDistribution: {
-      html: '71.5%',
-      css: '18.5%',
-      js: '10%', // Set to 0% as js is not used in this project
+      html: '39.9%',
+      css: '51.9%',
+      js: '8.2%',
     },
     on: true,
   },

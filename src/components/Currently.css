@@ -117,3 +117,25 @@
   
 }
 
+
+
+/* --- */
+
+/* 
+.currently_pa.fadeIn {
+  animation: UpAnime 0.5s forwards;
+    position: relative;
+}
+
+
+@keyframes UpAnime{
+  from {
+    visibility: hidden;
+    
+	transform: translateY(100px);
+  }
+  to {
+    visibility: visible;
+	transform: translateY(0);
+  }
+} */

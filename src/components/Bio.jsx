@@ -1,41 +1,66 @@
-// import React from 'react'
-// import './Anime.css'
 
-// function Anime() {
 
-// return (
+// // 🌸
+// import React, { useRef, useEffect, useState } from 'react';
+// // import './Bio.css';
 
+// function Bio({isJapanese}) {
+//   useEffect(() => {
+//     const bioLeftElement = document.querySelector('.bio_left');
+//     const bioRightElement = document.querySelector('.bio_right');
+
+//     bioLeftElement.addEventListener('animationend', () => {
+//       bioRightElement.style.opacity = 1;
+//       // bioRightElement.style.left = '50%'; // bio_rightの初期位置（画面の中央）に設定
+//     });
+//   }, []);
+
+//   return (
 //     <div>
-//         <div className="anime_pa">
-//             <div className="anime_left"></div>
-//             <div className="anime_right"></div>
-//         </div>
+//       <div className="bio_pa">
+//         <div className="bio_left"></div>
+//         <div className="bio_right"></div>
+
+//         <div>
+//               <p className={`bio_right left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Hello</p>
+//               <p className={`bio_right left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>こんにちは</p>
+//             </div>
+//       </div>
 //     </div>
-// )
+//   );
 // }
 
-// export default Anime
+// export default Bio;
 
-// 🌸
-import React, { useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 // import './Bio.css';
 
-function Bio() {
-  useEffect(() => {
-    const bioLeftElement = document.querySelector('.bio_left');
-    const bioRightElement = document.querySelector('.bio_right');
+function Bio({isJapanese}) {
+  const [animationClass, setAnimationClass] = useState('animated');
 
-    bioLeftElement.addEventListener('animationend', () => {
-      bioRightElement.style.opacity = 1;
-      bioRightElement.style.left = '50%'; // bio_rightの初期位置（画面の中央）に設定
-    });
-  }, []);
+  useEffect(() => {
+    setAnimationClass('animated');
+    const timer = setTimeout(() => {
+      setAnimationClass('');
+    }, 5000); // remove the animation class after 5 seconds
+
+    // Cleanup function to clear the timer if the component is unmounted before the timeout finishes
+    return () => {
+      clearTimeout(timer);
+    }
+  }, []); // run this effect only once, when the component mounts
 
   return (
     <div>
-      <div className="bio_pa">
+      <div className={`bio_pa ${animationClass}`}>
         <div className="bio_left"></div>
-        <div className="bio_right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore blanditiis minima, eaque optio tenetur aspernatur qui fugit ut id repudiandae itaque in repellendus officiis hic cum quisquam saepe quia veritatis.</div>
+        <div className="bio_right"></div>
+
+        <div>
+          <p className={`bio_right left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Hello</p>
+          <p className={`bio_right left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>こんにちは</p>
+        </div>
       </div>
     </div>
   );

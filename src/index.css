@@ -1,6 +1,3 @@
-
-
-
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -49,7 +46,6 @@ h6 {
   isolation: isolate;
 }
 
-
 /* 
 font-family: 'Crimson Pro', serif;
 font-family: 'Crimson Text', serif;
@@ -58,9 +54,6 @@ font-family: 'Spline Sans', sans-serif;
 font-family: 'Spline Sans Mono', monospace;
 */
 
-
-
-
 body {
   min-height: 100vh;
   margin: 0;
@@ -68,6 +61,10 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  text-align: center;
+  font-size: 3rem;
+}
 
 /* BOARD */
 /* 
@@ -84,7 +81,6 @@ Wholeは
   /* background-image: url(./assets/cut.png);
   background-repeat: no-repeat;
   background-size: cover;background-position: 0 30%; */
-  
 }
 
 /* svg {
@@ -95,7 +91,6 @@ Wholeは
 canvas {
   position: absolute;
   left: 0%;
-
 }
 
 /* img {
@@ -107,11 +102,6 @@ canvas {
   object-position: 0%;
 } */
 
-
-
-
-
-
 /* BIO */
 /* 🌸 だめだめだあ😵😵 */
 .bio_pa {
@@ -120,17 +110,19 @@ canvas {
   width: 80vw;
   height: 30vh;
   margin: 10vh auto;
-  
 }
 
 .bio_left {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 15rem;
+  height: 15rem;
   border: 1px solid salmon;
   border-radius: 50%;
-
-
+  opacity: 1;
+  transform: translateY(30%);
+  left: 10%;
+}
+.animated .bio_left {
   animation-name: slideAndRotate;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -139,12 +131,12 @@ canvas {
 @keyframes slideAndRotate {
   0% {
     opacity: 0;
-    transform: translateY(1000%); 
+    transform: translateY(1000%);
     left: 45%;
   }
   50% {
     opacity: 0.5;
-    transform: translateY(30%); 
+    transform: translateY(30%);
     left: 45%;
   }
   100% {
@@ -156,34 +148,34 @@ canvas {
 
 .bio_right {
   position: absolute;
-  opacity: 0; 
-  /* left: 100%; 初期位置は画面外に設定 これに最終的になるように */
   top: 20%;
-
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  animation-delay: 3s; 
-  animation-fill-mode: forwards;
-
   width: 40vw;
+  transform: translateY(30%);
+  /* opacity: 1; */
+  /* visibility: visible; */
+  left: 60%;
 }
 
-@keyframes fadeIn {
+.animated .bio_right {
+  animation-name: toRight;
+  animation-duration: 5s;
+  /* animation-delay: 3s; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes toRight {
   0% {
     opacity: 0;
-    left: 10%; 
+    display: none;
+    /* left: -100%;  */
+    /* transform: translateX(-1000%);  */
   }
+
   100% {
     opacity: 1;
-    left: 40%; 
+    left: 60%;
   }
 }
-
-
-
-
-
-
 
 /* AVATAR */
 /* 
@@ -198,7 +190,6 @@ zoom 100%
   margin: 10vh auto;
   position: relative;
   border: 1px solid black;
-
 }
 /* 
 canvas {
