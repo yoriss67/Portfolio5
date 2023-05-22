@@ -1,4 +1,4 @@
-// import React from 'react'
+// import React, { useState }  from 'react'
 // import ReactDOM from 'react-dom/client'
 // import './index.css'
 // import {Board, Bio, Avatar, Currently, Projects, Global} from "./index"
@@ -17,20 +17,31 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { Board, Bio, Avatar, Currently, Projects, Global } from './index';
+import { Board, Bio, Avatar, Currently, Works, Global } from './index';
 
 function Main() {
   const [isJapanese, setLanguage] = useState(false);
   return (
     <React.StrictMode>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
-      <Board />
+      {/* <Board /> */}
       <Bio isJapanese={isJapanese} />
-      <Projects isJapanese={isJapanese} />
-      <Avatar />
-      <Currently />
+      <Works isJapanese={isJapanese} />
+      {/* <Avatar /> */}
+      <Currently isJapanese={isJapanese} setLanguage={setLanguage} />
     </React.StrictMode>
   );
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<Main />);
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <>
+//     <Global />
+//     {/* <Board /> */}
+//     <Bio />
+//     <Projects />
+//     {/* <Avatar /> */}
+//     {/* <Currently /> */}
+//   </>,
+// )

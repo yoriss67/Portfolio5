@@ -59,12 +59,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Crimson Text', serif;
 }
 
 h2 {
+  font-family: 'Crimson Pro', serif;
   text-align: center;
   font-size: 3rem;
 }
+
+
+h4 {
+  font-family: 'Crimson Pro', serif;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 
 /* BOARD */
 /* 
@@ -91,6 +101,7 @@ Wholeは
 canvas {
   position: absolute;
   left: 0%;
+  height: 100%;
 }
 
 /* img {
@@ -106,7 +117,7 @@ canvas {
 /* 🌸 だめだめだあ😵😵 */
 .bio_pa {
   position: relative;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 80vw;
   height: 30vh;
   margin: 10vh auto;
@@ -116,7 +127,6 @@ canvas {
   position: absolute;
   width: 15rem;
   height: 15rem;
-  border: 1px solid salmon;
   border-radius: 50%;
   opacity: 1;
   transform: translateY(30%);
@@ -148,12 +158,13 @@ canvas {
 
 .bio_right {
   position: absolute;
-  top: 20%;
+  top: 15%;
   width: 40vw;
-  transform: translateY(30%);
+  transform: translateY(20%);
   /* opacity: 1; */
   /* visibility: visible; */
-  left: 60%;
+  left: 45%;
+  line-height: 2rem;
 }
 
 .animated .bio_right {
@@ -173,7 +184,7 @@ canvas {
 
   100% {
     opacity: 1;
-    left: 60%;
+    left: 40%;
   }
 }
 
@@ -187,9 +198,9 @@ zoom 100%
 .avatar {
   width: 35%;
   height: 40vh;
-  margin: 10vh auto;
+  margin: 0 auto;
   position: relative;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 /* 
 canvas {
@@ -197,3 +208,203 @@ canvas {
 } */
 
 /* CURRENTLY */
+
+
+/* 🌸 だめだめだあtたので自作😵😵 */
+.currently_pa {
+  position: relative;
+  /* display: flex; */
+  /* border: 1px solid black; */
+  width: 80vw;
+  height: 50vh;
+  margin: 10vh auto;
+
+}
+
+
+.slideAndRotate {
+  /* position: absolute; */
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+
+}
+
+.currently_child {
+  display: flex;
+  flex-direction: column;
+  /* top: 30%;
+  position: absolute; */
+  width: 30%;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.currently_left {
+  position: absolute;
+  /* left: 10%; */
+}
+
+.currently_left  {
+
+  animation-name: slideAndRotateLeft;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideAndRotateLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(1000%); 
+    
+    left: 40%;
+  }
+  50% {
+    opacity: 0.5;
+   
+    
+    left: 40%;
+  }
+  70% {
+    left: 40%;
+  }
+  100% {
+    opacity: 1;
+    left: 10%;
+    
+  }
+}
+
+.currently_text_left {
+  /* transform: translateY(300%); */
+ 
+}
+
+/* .currently_left p {
+
+} */
+
+
+/* ----- */
+
+
+
+
+
+.currently_middle {
+  position: absolute;
+  left: 40%;
+
+}
+
+.currently_middle {
+
+  
+
+
+  animation-name: slideAndRotateMiddle;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideAndRotateMiddle {
+  0% {
+    opacity: 0;
+    transform: translateY(1000%); 
+    
+  }
+  50% {
+    opacity: 0.5;
+   
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+}
+
+
+.currently_text_middle {
+  /* transform: translateY(300%); */
+ 
+
+}
+
+
+
+/* ------ */
+
+.currently_right {
+  position: absolute;
+  left: 70%;
+}
+
+.currently_right {
+
+  animation-name: slideAndRotateRight;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideAndRotateRight {
+  0% {
+    opacity: 0;
+    transform: translateY(1000%); 
+    left: 37.5%;
+    left: 40%;
+  }
+  50% {
+    opacity: 0.5;
+    /* 🤔なぜここだけ30%でも高さが違うのか */
+   
+    
+    
+  }
+  70% {
+    left: 40%;
+  }
+  100% {
+    opacity: 1;
+    left: 70%;
+    
+  }
+}
+
+
+
+.currently_text_right {
+  /* transform: translateY(300%); */
+ 
+
+}
+
+
+
+
+
+/* --- */
+
+/* 
+.currently_pa.fadeIn {
+animation: UpAnime 0.5s forwards;
+  position: relative;
+}
+
+
+@keyframes UpAnime{
+from {
+  visibility: hidden;
+  
+transform: translateY(100px);
+}
+to {
+  visibility: visible;
+transform: translateY(0);
+}
+} */

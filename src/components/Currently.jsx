@@ -1,13 +1,12 @@
-
 // 🌸
-import React, { useEffect } from 'react';
-import './Currently.css';
+import React, { useEffect, useState  } from 'react';
+// import './Currently.css';
 
 // https://zenn.dev/himorishige/articles/e17b7d04fc7722
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
-function Currently() {
+function Currently({isJapanese}) {
   // useEffect(() => {
   //   const currentlyLeftElement = document.querySelector('.currently_left');
   //   const currentlyMiddleElement = document.querySelector('.currently_middle');
@@ -16,7 +15,7 @@ function Currently() {
   //   currentlyLeftElement.addEventListener('animationend', () => {
   //     currentlyMiddleElement.style.opacity = 1;
   //     // currentlyMiddleElement.style.left = '35%'; // currently_rightの初期位置（画面の中央）に設定
-      
+
   //   });
   // }, []);
 
@@ -27,18 +26,49 @@ function Currently() {
   });
 
   return (
-    <div ref={ref} style={{ height: '900px' }}>
-      {inView && (
-      
-      <div className="currently_pa animate__animated animate__fadeInUp">
-        <img src='netlify-digital-card.png' className="slideAndRotate currently_left " />
-        <img src='netlify-travel-journal.png' className="slideAndRotate currently_middle" />.
-        <img src='netlify-meme.png' className="slideAndRotate currently_right " />
-        </div>
+    <div>
+      <div ref={ref} style={{ height: '900px' }}>
+        {inView && (
+          <div className="currently_pa animate__animated animate__fadeInUp">
+            <div className="currently_child currently_left">
+              <img src="n.png" className="slideAndRotate " />
+              <div className="currently_text_left">
+                <h4>Digital business card</h4>
+                <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+                  This is first solo React project!
+                </p>
+                <p className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}>最初のReactプロジェクトです！</p>
+              </div>
+            </div>
+
+            <div className="currently_child currently_middle">
+              <img
+                src="netlify-travel-journal.png"
+                className="slideAndRotate"
+              />
+              <div className="currently_text_middle">
+                <h4>Travel journal</h4>
+                <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+                NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still static...
+                </p>
+                <p className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}>旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...</p>
+              </div>
+            </div>
+
+            <div className="currently_child currently_right">
+              <img src="netlify-meme.png" className="slideAndRotate" />
+              <div className="currently_text_right">
+                <h4>Meme generator</h4>
+                <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+                 I`&apos`m literally developing now!🙋‍♀️
+                </p>
+                <p className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}>まさに今開発中です！🙋‍♀️</p>
+              </div>
+            </div>
+          </div>
         )}
       </div>
-
-
+    </div>
 
     //   <div>
     //   <div style={{ height: '2000px', backgroundColor: 'blue' }}>contents</div>
