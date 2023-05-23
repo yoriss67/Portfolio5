@@ -100,7 +100,7 @@
   }
   
   .language-meter-info p:not(:last-of-type) {
-    padding-right: 1.2rem;
+    padding-right: 1rem;
   }
   
   .meter-html {
@@ -120,10 +120,12 @@
   .html-circle,
   .css-circle,
   .js-circle {
-    width: 10px;
-    height: 10px;
+    width: 2.5vw;
+    width: min(2vw, 1rem);
+    height: min(2vw, 1rem);
     border-radius: 50%;
-    margin-right: 4px;
+    margin-right: 2px;
+    margin-bottom: 18px;
   }
   
   .html-circle {
@@ -131,7 +133,7 @@
   }
   
   .css-circle {
-    background-color: #8f5593;
+    background-color: #563D7C;
   }
   
   .js-circle {
@@ -164,10 +166,19 @@
         text-align: center;
     }
     .works__text__sent {
-        width: 85%;
+        width: 100%;
         padding: 3vh 0;
         margin: 0 auto;
     }
+
+    .language-meter {
+      width: 100%;
+  }
+
+  .language-meter-info {
+    width: 100%;
+  
+}
   }
   
   

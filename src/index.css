@@ -106,9 +106,7 @@ ul {
 }
 
 /* HEADER */
-header {
-  display: block;
-}
+
 
 .navbar {
   background-color: transparent;
@@ -130,7 +128,7 @@ header {
 
 .nav-link {
   color: #cb7a67;
-  z-index: 9999;
+  /* z-index: 9999; */
   position: relative;
 }
 
@@ -138,7 +136,6 @@ header {
   font-size: 2.7rem;
 }
 
-/* js */
 .nav-link i.change-color {
   color: #5e9a99;
 }
@@ -153,19 +150,7 @@ header {
   font-size: 2rem;
 }
 
-@media all and (max-width: 990px) {
-  .navbar {
-    padding: 1%;
-  }
-  .nav-item i {
-    font-size: 1.5rem;
-  }
 
-  .navbar-nav .nav-link {
-    font-size: 1.8rem;
-    padding: 0.2rem 0;
-  }
-}
 
 /* BOARD */
 /* 
@@ -322,6 +307,7 @@ canvas {
 
 /* CURRENTLY */
 
+
 /* 🌸 だめだめだあtたので自作😵😵 */
 .currently_pa {
   position: relative;
@@ -467,6 +453,20 @@ canvas {
 
 
 @media all and (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 1%;
+  }
+  .nav-item i {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.8rem;
+    padding: 0.2rem 0;
+  }
+
+  /* BIO */
   .bio_pa {
     display: flex;
     flex-direction: column;
@@ -492,6 +492,30 @@ canvas {
   line-height: 1.5rem;
   margin: 2vh auto;
     }
+
+    /* CURRENTLY */
+    /* .currently_pa {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+      width: 80vw;
+    }
+
+
+    .currently_left {
+      position: relative;
+    }
+
+    .currently_middle {
+      position: relative;
+      left: 0%;
+    }
+
+    .currently_right {
+      position: relative;
+      left: 0%;
+    } */
 
 
 }

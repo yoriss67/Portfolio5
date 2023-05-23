@@ -3,10 +3,18 @@ import './Global.css';
 
 function Global({ isJapanese, setLanguage })  {
 
-  useEffect(() => {
-    const loader = document.getElementById('loading');
+  // useEffect(() => {
+  //   const loader = document.getElementById('loading');
+  //   loader.classList.add('loaded');
+  // }, []);
+
+
+
+  window.onload = ()=>{
+    const loader = document.getElementById('loader');
     loader.classList.add('loaded');
-  }, []);
+}
+
 
 
   const handleTranslateClick = () => {
@@ -42,7 +50,7 @@ function Global({ isJapanese, setLanguage })  {
       <div id="cursor"></div>
       <div id="stalker"></div>
 
-      <div id="loading">
+      {/* <div id="loading">
         <div id="loading-relative">
           <div className="sun-circle"></div>
           <div className="horizon"></div>
@@ -53,11 +61,15 @@ function Global({ isJapanese, setLanguage })  {
           <div className="sun-border4"></div>
           <div className="sun-border5"></div>
         </div>
+      </div> */}
+
+      <div id="loader">
+        <img className='sun' src="/public/sun.png" alt="" />
       </div>
 
-      <button 
-        id="translate" 
-        className={`js-turn-to-red ${isJapanese ? 'change-color' : ''}`} 
+      <button
+        id="translate"
+        className={`js-turn-to-red ${isJapanese ? 'change-color' : ''}`}
         onClick={handleTranslateClick}
       >
         <p>EN-JP</p>

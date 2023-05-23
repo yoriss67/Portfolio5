@@ -31,51 +31,7 @@
     }
   }
   
-  #translate {
-    position: fixed;
-    top: 17rem;
-    right: 1rem;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    z-index: 9999;
-    color: #CB7A67;
-    border: none;
-    background-color: transparent;
-    /* cursor: none; */
-    min-width: 1rem;
-    min-height: 102px;
-  }
   
-  #translate.change-color {
-    color: var(--green);
-    color: #5E9A99;
-  }
-  
-  #translate p {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-  }
-  
-  @media all and (min-width: 990px) {
-    #translate {
-      top: 4rem;
-      right: 2rem;
-      -ms-writing-mode: lr-bt;
-      writing-mode: horizontal-tb;
-    }
-
-    #translate p {
-        -ms-writing-mode: lr-bt;
-        writing-mode: horizontal-tb;
-        padding-right: 2rem;
-    }
-  }
-  
-  .display-none {
-    display: none;
-  }
   
   .toggleBox-jp {
     font-family: 'Noto Serif JP', serif;
@@ -114,14 +70,41 @@
     }
   }
   
+
+
+  /* https://into-the-program.com/javascript-loader/ */
+
+  /* https://1-notes.com/css-border-animation/ */
+  
   #loader {
     width: 100%;
     height: 100vh;
-    background-color: #cc3333;
+
     /* 環境によって「z-index」追加 */
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .sun {
+    width: 30vw;
+    height: 30vw;
+    margin: 25% auto;
+    animation: rotate 10s ease infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
   
   
@@ -141,248 +124,12 @@
       z-index: -1;
     }
   }
+
   
+
+
   
-  /* https://1-notes.com/javascript-rotate-animation-with-animate/*/
-  
-  .rotate {
-    width: 50vw;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-  .rotate img {
-    width: 50%;
-  }
-  
-  
-  /* https://into-the-program.com/javascript-loader/ */
-  
-  
-  /* https://1-notes.com/css-border-animation/ */
-  
-  #loading {
-    width: 100%;
-    height: 100vh;
-    background-color: #c5dada;
-    background-color: #c2c2c2;
-    background-color: rgba(89, 183, 176, 0.99);
-    background-color: rgba(188, 219, 217, 0.99);
-    background-color: var(--sky-blue);
-    background-color: #5E9A99;
-    z-index: 999;
-    /* 環境によって「z-index」追加 */
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  
-  /* 読み込み完了後に「loaded」を付与する */
-  
-  #loading.loaded {
-    animation: fadeOut 3s forwards;
-    /* display: none; */
-  }
-  
-  
-  /* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
-  
-  .loading-relative {
-    position: relative;
-  }
-  
-  .sun-circle,
-  .sun-border1,
-  .sun-border2,
-  .sun-border3,
-  .sun-border4,
-  .sun-border5,
-  .horizon {
-    position: absolute;
-  }
-  
-  .sun-circle {
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
-    border: 2px solid #000;
-    top: 48.5%;
-    left: 44%;
-    animation: dusk-to-dawn 5s linear infinite;
-    overflow: hidden;
-  }
-  
-  @keyframes dusk-to-dawn {
-    0%,
-    100% {
-      transform: translateY(3vh);
-    }
-    50% {
-      transform: translateY(5vh);
-    }
-  }
-  
-  .horizon {
-    width: 18vw;
-    height: 18vh;
-    border-top: 2px solid #000;
-    background-color: var(--sky-blue);
-    background-color: #5E9A99;
-    top: 65%;
-    left: 40%;
-    z-index: 999;
-  }
-  
-  .sun-border1 {
-    width: 0px;
-    height: 1px;
-    border: solid 1px #000;
-    background-color: #000;
-    transform: translateX(-100%);
-    top: 60%;
-    left: 42%;
-    animation: border_anim_horizon_left 5s linear infinite;
-  }
-  
-  @keyframes border_anim_horizon_left {
-    0%,
-    100% {
-      width: 0%;
-    }
-    50% {
-      width: 3%;
-    }
-  }
-  
-  .sun-border2 {
-    width: 0px;
-    height: 1px;
-    border: solid 1px #000;
-    background-color: #000;
-    top: 52%;
-    left: 43%;
-    transform: translateX(-100%) rotate(30deg);
-    animation: border_anim_diagonal_left 5s linear infinite;
-  }
-  
-  @keyframes border_anim_diagonal_left {
-    0%,
-    100% {
-      width: 0%;
-    }
-    50% {
-      width: 3%;
-      transform: translate(-3vw, -2vw) rotate(vw);
-    }
-  }
-  
-  .sun-border3 {
-    width: 0px;
-    height: 1px;
-    border: solid 1px #000;
-    background-color: #000;
-    transform: rotate(90deg);
-    top: 49%;
-    left: 49%;
-    transform: rotate(90deg);
-    animation: border_anim_vertical 5s linear infinite;
-  }
-  
-  @keyframes border_anim_vertical {
-    0%,
-    100% {
-      width: 0%;
-      transform: translate(0vw, -2vh) rotate(90deg);
-    }
-    50% {
-      width: 3%;
-      transform: translate(-1.5vw, -2vh) rotate(90deg);
-    }
-  }
-  
-  .sun-border4 {
-    width: 0px;
-    height: 1px;
-    border: solid 1px #000;
-    background-color: #000;
-    top: 52%;
-    right: 45%;
-    transform: translateX(100%) rotate(-210deg);
-    animation: border_anim_diagonal_right 5s linear infinite;
-  }
-  
-  @keyframes border_anim_diagonal_right {
-    0%,
-    100% {
-      width: 0%;
-    }
-    50% {
-      width: 3%;
-      transform: translate(3vw, 2vw) rotate(vw);
-    }
-  }
-  
-  .sun-border5 {
-    width: 0px;
-    height: 1px;
-    border: solid 1px #000;
-    background-color: #000;
-    transform: translateX(100%);
-    top: 60%;
-    right: 44%;
-    animation: border_anim_horizon_right 5s linear infinite;
-  }
-  
-  @keyframes border_anim_horizon_right {
-    0%,
-    100% {
-      width: 0%;
-    }
-    50% {
-      width: 3%;
-    }
-  }
-  
-  
-  /* 🤔max320, 375,  425pxで太陽の位置下げる */
-  
-  @media all and (max-width: 426px) {
-    .sun-circle {
-      top: 55%;
-    }
-    .sun-border1,
-    .sun-border5 {
-      top: 63%;
-    }
-    .sun-border2,
-    .sun-border4 {
-      top: 59%;
-    }
-    .sun-border3 {
-      top: 59%;
-    }
-  }
-  
-  @media all and (max-width: 376px) {
-    .sun-circle {
-      top: 55%;
-    }
-  }
-  
-  @media all and (max-width: 321px) {
-    .sun-circle {
-      top: 57%;
-    }
-    .sun-border2,
-    .sun-border4 {
-      top: 60.5%;
-    }
-    .sun-border3 {
-      top: 61%;
-    }
-  }
-  
+
   .dn-in-pc {
     display: none;
     width: 10%;
@@ -392,21 +139,62 @@
     display: block;
   }
   
+
+
+  /* TRANSLATE */
+#translate {
+  position: fixed;
+  top: 17rem;
+  right: 1rem;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 9999;
+  color: #CB7A67;
+  border: none;
+  background-color: transparent;
+  /* cursor: none; */
+  min-width: 1rem;
+  min-height: 102px;
+}
+
+#translate.change-color {
+  color: var(--green);
+  color: #5E9A99;
+}
+
+#translate p {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+@media all and (min-width: 990px) {
+  #translate {
+    top: 4rem;
+    right: 2rem;
+    -ms-writing-mode: lr-bt;
+    writing-mode: horizontal-tb;
+  }
+
+  #translate p {
+      -ms-writing-mode: lr-bt;
+      writing-mode: horizontal-tb;
+      padding-right: 2rem;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+
+
+
   @media all and (max-width: 768px) {
-    .section-wrapper {
-      margin: 10vh auto;
-    }
-    .section-wrapper h2 {
-      margin: 10vh auto;
-    }
-    .dn-in-pc {
-      display: inline-block;
-    }
-    .dn-in-sp {
-      display: none;
-    }
+ 
     #translate {
-      right: 1.3rem;
+      right: 1rem;
       
     }
   }
