@@ -19,6 +19,11 @@
   .eye-container a.toggleBox-jp {
     font-size: min(2vw, 1rem);
   }
+
+
+  .works {
+    margin: 30vh auto 20vh;
+  }
   
   .works__flex {
     display: flex;

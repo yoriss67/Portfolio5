@@ -186,7 +186,7 @@ const Works = ({isJapanese}) => {
   });
 
   return (
-    <div className="Works">
+    <div className="works">
       <h2>Works</h2>
 
       {WorksData.map((work) => (
