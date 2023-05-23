@@ -178,13 +178,16 @@ canvas {
   0% {
     opacity: 0;
     display: none;
-    /* left: -100%;  */
+    left: -100%; 
     /* transform: translateX(-1000%);  */
+  }
+  90% {
+    opacity: 0;
   }
 
   100% {
     opacity: 1;
-    left: 40%;
+    left: 45%;
   }
 }
 
