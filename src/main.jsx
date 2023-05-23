@@ -28,7 +28,7 @@ function Main() {
       {/* <Board /> */}
       <Bio isJapanese={isJapanese} />
       <Works isJapanese={isJapanese} />
-      {/* <Avatar /> */}
+      <Avatar />
       <Currently isJapanese={isJapanese} setLanguage={setLanguage} />
     </React.StrictMode>
   );

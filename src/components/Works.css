@@ -12,8 +12,7 @@
   }
   
   .eye-container a {
-    font-size: min(3vw, 20px);
-    color: var(--green);
+    font-size: min(6vw, 20px);
   }
   
   .eye-container a.toggleBox-jp {
@@ -143,19 +142,26 @@
   /* mobile */
   
   @media all and (max-width: 767px) {
+    .works {
+      width: 90vw;
+    }
     .works__flex {
         display: inline-block;
         height: auto;
     }
     .works__image {
         height: 40vh;
+        width: 100%;
     }
     .works__text {
         margin-top: 10vh;
+        width: 100%;
+        align-items: center;
     }
     .works__text__title {
         display: inline-block;
         align-items: center;
+        text-align: center;
     }
     .works__text__sent {
         width: 85%;
