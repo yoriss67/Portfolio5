@@ -60,6 +60,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Crimson Text', serif;
+  cursor: none;
 }
 
 h2 {
@@ -68,18 +69,47 @@ h2 {
   font-size: 3rem;
 }
 
-
 h4 {
   font-family: 'Crimson Pro', serif;
   text-align: center;
   font-size: 1.5rem;
 }
 
+p {
+  letter-spacing: 2px;
+}
 
+p,
+a,
+i {
+  font-size: min(4.5vw, 1.2rem);
+}
 
+a {
 
+  cursor: none;
+}
+/* 
+body {
+  height: 500vh;
+  cursor: none;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: #FFFFE1;
+  background-color: #fff0e1;
+  background-color: rgba(217, 217, 217, 0.46);
+} */
+
+ol,
+ul {
+  list-style: none;
+}
 
 /* HEADER */
+header {
+  display: block;
+}
+
 .navbar {
   background-color: transparent;
   margin-bottom: 10vh;
@@ -94,11 +124,9 @@ h4 {
   width: clamp(16px, 2vw, 5vw);
 }
 
-.navbar>.container-fluid {
+.navbar > .container-fluid {
   align-items: flex-start;
 }
-
-
 
 .nav-link {
   color: #cb7a67;
@@ -106,28 +134,15 @@ h4 {
   position: relative;
 }
 
+.navbar-nav .nav-link {
+  font-size: 2.7rem;
+}
 
 /* js */
-
 .nav-link i.change-color {
-  color: rgb(79, 135, 157);
-  color: #004182;
-  color: rgba(118, 186, 153, 1);
-  color: var(--green);
   color: #5e9a99;
 }
 
-
-
-/* js */
-
-.navbar-brand img.change-color {
-  color: rgb(79, 135, 157);
-  color: #004182;
-  color: rgb(90, 152, 122);
-  color: var(--green);
-  color: #5e9a99;
-}
 
 
 .nav-item {
@@ -145,24 +160,12 @@ h4 {
   .nav-item i {
     font-size: 1.5rem;
   }
+
+  .navbar-nav .nav-link {
+    font-size: 1.8rem;
+    padding: 0.2rem 0;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* BOARD */
 /* 
@@ -248,7 +251,6 @@ canvas {
   position: absolute;
   top: 35%;
   width: 40vw;
-  transform: translateY(20%);
   /* opacity: 1; */
   /* visibility: visible; */
   left: 45%;
@@ -266,7 +268,7 @@ canvas {
   0% {
     opacity: 0;
     display: none;
-    left: -100%; 
+    left: -100%;
     /* transform: translateX(-1000%);  */
   }
   90% {
@@ -278,6 +280,26 @@ canvas {
     left: 45%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* AVATAR */
 /* 
@@ -300,7 +322,6 @@ canvas {
 
 /* CURRENTLY */
 
-
 /* 🌸 だめだめだあtたので自作😵😵 */
 .currently_pa {
   position: relative;
@@ -309,9 +330,7 @@ canvas {
   width: 80vw;
   height: 50vh;
   margin: 10vh auto;
-
 }
-
 
 .slideAndRotate {
   /* position: absolute; */
@@ -321,7 +340,6 @@ canvas {
   border-radius: 50%;
   object-fit: cover;
   object-position: center 20%;
-
 }
 
 .currently_child {
@@ -334,15 +352,12 @@ canvas {
   text-align: center;
 }
 
-
-
 .currently_left {
   position: absolute;
   /* left: 10%; */
 }
 
-.currently_left  {
-
+.currently_left {
   animation-name: slideAndRotateLeft;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -351,14 +366,13 @@ canvas {
 @keyframes slideAndRotateLeft {
   0% {
     opacity: 0;
-    transform: translateY(1000%); 
-    
+    transform: translateY(1000%);
+
     left: 40%;
   }
   50% {
     opacity: 0.5;
-   
-    
+
     left: 40%;
   }
   70% {
@@ -367,37 +381,25 @@ canvas {
   100% {
     opacity: 1;
     left: 0%;
-    
   }
 }
 
 .currently_text_left {
   /* transform: translateY(300%); */
- 
 }
 
 /* .currently_left p {
 
 } */
 
-
 /* ----- */
-
-
-
-
 
 .currently_middle {
   position: absolute;
   left: 35%;
-
 }
 
 .currently_middle {
-
-  
-
-
   animation-name: slideAndRotateMiddle;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -406,28 +408,19 @@ canvas {
 @keyframes slideAndRotateMiddle {
   0% {
     opacity: 0;
-    transform: translateY(1000%); 
-    
+    transform: translateY(1000%);
   }
   50% {
     opacity: 0.5;
-   
-    
   }
   100% {
     opacity: 1;
-    
   }
 }
 
-
 .currently_text_middle {
   /* transform: translateY(300%); */
- 
-
 }
-
-
 
 /* ------ */
 
@@ -437,7 +430,6 @@ canvas {
 }
 
 .currently_right {
-
   animation-name: slideAndRotateRight;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -446,16 +438,13 @@ canvas {
 @keyframes slideAndRotateRight {
   0% {
     opacity: 0;
-    transform: translateY(1000%); 
+    transform: translateY(1000%);
     left: 37.5%;
     left: 40%;
   }
   50% {
     opacity: 0.5;
     /* 🤔なぜここだけ30%でも高さが違うのか */
-   
-    
-    
   }
   70% {
     left: 40%;
@@ -463,15 +452,52 @@ canvas {
   100% {
     opacity: 1;
     left: 70%;
-    
   }
 }
 
-
-
 .currently_text_right {
   /* transform: translateY(300%); */
- 
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+  .bio_pa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 80vw;
+  }
+  .bio_left {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    opacity: 1;
+    transform: translateY(0%);
+    left: 0%;
+  }
+
+  .bio_right {
+    position: relative;
+  top: 35%;
+  width: 100%;
+  left: 0%;
+  line-height: 1.5rem;
+  margin: 2vh auto;
+    }
+
+
+    /* WORKS */
+    .works {
+      width: 90vw;
+    }
 
 }
 
@@ -479,23 +505,5 @@ canvas {
 
 
 
-/* --- */
-
-/* 
-.currently_pa.fadeIn {
-animation: UpAnime 0.5s forwards;
-  position: relative;
-}
 
 
-@keyframes UpAnime{
-from {
-  visibility: hidden;
-  
-transform: translateY(100px);
-}
-to {
-  visibility: visible;
-transform: translateY(0);
-}
-} */

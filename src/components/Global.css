@@ -1,7 +1,7 @@
 
 #cursor {
     position: fixed;
-    background: rgb(131, 195, 179);
+    background: rgb(181, 206, 90);
     border-radius: 20px;
     width: 10px;
     height: 10px;
@@ -13,7 +13,7 @@
   
   #stalker {
     position: fixed;
-    background: #7fa644;
+    background: #465ac1;
     width: 20px;
     height: 20px;
     border-radius: 30px;
@@ -33,8 +33,8 @@
   
   #translate {
     position: fixed;
-    top: 14rem;
-    right: 1.8rem;
+    top: 17rem;
+    right: 1rem;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -65,9 +65,11 @@
       -ms-writing-mode: lr-bt;
       writing-mode: horizontal-tb;
     }
+
     #translate p {
-      -ms-writing-mode: lr-bt;
-      writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-bt;
+        writing-mode: horizontal-tb;
+        padding-right: 2rem;
     }
   }
   
@@ -405,6 +407,7 @@
     }
     #translate {
       right: 1.3rem;
+      
     }
   }
   
