@@ -76,6 +76,94 @@ h4 {
 }
 
 
+
+
+
+/* HEADER */
+.navbar {
+  background-color: transparent;
+  margin-bottom: 10vh;
+  padding: 1% 4%;
+}
+
+.navbar img {
+  color: #cb7a67;
+}
+
+.navbar img {
+  width: clamp(16px, 2vw, 5vw);
+}
+
+.navbar>.container-fluid {
+  align-items: flex-start;
+}
+
+
+
+.nav-link {
+  color: #cb7a67;
+  z-index: 9999;
+  position: relative;
+}
+
+
+/* js */
+
+.nav-link i.change-color {
+  color: rgb(79, 135, 157);
+  color: #004182;
+  color: rgba(118, 186, 153, 1);
+  color: var(--green);
+  color: #5e9a99;
+}
+
+
+
+/* js */
+
+.navbar-brand img.change-color {
+  color: rgb(79, 135, 157);
+  color: #004182;
+  color: rgb(90, 152, 122);
+  color: var(--green);
+  color: #5e9a99;
+}
+
+
+.nav-item {
+  margin: 0 0 0 2%;
+}
+
+.nav-item i {
+  font-size: 2rem;
+}
+
+@media all and (max-width: 990px) {
+  .navbar {
+    padding: 1%;
+  }
+  .nav-item i {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* BOARD */
 /* 
 SETTING

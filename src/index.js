@@ -1,3 +1,4 @@
+export { default as Header } from './components/Header';
 export { default as Bio } from './components/Bio';
 export { default as Board } from './components/Board';
 export { default as Avatar } from './components/Avatar';

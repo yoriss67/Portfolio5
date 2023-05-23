@@ -17,13 +17,14 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { Board, Bio, Avatar, Currently, Works, Global } from './index';
+import { Header, Board, Bio, Avatar, Currently, Works, Global } from './index';
 
 function Main() {
   const [isJapanese, setLanguage] = useState(false);
   return (
     <React.StrictMode>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
+      <Header />
       {/* <Board /> */}
       <Bio isJapanese={isJapanese} />
       <Works isJapanese={isJapanese} />
