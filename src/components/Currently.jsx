@@ -29,10 +29,11 @@ function Currently({isJapanese}) {
 
       <div ref={ref} style={{ height: '2000px'}}>
         {inView && (
-          <div className="currently_pa animate__animated animate__fadeInUp">
+          // animate__animated animate__fadeInUp
+          <div className="currently_pa ">
             <div className="currently_child currently_left">
               <img src="n.png" className="slideAndRotate " />
-              <div className="currently_text_left">
+              <div className="currently_text currently_text_left">
                 <h4>Digital business card</h4>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                   This is first solo React project!
@@ -46,7 +47,7 @@ function Currently({isJapanese}) {
                 src="netlify-travel-journal.png"
                 className="slideAndRotate"
               />
-              <div className="currently_text_middle">
+              <div className="currently_text currently_text_middle">
                 <h4>Travel journal</h4>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                 NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still static...
@@ -57,7 +58,7 @@ function Currently({isJapanese}) {
 
             <div className="currently_child currently_right">
               <img src="netlify-meme.png" className="slideAndRotate" />
-              <div className="currently_text_right">
+              <div className="currently_text currently_text_right">
                 <h4>Meme generator</h4>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                  I`&apos`m literally developing now!🙋‍♀️

@@ -50,18 +50,6 @@ function Global({ isJapanese, setLanguage })  {
       <div id="cursor"></div>
       <div id="stalker"></div>
 
-      {/* <div id="loading">
-        <div id="loading-relative">
-          <div className="sun-circle"></div>
-          <div className="horizon"></div>
-
-          <div className="sun-border1"></div>
-          <div className="sun-border2"></div>
-          <div className="sun-border3"></div>
-          <div className="sun-border4"></div>
-          <div className="sun-border5"></div>
-        </div>
-      </div> */}
 
       <div id="loader">
         <img className='sun' src="/public/sun.png" alt="" />

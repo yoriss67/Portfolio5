@@ -25,10 +25,10 @@ function Main() {
     <React.StrictMode>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       <Header />
-      {/* <Board /> */}
+      <Board />
       <Bio isJapanese={isJapanese} />
       <Works isJapanese={isJapanese} />
-      {/* <Avatar /> */}
+      <Avatar />
       <Currently isJapanese={isJapanese} setLanguage={setLanguage} />
     </React.StrictMode>
   );
@@ -36,13 +36,3 @@ function Main() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(<Main />);
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <>
-//     <Global />
-//     {/* <Board /> */}
-//     <Bio />
-//     <Projects />
-//     {/* <Avatar /> */}
-//     {/* <Currently /> */}
-//   </>,
-// )

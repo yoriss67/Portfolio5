@@ -209,7 +209,7 @@ const Works = ({isJapanese}) => {
             <div className="works__text__title">
               <h3>{work.title}</h3>
               <div className="eye-container">
-                <img src="images/eye.png" alt="" />
+                
                 <a
                   className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                   href={work.siteLink}

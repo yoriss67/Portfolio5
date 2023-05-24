@@ -4,12 +4,7 @@
     margin: 2vw;
   }
   
-  .eye-container img {
-    width: 30px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
+
   
   .eye-container a {
     font-size: min(6vw, 20px);
