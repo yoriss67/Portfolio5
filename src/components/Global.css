@@ -141,7 +141,7 @@
   writing-mode: vertical-rl;
   text-orientation: upright;
   z-index: 9999;
-  color: #cb7a67;
+  color: #73aa8f;
   border: none;
   background-color: transparent;
   /* cursor: none; */
@@ -150,8 +150,7 @@
 }
 
 #translate.change-color {
-  color: var(--green);
-  color: #5e9a99;
+  color: #9a5e8c;
 }
 
 #translate p {

@@ -36,7 +36,9 @@
     background-size: cover;
     /* border: 1px solid #000; */
     /* border-radius: 10px; */
-    background-color: #629c8bb8;
+    background: -moz-linear-gradient(top left, #d2d984, #da7daf); 
+    background: -webkit-linear-gradient(top left, #73FB12, #553A8F); 
+    background: linear-gradient(to bottom right, #eee8cc, #73aa8f); 
     width: 50%;
     height: 60%;
   }

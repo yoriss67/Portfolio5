@@ -86,7 +86,6 @@ i {
 }
 
 a {
-
   cursor: none;
 }
 /* 
@@ -107,15 +106,10 @@ ul {
 
 /* HEADER */
 
-
 .navbar {
   background-color: transparent;
   margin-bottom: 10vh;
   padding: 1% 4%;
-}
-
-.navbar img {
-  color: #cb7a67;
 }
 
 .navbar img {
@@ -127,8 +121,7 @@ ul {
 }
 
 .nav-link {
-  color: #cb7a67;
-  /* z-index: 9999; */
+  color: #73aa8f;
   position: relative;
 }
 
@@ -140,8 +133,6 @@ ul {
   color: #5e9a99;
 }
 
-
-
 .nav-item {
   margin: 0 0 0 2%;
 }
@@ -149,8 +140,6 @@ ul {
 .nav-item i {
   font-size: 2rem;
 }
-
-
 
 /* BOARD */
 /* 
@@ -206,15 +195,12 @@ canvas {
   border-radius: 50%;
   opacity: 1;
   /* transform: translateY(30%); */
-  left: 10%;
-
 
 
   animation-name: slideAndRotate;
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
-
 
 @keyframes slideAndRotate {
   0% {
@@ -244,14 +230,11 @@ canvas {
   left: 45%;
   line-height: 2rem;
 
-
   /* 🤔これにanimationつけるとtranslateのたびに再レンダリングされる問題 */
   /* animation-name: toRight;
   animation-duration: 5s;
   animation-fill-mode: forwards; */
 }
-
-
 
 @keyframes toRight {
   0% {
@@ -269,34 +252,17 @@ canvas {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* AVATAR */
 /* 
 SETTING
 zoom 100%
-
 */
 
 .avatar {
+  width: 100%;
+}
+
+.canvas_pa {
   width: 35%;
   height: 40vh;
   margin: 0 auto;
@@ -309,7 +275,6 @@ canvas {
 } */
 
 /* CURRENTLY */
-
 
 /* 🌸 だめだめだあtたので自作😵😵 */
 .currently_pa {
@@ -346,9 +311,8 @@ canvas {
   justify-content: space-evenly;
   height: 15vh;
   margin: 5vh auto;
-text-align: left;
+  text-align: left;
 }
-
 
 .currently_left {
   position: absolute;
@@ -384,7 +348,6 @@ text-align: left;
 
 .currently_text_left {
   /* transform: translateY(300%); */
-
 }
 
 /* .currently_left p {
@@ -450,20 +413,12 @@ text-align: left;
   }
   100% {
     opacity: 1;
-    left: 70%;
   }
 }
 
 .currently_text_right {
   /* transform: translateY(300%); */
 }
-
-
-
-
-
-
-
 
 @media all and (max-width: 768px) {
   /* NAVBAR */
@@ -481,7 +436,6 @@ text-align: left;
 
   /* BIO */
   .bio_pa {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -498,45 +452,77 @@ text-align: left;
     left: 0%;
   }
 
+  @keyframes slideAndRotate {
+    0% {
+      opacity: 0;
+      transform: translateY(1000%);
+      left: 0%;
+    }
+    50% {
+      opacity: 0.5;
+      /* transform: translateY(30%); */
+    }
+  
+    60% {
+      left: 0%;
+    }
+    100% {
+      opacity: 1;
+      left: 0%;
+      /* transform: translateY(30%); */
+    }
+  }
+
   .bio_right {
     position: relative;
-  top: 35%;
-  width: 100%;
-  left: 0%;
-  line-height: 1.5rem;
-  margin: 2vh auto;
-    }
+    top: 35%;
+    width: 100%;
+    left: 0%;
+    line-height: 1.5rem;
+    margin: 2vh auto;
+  }
 
-    /* CURRENTLY */
-    /* .currently_pa {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: fit-content;
-      width: 80vw;
-    }
+  /* AVATAR */
+  .avatar {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .canvas_pa {
+    width: 100%;
+  }
+  .canvas_pa canvas {
+    width: 100%;
+    /* border: 1px solid black; */
+  }
 
+  /* CURRENTLY */
+  .currently {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .currently_pa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 80vw;
+  }
 
-    .currently_left {
-      position: relative;
-    }
+  .currently_child {
+    width: 100%;
+  }
 
-    .currently_middle {
-      position: relative;
-      left: 0%;
-    }
+  .currently_left {
+    position: relative;
+  }
 
-    .currently_right {
-      position: relative;
-      left: 0%;
-    } */
+  .currently_middle {
+    position: relative;
+    left: 0%;
+  }
 
-
+  .currently_right {
+    position: relative;
+    left: 0%;
+  }
 }
-
-
-
-
-
-
-

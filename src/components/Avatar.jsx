@@ -8,11 +8,11 @@ function Avatar() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <div className='avatar'>
       <h2>I’m learning React now!</h2>
-    <div className="avatar">
+      <div className="canvas_pa">
         <Spline scene="https://prod.spline.design/6splkedRobq543mR/scene.splinecode" />
-    </div>
+      </div>
     </div>
   );
 }

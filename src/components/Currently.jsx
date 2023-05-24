@@ -27,7 +27,7 @@ function Currently({isJapanese}) {
 
   return (
 
-      <div ref={ref} style={{ height: '2000px'}}>
+      <div className='currently' ref={ref} style={{ height: '2000px'}}>
         {inView && (
           // animate__animated animate__fadeInUp
           <div className="currently_pa ">
