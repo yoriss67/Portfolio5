@@ -52,7 +52,7 @@ function Global({ isJapanese, setLanguage })  {
 
 
       <div id="loader">
-        <img className='sun' src="/public/sun.png" alt="" />
+        <img className='sun' src="/sun.png" alt="" />
       </div>
 
       <button

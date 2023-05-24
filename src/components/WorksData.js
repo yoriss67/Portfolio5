@@ -1,28 +1,5 @@
 const ProjectsData = [
-  // {
-  //     id: 1,
-  //     title: "Travel Blog",
-  //     // images: {
-  //     // //     // desktop: "./images/travel-blog-desktop.jpg",
-  //     // //     // tablet: "./images/travel-blog-tablet.jpg",
-  //     // //     // mobile: "./images/travel-blog-mobile.jpg",
-  //     // //     // crumpledDesktop: "./images/travel-blog desktop-crumpled.png",
-  //     // //     // crumpledTablet: "./images/travel-blog-tablet-crumpled.png",
-  //     // //     // crumpledMobile: "./images/travel-blog-mobile-crumpled.png",
-  //     // },
-  //     images: {
-  //         image1: "/public/netlify-digital-card.png",
-  //     },
-  //     siteLink: "https://yoriss67.github.io/Travel-Blog/",
-  //     descriptionEn: "This is my first reproduction. I learned basic structure of HTML and CSS. In retrospect, it was super simple and easy, but I had some hard time overthinking so that the reproduction can be perfect. ;)",
-  //     descriptionJp: "初めての模写です。HTMLとCSSの基礎を学びました。今振り返ってみると、シンプルな構造だったにも関わらず完璧にしようとして考えすぎてました。笑",
-  //     languages: {
-  //         html: true,
-  //         css: true,
-  //         js: false,
-  //     },
-  //     on: true,
-  // },
+
 
   {
     id: 1,
@@ -39,7 +16,7 @@ const ProjectsData = [
     //     ],
     // },
 
-    image: '/public/e-commerce.png',
+    image: 'e-commerce.png',
 
     siteLink: 'https://yoriss67.github.io/Tech2-etc-Ecommerce-Website/',
     descriptionEn:
@@ -66,7 +43,7 @@ const ProjectsData = [
     //     tablet: "./images/easybank-tablet.jpg",
     //     mobile: "./images/easybank-mobile.jpg",
     // },
-    image: '/public/easybank-desktop.jpg',
+    image: '/easybank-desktop.jpg',
     siteLink:
       'https://yoriss67.github.io/Frontend-mentor-Easybank-landing-page/',
     descriptionEn:
@@ -88,7 +65,7 @@ const ProjectsData = [
   {
     id: 3,
     title: 'Reference Site for Assignments',
-    image: '/public/ReTribe16.png',
+    image: '/ReTribe16.png',
 
     siteLink: 'https://retribe16.netlify.app/',
     descriptionEn:
@@ -110,7 +87,7 @@ const ProjectsData = [
   {
     id: 4,
     title: 'Ninbai-profession',
-    image: '/public/ninbai.png',
+    image: 'ninbai.png',
     siteLink: 'https://ninbai-profession.com/',
     descriptionEn:
       'I created a landing page for a real estate consultation service for the voluntary sale of real estate. I not only created the pages, but also learned a lot about servers, file transfer, and other practical matters.',

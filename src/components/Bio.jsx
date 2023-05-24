@@ -92,7 +92,7 @@ function Bio({isJapanese}) {
         // <div className={`bio_pa ${animationClass}`}>
         <div className="bio_pa">
 
-          <img className="bio_left" src="/public/bali-profile.png"></img>
+          <img className="bio_left" src="bali-profile.png"></img>
        
             <div className={`bio_right left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
               As a self-taught learner, I continuously pursue new challenges and
