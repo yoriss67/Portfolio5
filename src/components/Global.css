@@ -1,6 +1,6 @@
 #cursor {
   position: fixed;
-  background: rgb(181, 206, 90);
+  background: #2DB696;
   border-radius: 20px;
   width: 10px;
   height: 10px;
@@ -12,7 +12,7 @@
 
 #stalker {
   position: fixed;
-  background: #465ac1;
+  background: #E0E2C5;
   width: 20px;
   height: 20px;
   border-radius: 30px;
