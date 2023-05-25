@@ -9,6 +9,7 @@ function Avatar() {
 
   return (
     <div className='avatar'>
+      <p>hi</p>
       <h2>I’m learning React now!</h2>
       <div className="canvas_pa">
         <Spline scene="https://prod.spline.design/6splkedRobq543mR/scene.splinecode" />
