@@ -61,7 +61,7 @@ function Currently({isJapanese}) {
               <div className="currently_text currently_text_right">
                 <h4>Meme generator</h4>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
-                 I`&apos`m literally developing now!🙋‍♀️
+                 I'm literally developing now!🙋‍♀️
                 </p>
                 <p className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}>まさに今開発中です！🙋‍♀️</p>
               </div>
