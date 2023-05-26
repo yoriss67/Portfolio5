@@ -21,8 +21,8 @@ import { Header, Board, Bio, Avatar, Currently, Works, Global } from './index';
 
 function Main() {
   const [isJapanese, setLanguage] = useState(false);
-  return (
-    <React.StrictMode>
+  return  (
+    <>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       <Header />
       <Board />
@@ -30,7 +30,7 @@ function Main() {
       <Works isJapanese={isJapanese} />
       <Avatar />
       <Currently isJapanese={isJapanese} setLanguage={setLanguage} />
-    </React.StrictMode>
+    </>
   );
 }
 

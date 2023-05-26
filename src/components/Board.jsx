@@ -9,7 +9,6 @@ function Board() {
 
   return (
     <div className="spline">
-      {/* <Spline scene="https://prod.spline.design/zcaoqR2JOYOCmmmd/scene.splinecode" /> */}
       <Spline scene="https://prod.spline.design/oMHtygfB0MXKMfAl/scene.splinecode" />
     </div>
   );
