@@ -180,6 +180,18 @@ canvas {
 
 /* BIO */
 /* 🌸 だめだめだあ😵😵 */
+.bio {
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.bio_name {
+  text-align: center;
+  font-size:min(5vw,30px);
+}
+
 .bio_pa {
   position: relative;
   /* border: 1px solid black; */
@@ -194,7 +206,6 @@ canvas {
   height: 15rem;
   border-radius: 50%;
   opacity: 1;
-  /* transform: translateY(30%); */
 
 
   animation-name: slideAndRotate;
@@ -202,7 +213,9 @@ canvas {
   animation-fill-mode: forwards;
 }
 
-@keyframes slideAndRotate {
+
+
+/* @keyframes slideAndRotate {
   0% {
     opacity: 0;
     transform: translateY(1000%);
@@ -210,7 +223,6 @@ canvas {
   }
   50% {
     opacity: 0.5;
-    /* transform: translateY(30%); */
   }
 
   60% {
@@ -219,9 +231,8 @@ canvas {
   100% {
     opacity: 1;
     left: 10%;
-    /* transform: translateY(30%); */
   }
-}
+} */
 
 .bio_right {
   position: absolute;
@@ -236,7 +247,7 @@ canvas {
   animation-fill-mode: forwards; */
 }
 
-@keyframes toRight {
+/* @keyframes toRight {
   0% {
     opacity: 0;
     display: none;
@@ -250,7 +261,7 @@ canvas {
     opacity: 1;
     left: 45%;
   }
-}
+} */
 
 /* AVATAR */
 /* 
@@ -460,8 +471,7 @@ canvas {
     }
     50% {
       opacity: 0.5;
-      /* transform: translateY(30%); */
-    }
+      }
   
     60% {
       left: 0%;
@@ -469,8 +479,7 @@ canvas {
     100% {
       opacity: 1;
       left: 0%;
-      /* transform: translateY(30%); */
-    }
+      }
   }
 
   .bio_right {

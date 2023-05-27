@@ -56,14 +56,14 @@
 // export default Bio;
 // ーーーーーーーーーーーー
 
-
-
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import 'animate.css';
+import '../index.css'
 
-function Bio({isJapanese}) {
-  const [animationClass, setAnimationClass] = useState('');
-  const [isFirstLanguageChange, setIsFirstLanguageChange] = useState(true);
+function Bio({ isJapanese }) {
+  // const [animationClass, setAnimationClass] = useState('');
+  // const [isFirstLanguageChange, setIsFirstLanguageChange] = useState(true);
 
   // useEffect(() => {
   //   if (isFirstLanguageChange) {
@@ -79,22 +79,53 @@ function Bio({isJapanese}) {
   //     };
   //   }
   // }, [isJapanese]); // run this effect when isJapanese changes
- 
-  const { ref, inView } = useInView({
-    // オプション
-    rootMargin: '10px', // ref要素が現れてから50px過ぎたら
-    triggerOnce: true, // 最初の一度だけ実行
-  });
+
+  // const { ref, inView } = useInView({
+  //   rootMargin: '-300px', // ref要素が現れてから50px過ぎたら
+  //   triggerOnce: true, // 最初の一度だけ実行
+  // });
+
+  // const [animationClass, setAnimationClass] = useState('');
+  // const [isFirstLanguageChange, setIsFirstLanguageChange] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1000); // Set your own delay time (in ms)
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  useEffect(() => {
+    // Simulating a delay of 1 second before showing the animation
+    const timer = setTimeout(() => {
+      setShowAnimation(true);
+    }, 1000);
+
+    return () => clearTimeout(timer); // Cleanup the timer when the component unmounts
+  }, []);
 
   return (
-    <div ref={ref} style={{ minHeight: '30vh' }}>
-      {inView && (
-        // <div className={`bio_pa ${animationClass}`}>
-        <div className="bio_pa">
+    // ref={ref} style={{ minHeight: '30vh' }}
+    <div className="bio">
+      {/* {inView && ( */}
+      {/* // <div className={`bio_pa ${animationClass}`}> */}
+      {showAnimation && (
+        <>
+          <div className="bio_name">Hi, I'm Iori !</div>
+          <div className="bio_pa">
+            <img
+              className="bio_left animate__animated animate__fadeInUp"
+              src="profile.png"
+            ></img>
 
-          <img className="bio_left" src="profile.png"></img>
-       
-            <div className={`bio_right left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
+            <div
+              className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+            >
               As a self-taught learner, I continuously pursue new challenges and
               opportunities to sharpen my abilities. My passion lies in
               acquiring knowledge and staying abreast with the latest
@@ -102,16 +133,18 @@ function Bio({isJapanese}) {
               by curiosity and a desire for personal growth, I strive to turn
               insights into impactful actions.
             </div>
-            <div className={`bio_right left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+            <div
+              className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+            >
               独学で学ぶ者として、私は自分の能力を磨くために新しい挑戦と機会を追い求め続けています。私の情熱は、知識を身につけ、私たちの生活を向上させる可能性のある最新の進歩に遅れないようにすることにあります。好奇心と自己成長への欲求に突き動かされ、自分なりの考えをインパクトある行動につなげるよう努力しています。
             </div>
           </div>
-        
+        </>
       )}
     </div>
   );
 }
 
 export default Bio;
-
-
