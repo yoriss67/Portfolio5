@@ -87,7 +87,7 @@ function Bio({isJapanese}) {
   });
 
   return (
-    <div ref={ref} style={{ height: '30vh' }}>
+    <div ref={ref} style={{ minHeight: '30vh' }}>
       {inView && (
         // <div className={`bio_pa ${animationClass}`}>
         <div className="bio_pa">
