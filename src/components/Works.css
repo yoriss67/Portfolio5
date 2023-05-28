@@ -38,7 +38,7 @@
     /* border-radius: 10px; */
     background: -moz-linear-gradient(top left, #d2d984, #da7daf); 
     background: -webkit-linear-gradient(top left, #73FB12, #553A8F); 
-    background: linear-gradient(to bottom right, #eee8cc, #73aa8f); 
+    background: linear-gradient(to bottom right, #eee8cc, #60b357); 
     width: 50%;
     height: 60%;
   }
