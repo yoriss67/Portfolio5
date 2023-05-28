@@ -114,7 +114,7 @@ function Bio({ isJapanese }) {
       {/* // <div className={`bio_pa ${animationClass}`}> */}
       {showAnimation && (
         <>
-          <div className="bio_name">Hi, I'm Iori !</div>
+          <h2 className="bio_name">Hi, I'm Iori !</h2>
           <div className="bio_pa">
             <img
               className="bio_left animate__animated animate__fadeInUp"

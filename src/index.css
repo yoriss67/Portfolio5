@@ -87,6 +87,9 @@ i {
 
 a {
   cursor: none;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+
 }
 /* 
 body {
@@ -190,6 +193,7 @@ canvas {
 .bio_name {
   text-align: center;
   font-size:min(7vw,30px);
+  margin: 5vh auto;
 }
 
 .bio_pa {

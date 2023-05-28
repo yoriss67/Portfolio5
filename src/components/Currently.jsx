@@ -35,6 +35,22 @@ function Currently({isJapanese}) {
               <img src="n.png" className="slideAndRotate " />
               <div className="currently_text currently_text_left">
                 <h4>Digital business card</h4>
+                <a
+                  className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                  href='https://myprofile-card-yoriss67.netlify.app/'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view site
+                </a>
+                <a
+                  className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
+                  href='https://myprofile-card-yoriss67.netlify.app/'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  サイトを見る
+                </a>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                   This is first solo React project!
                 </p>
@@ -49,6 +65,22 @@ function Currently({isJapanese}) {
               />
               <div className="currently_text currently_text_middle">
                 <h4>Travel journal</h4>
+                <a
+                  className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                  href='https://yoriss67travel-journal.netlify.app/'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view site
+                </a>
+                <a
+                  className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
+                  href='https://yoriss67travel-journal.netlify.app/'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  サイトを見る
+                </a>
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                 NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still static...
                 </p>
@@ -60,6 +92,24 @@ function Currently({isJapanese}) {
               <img src="netlify-meme.png" className="slideAndRotate" />
               <div className="currently_text currently_text_right">
                 <h4>Meme generator</h4>
+
+                {/* <a
+                  className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                  href='   '
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view site
+                </a>
+                <a
+                  className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
+                  href='   '
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  サイトを見る
+                </a> */}
+
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
                  I'm literally developing now!🙋‍♀️
                 </p>
