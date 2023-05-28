@@ -449,6 +449,9 @@ canvas {
   }
 
   /* BIO */
+  .bio {
+    min-height: 80vh;
+  }
   .bio_pa {
     display: flex;
     flex-direction: column;
