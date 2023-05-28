@@ -180,6 +180,6 @@
 
 @media all and (max-width: 768px) {
   #translate {
-    right: .6rem;
-  }
+    right: 0.8rem;
+    }
 }
