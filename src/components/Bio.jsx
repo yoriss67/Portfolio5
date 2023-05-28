@@ -121,7 +121,7 @@ function Bio({ isJapanese }) {
               src="profile.png"
             ></img>
 
-            <div
+            <p
               className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-en ${
                 isJapanese ? 'display-none' : ''
               }`}
@@ -132,7 +132,7 @@ function Bio({ isJapanese }) {
               advancements that have the potential to improve our lives. Driven
               by curiosity and a desire for personal growth, I strive to turn
               insights into impactful actions.
-            </div>
+            </p>
             <div
               className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
                 isJapanese ? '' : 'display-none'

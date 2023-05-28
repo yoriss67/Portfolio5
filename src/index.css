@@ -144,7 +144,7 @@ ul {
 /* BOARD */
 /* 
 SETTING
-zoom 50% 
+zoom 20% 
 Wholeは
 */
 
@@ -189,7 +189,7 @@ canvas {
 
 .bio_name {
   text-align: center;
-  font-size:min(5vw,30px);
+  font-size:min(7vw,30px);
 }
 
 .bio_pa {
@@ -198,14 +198,16 @@ canvas {
   width: 80vw;
   height: 30vh;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .bio_left {
-  position: absolute;
-  width: 15rem;
-  height: 15rem;
+  /* position: absolute; */
+  width: 20%;
   border-radius: 50%;
   opacity: 1;
+  margin: 0 auto;
 
 
   animation-name: slideAndRotate;
@@ -235,10 +237,11 @@ canvas {
 } */
 
 .bio_right {
-  position: absolute;
-  width: 40vw;
-  top: 20%;
-  left: 45%;
+  /* position: absolute; */
+  width: 60%;
+  margin: 0 auto;
+  /* top: 20%;
+  left: 45%; */
   line-height: 2rem;
 
   /* 🤔これにanimationつけるとtranslateのたびに再レンダリングされる問題 */
