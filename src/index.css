@@ -450,7 +450,7 @@ canvas {
 
   /* BIO */
   .bio {
-    min-height: 80vh;
+    min-height: 500px;
   }
   .bio_pa {
     display: flex;
