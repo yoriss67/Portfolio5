@@ -26,7 +26,7 @@ function Main() {
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       <Header />
       <Bio isJapanese={isJapanese} />
-      {/* <Board /> */}
+      <Board />
       <Works isJapanese={isJapanese} />
       {/* <Avatar /> */}
       {/* <Currently isJapanese={isJapanese} setLanguage={setLanguage} /> */}

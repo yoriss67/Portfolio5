@@ -6,12 +6,16 @@ function Board() {
 
   return (
     <div className="spline">
-      <Spline scene="https://prod.spline.design/oMHtygfB0MXKMfAl/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/Yf-lxfYRDOlgM0NW/scene.splinecode" />
     </div>
   );
 }
 
 export default Board;
+
+// 前の
+      // {/* <Spline scene="https://prod.spline.design/oMHtygfB0MXKMfAl/scene.splinecode" /> */}
+
 
 // styled component版
 // import { useState } from 'react';
