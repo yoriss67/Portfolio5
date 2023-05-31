@@ -17,7 +17,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { Header, Board, Bio, Avatar, Currently, Works, Global } from './index';
+import { Header, Board, Bio, Avatar, Currently, Works, Global, Horizontal } from './index';
 
 function Main() {
   const [isJapanese, setLanguage] = useState(false);
@@ -26,10 +26,11 @@ function Main() {
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       <Header />
       <Bio isJapanese={isJapanese} />
-      <Board />
+      {/* <Board /> */}
       <Works isJapanese={isJapanese} />
-      <Avatar />
-      <Currently isJapanese={isJapanese} setLanguage={setLanguage} />
+      {/* <Avatar /> */}
+      {/* <Currently isJapanese={isJapanese} setLanguage={setLanguage} /> */}
+      {/* <Horizontal /> */}
     </>
   );
 }

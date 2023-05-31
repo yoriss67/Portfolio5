@@ -18,9 +18,11 @@
     "@splinetool/runtime": "^0.9.345",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
+    "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",
+    "scrolltrigger": "^1.0.1",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
