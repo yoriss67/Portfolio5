@@ -61,6 +61,10 @@ ul {
   list-style: none;
 }
 
+div {
+  font-family: 'Crimson Text', serif;
+}
+
 /* HEADER */
 
 .navbar {
