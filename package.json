@@ -19,6 +19,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "gsap": "^3.11.5",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",

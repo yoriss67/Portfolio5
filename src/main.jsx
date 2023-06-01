@@ -17,7 +17,10 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { Header, Board, Bio, Avatar, Currently, Works, Global, Horizontal } from './index';
+import { Header, Board, Bio, Avatar, Currently, Works, Global, Horizontal, Gsap} from './index';
+
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Main() {
   const [isJapanese, setLanguage] = useState(false);
@@ -28,9 +31,9 @@ function Main() {
       <Bio isJapanese={isJapanese} />
       <Board />
       <Works isJapanese={isJapanese} />
-      {/* <Avatar /> */}
-      {/* <Currently isJapanese={isJapanese} setLanguage={setLanguage} /> */}
+      <Avatar />
       {/* <Horizontal /> */}
+      {/* <Gsap /> */}
     </>
   );
 }
