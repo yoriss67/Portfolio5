@@ -478,7 +478,7 @@ h2 {
 @media all and (max-width: 768px) {
   #translate {
     top: 22rem;
-    right: 0rem;
+    right: 0.8rem;
     padding: 0;
   }
   
