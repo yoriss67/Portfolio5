@@ -478,8 +478,8 @@ h2 {
 @media all and (max-width: 768px) {
   #translate {
     top: 22rem;
-    right: 0rem;
-    padding: 0;
+    right: -8px;
+        padding: 0;
   }
   
   
@@ -515,6 +515,7 @@ h2 {
 
 .hero::before {
   top: 50vh;
+  left: 100px;
 }
 
 .hero .spline {
