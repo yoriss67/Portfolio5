@@ -478,8 +478,8 @@ h2 {
 @media all and (max-width: 768px) {
   #translate {
     top: 22rem;
-    right: -8px;
-        padding: 0;
+    right: 0rem;
+    padding: 0;
   }
   
   
@@ -488,6 +488,7 @@ h2 {
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding: 0;
+    margin: 0 3vw 0 auto;
   }
   
 
