@@ -33,27 +33,6 @@
   font-size: min(7vw, 1rem);
 }
 
-.fa-twitter:hover {
-  color: #1d9bf0;
-}
-
-.fa-instagram:hover {
-  color: #e905ab;
-}
-
-.fa-linkedin-in:hover {
-  color: #004182;
-  color: #1472d1;
-}
-
-.fa-github:hover {
-  color: rgb(158, 154, 154);
-}
-
-.fa-note-sticky:hover {
-  color: #2cb696;
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -66,9 +45,6 @@
 }
 
 /* https://into-the-program.com/javascript-loader/ */
-
-/* https://1-notes.com/css-border-animation/ */
-
 #loader {
   width: 100vw;
   height: 100vh;
@@ -78,7 +54,6 @@
   justify-content: center;
   align-items: center;
 
-
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -87,7 +62,6 @@
 }
 
 .sun {
-
   width: 40vw;
   height: 40vw;
   margin: 0 auto;
@@ -104,7 +78,6 @@
   }
 }
 
-/* 読み込み完了後に「loaded」を付与する */
 
 #loader.loaded {
     animation: fadeOut 3s forwards;
@@ -132,54 +105,6 @@
   display: block;
 }
 
-/* TRANSLATE */
-#translate {
-  position: fixed;
-  top: 17rem;
-  right: 1rem;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  z-index: 9999;
-  color: #73aa8f;
-  border: none;
-  background-color: transparent;
-  /* cursor: none; */
-  min-width: 1rem;
-  min-height: 102px;
-}
-
-#translate.change-color {
-  color: #9a5e8c;
-}
-
-#translate p {
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-@media all and (min-width: 990px) {
-  #translate {
-    top: 4rem;
-    right: 2rem;
-    -ms-writing-mode: lr-bt;
-    writing-mode: horizontal-tb;
-  }
-
-  #translate p {
-    -ms-writing-mode: lr-bt;
-    writing-mode: horizontal-tb;
-    padding-right: 2rem;
-  }
-}
-
 .display-none {
   display: none;
-}
-
-@media all and (max-width: 768px) {
-  #translate {
-    right: 0.8rem;
-    }
 }

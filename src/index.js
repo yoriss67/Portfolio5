@@ -1,9 +1,10 @@
 export { default as Header } from './components/Header';
 export { default as Bio } from './components/Bio';
-export { default as Board } from './components/Board';
+export { default as Hero } from './components/Hero';
 export { default as Avatar } from './components/Avatar';
 export { default as Currently } from './components/Currently';
 export { default as Works } from './components/Works';
 export { default as Global } from './components/Global';
 export { default as Horizontal } from './components/scenes/Horizontal';
 export { default as Gsap } from './components/Gsap';
+export { default as Navbar } from './components/Navbar';

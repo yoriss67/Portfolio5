@@ -1,150 +1,112 @@
-// import React, { useEffect, useState } from 'react';
-// // import './Bio.css';
-// import { useInView } from 'react-intersection-observer';
 
-// function Bio({isJapanese}) {
-//   const [animationClass, setAnimationClass] = useState('animated');
-
-//   // useEffect(() => {
-//   //   setAnimationClass('animated');
-//   //   const timer = setTimeout(() => {
-//   //     setAnimationClass('');
-//   //   }, 5000); // remove the animation class after 5 seconds
-
-//   //   // Cleanup function to clear the timer if the component is unmounted before the timeout finishes
-//   //   return () => {
-//   //     clearTimeout(timer);
-//   //   }
-//   // }, []); // run this effect only once, when the component mounts
-
-//   // 🌸 理解していない！
-//   // useEffect(() => {
-//   //   setAnimationClass('animated');
-//   //   const timer = setTimeout(() => {
-//   //     setAnimationClass('');
-//   //   }, 6000); // remove the animation class after 5 seconds
-
-//   //   // Cleanup function to clear the timer if the component is unmounted before the timeout finishes
-//   //   return () => {
-//   //     clearTimeout(timer);
-//   //   }
-//   // }, []); // run this effect only once, when the component mounts
-
-//   const { ref, inView } = useInView({
-//     // オプション
-//     rootMargin: '-10px', // ref要素が現れてから50px過ぎたら
-//     triggerOnce: true, // 最初の一度だけ実行
-//   });
-
-//   return (
-//     <div  ref={ref} style={{ height: '30vh', border: '1px solid salmon'}}>
-//        {inView && (
-//       <div className={`bio_pa ${animationClass}`}>
-//         <img className="bio_left" src='/public/bali-profile.png'></img>
-//         <div className="bio_right"></div>
-
-//         <div>
-//           <p className={`bio_right left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>As a self-taught learner, I continuously pursue new challenges and opportunities to sharpen my abilities. My passion lies in acquiring knowledge and staying abreast with the latest advancements that have the potential to improve our lives. Driven by curiosity and a desire for personal growth, I strive to turn insights into impactful actions.</p>
-//           <p className={`bio_right left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>独学で学ぶ者として、私は自分の能力を磨くために新しい挑戦と機会を追い求め続けています。私の情熱は、知識を身につけ、私たちの生活を向上させる可能性のある最新の進歩に遅れないようにすることにあります。好奇心と自己成長への欲求に突き動かされ、自分なりの考えをインパクトある行動につなげるよう努力しています。</p>
-//         </div>
-//       </div>
-//        )}
-//     </div>
-//   );
-// }
-
-// export default Bio;
-// ーーーーーーーーーーーー
 
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';
-import '../index.css'
+import '../index.css';
 
 function Bio({ isJapanese }) {
-  // const [animationClass, setAnimationClass] = useState('');
-  // const [isFirstLanguageChange, setIsFirstLanguageChange] = useState(true);
 
-  // useEffect(() => {
-  //   if (isFirstLanguageChange) {
-  //     setAnimationClass('animated');
-  //     const timer = setTimeout(() => {
-  //       setAnimationClass('');
-  //     }, 5000); // remove the animation class after 5 seconds
-  //     setIsFirstLanguageChange(false);
 
-  //     // Cleanup function to clear the timer if the component is unmounted before the timeout finishes
-  //     return () => {
-  //       clearTimeout(timer);
-  //     };
-  //   }
-  // }, [isJapanese]); // run this effect when isJapanese changes
+  const { ref, inView } = useInView({
+    rootMargin: '-400px', // px以外は❌
+    triggerOnce: true, // 最初の一度だけ実行
+  });
 
-  // const { ref, inView } = useInView({
-  //   rootMargin: '-300px', // ref要素が現れてから50px過ぎたら
-  //   triggerOnce: true, // 最初の一度だけ実行
-  // });
 
-  // const [animationClass, setAnimationClass] = useState('');
-  // const [isFirstLanguageChange, setIsFirstLanguageChange] = useState(true);
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1000); // Set your own delay time (in ms)
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  const [showAnimation, setShowAnimation] = useState(false);
-
-  useEffect(() => {
-    // Simulating a delay of 1 second before showing the animation
-    const timer = setTimeout(() => {
-      setShowAnimation(true);
-    }, 1000);
-
-    return () => clearTimeout(timer); // Cleanup the timer when the component unmounts
-  }, []);
 
   return (
-    // ref={ref} style={{ minHeight: '30vh' }}
-    <div className="bio">
-      {/* {inView && ( */}
-      {/* // <div className={`bio_pa ${animationClass}`}> */}
-      {showAnimation && (
-        <>
-          <h2 className="bio_name">Hi, I'm Iori !</h2>
-          <div className="bio_pa">
-            <img
-              className="bio_left animate__animated animate__fadeInUp"
-              src="profile.png"
-            ></img>
+    <div className="bio section" ref={ref} style={{ height: '80vh'}}>
+      {inView && (
 
-            <p
-              className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-en ${
+        <>
+          <img
+            className="bio_img animate__animated animate__fadeInUp"
+            src="profile.png"
+          ></img>
+          <div className="bio_p">
+            <h3 className="bio_name">Iori Kawano</h3>
+
+            <div
+              className={`bio_snt bio_snt1 animate__animated animate__fadeInUp animate__slow animate__delay-1s left-align toggleBox-en ${
                 isJapanese ? 'display-none' : ''
               }`}
             >
-              As a self-taught learner, I continuously pursue new challenges and
-              opportunities to sharpen my abilities. My passion lies in
-              acquiring knowledge and staying abreast with the latest
-              advancements that have the potential to improve our lives. Driven
-              by curiosity and a desire for personal growth, I strive to turn
-              insights into impactful actions.
-            </p>
+              I started studying programming in July 2022. I am completely
+              self-taught as I belong to a liberal arts department. This is what
+              got me interested in the IT industry.
+            </div>
             <div
-              className={`bio_right animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
+              className={`bio_snt bio_snt1 animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
                 isJapanese ? '' : 'display-none'
               }`}
             >
-              独学で学ぶ者として、私は自分の能力を磨くために新しい挑戦と機会を追い求め続けています。私の情熱は、知識を身につけ、私たちの生活を向上させる可能性のある最新の進歩に遅れないようにすることにあります。好奇心と自己成長への欲求に突き動かされ、自分なりの考えをインパクトある行動につなげるよう努力しています。
+              2022年7月からプログラミングの勉強を始めました。私は文系学部に所属しているため、完全に独学で文系学部に所属しているため、独学で勉強しています。このことがIT業界に興味を持ったのがきっかけです。
             </div>
+
+
+
+            <div
+              className={`bio_snt bio_snt2 animate__animated animate__fadeInUp animate__slow  animate__delay-2s left-align toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+            >
+      In recent news and in my daily life, I feel that the demand for technology is only increasing day by day. I believe that humans and computers will be more closely related in the future. 
+
+            </div>
+            <div
+              className={`bio_snt bio_snt2 animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+            >
+最近のニュースや日々の生活の中で、技術に対する要求は日々高まるばかりだと感じています。今後、人間とコンピューターはより密接な関係になっていくのではないでしょうか。
+            </div>
+
+            <div
+              className={`bio_snt bio_snt3 animate__animated animate__fadeInUp animate__slow  animate__delay-3s left-align toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+            >
+My priority in terms of work values is internationality and the future potential of the business.
+This is due to my genuine love of English and foreign cultures and my desire to contribute to the globalization of Japan.
+            </div>
+            <div
+              className={`bio_snt bio_snt3 animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+            >
+私が仕事の価値観として優先するのは、国際性と事業の将来性です。これは、私が純粋に英語や外国の文化が好きであることと、日本のグローバル化に貢献したいという思いからです。
+            </div>
+
+
+
+
+            <div
+              className={`bio_snt bio_snt4 animate__animated animate__fadeInUp animate__slow  animate__delay-4s left-align toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+            >
+ I believe that the Japanese people need to be more willing to coexist with people from other countries against the backdrop of a declining and aging population.
+
+Second priority is the potential of the work. I would like to be involved in a job where I can bring convenience, health, and happiness to people through IT.
+            </div>
+            <div
+              className={`bio_snt bio_snt4 animate__animated animate__fadeInUp animate__slow left-align toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+            >
+ 少子高齢化を背景に、日本人が他国の人と共存していく姿勢が必要だと考えています。
+
+第二の優先順位は、仕事の可能性です。ITを通じて人々に便利さ、健康、幸せを提供できるような仕事に携わりたいと考えています。
+            </div>
+
+      
+
           </div>
         </>
-      )}
+      )}     
     </div>
   );
-}
+            }
 
 export default Bio;

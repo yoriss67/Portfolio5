@@ -38,9 +38,26 @@
     /* border-radius: 10px; */
     background: -moz-linear-gradient(top left, #d2d984, #da7daf); 
     background: -webkit-linear-gradient(top left, #73FB12, #553A8F); 
-    background: linear-gradient(to bottom right, #eee8cc, #60b357); 
+    background: linear-gradient(to bottom right, #eee8cc, #94D3D9); 
     width: 50%;
     height: 60%;
+  }
+
+  .works__image::after {
+    filter: blur(75px);
+    z-index: -1;
+
+    position: absolute;
+    content: "";
+    width: 390px;
+    height: 390px;
+    border-radius: 100%;
+
+
+    background: #ffc285;
+    right: 5px;
+    top: 40%;
+    transform: translateY(-50%);
   }
   
 
