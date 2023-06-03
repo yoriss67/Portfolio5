@@ -6,7 +6,7 @@ import '../index.css';
 function Bio({ isJapanese }) {
   const { ref, inView } = useInView({
     // Optionについては、rootMarginを設定。要素が400pxより上に入った段階でinViewを取得できます。
-    rootMargin: '-400px 0px', // px以外は❌
+    rootMargin: '-200px 0px', // px以外は❌??
     triggerOnce: true, // 最初の一度だけ実行
   });
 
