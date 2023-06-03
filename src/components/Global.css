@@ -31,6 +31,7 @@
 .toggleBox-jp {
   font-family: 'Noto Serif JP', serif;
   font-size: min(7vw, 1rem);
+  line-height: 2rem;
 }
 
 @keyframes fadeOut {

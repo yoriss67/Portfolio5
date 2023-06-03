@@ -111,7 +111,7 @@ function Currently({isJapanese}) {
                 </a> */}
 
                 <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
-                 I'm literally developing now!🙋‍♀️
+                 I am literally developing now!🙋‍♀️
                 </p>
                 <p className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}>まさに今開発中です！🙋‍♀️</p>
               </div>

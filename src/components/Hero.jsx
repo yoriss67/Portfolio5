@@ -1,19 +1,50 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 
+import { useInView } from 'react-intersection-observer';
+import 'animate.css';
+
 function Hero({ isJapanese }) {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [loaded, setLoaded] = useState(false); // New loading state
+
+  const { ref, inView } = useInView({
+    // Optionについては、rootMarginを設定。要素が400pxより上に入った段階でinViewを取得できます。
+    rootMargin: '-50px 0px', // px以外は❌??
+    triggerOnce: true, // 最初の一度だけ実行
+  });
+
+    // 🤔loadingがおわってからanimation
+  // 🌸
+  // useEffect(() => {
+  //   if (inView) {
+  //     const timer = setTimeout(() => {
+  //       setLoaded(true);
+  //     }, 6000); // Wait for 1 second or the amount of time it takes for your component to load
+
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [inView]);
+
+
+
+
+
+  
+
+
 
   return (
-    <div className="hero ">
+    <div className="hero" ref={ref}>
+        {inView && (
       <div className="hero_width">
       <div className="circles"></div>
 
 
       <div className="hero_left">
         <div className="intro">
-          <h2>Hi, I'm Iori !</h2>
-          <h3>Front-end learner</h3>
+          <h2 className={`animate__animated animate__fadeInUp animate__delay-3s`}>Hi, I'm Iori !</h2>
+          <h3 className={`animate__animated animate__fadeInUp animate__slow animate__delay-4s`}>Front-end learner</h3>
         </div>
         <div className="spline">
           <Spline scene="https://prod.spline.design/Yf-lxfYRDOlgM0NW/scene.splinecode" />
@@ -21,7 +52,7 @@ function Hero({ isJapanese }) {
       </div>
 
       <div
-        className={`hero_right toggleBox-en ${
+        className={`hero_right animate__animated animate__fadeInUp animate__slow animate__delay-5s toggleBox-en ${
           isJapanese ? 'display-none' : ''
         }`}
       >
@@ -39,58 +70,9 @@ function Hero({ isJapanese }) {
         独学で学ぶ者として、私は自分の能力を磨くために新しい挑戦と機会を追い求め続けています。私の情熱は、知識を身につけ、私たちの生活を向上させる可能性のある最新の進歩に遅れないようにすることにあります。好奇心と自己成長への欲求に突き動かされ、自分なりの考えをインパクトある行動につなげるよう努力しています。
       </div>
       </div>
+        )}
     </div>
   );
 }
 
 export default Hero;
-
-// 前の
-// {/* <Spline scene="https://prod.spline.design/oMHtygfB0MXKMfAl/scene.splinecode" /> */}
-
-// styled component版
-// import { useState } from 'react';
-// import styled from 'styled-components';
-// import Spline from '@splinetool/react-spline';
-
-// const SplineContainer = styled.div`
-//   width: 80%;
-//   height: 50vh;
-//   margin: 10vh auto;
-//   position: relative;
-// `;
-
-// const StyledSvg = styled.svg`
-//   position: absolute;
-//   bottom: 0;
-// `;
-
-// const StyledCanvas = styled.canvas`
-//   position: absolute;
-//   bottom: 0;
-//   z-index: 2;
-// `;
-
-// const StyledImg = styled.img`
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 80vh;
-//   z-index: 1;
-// `;
-
-// function App() {
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <SplineContainer>
-//       <Spline scene="https://prod.spline.design/zcaoqR2JOYOCmmmd/scene.splinecode" />
-//       {/* Assuming the SVG, Canvas and Image are part of your component */}
-//       <StyledSvg />
-//       <StyledCanvas />
-//       <StyledImg />
-//     </SplineContainer>
-//   );
-// }
-
-// export default App;

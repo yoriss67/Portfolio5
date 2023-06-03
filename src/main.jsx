@@ -18,7 +18,7 @@ function Main() {
       <Bio isJapanese={isJapanese} />
       <Works isJapanese={isJapanese} />
       <Avatar />
-      <Currently />
+      <Currently  isJapanese={isJapanese}/>
       {/* <Horizontal /> */}
       {/* <Gsap /> */}
     </>
