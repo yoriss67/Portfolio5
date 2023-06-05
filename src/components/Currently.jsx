@@ -31,7 +31,7 @@ function Currently({isJapanese}) {
         {inView && (
           // animate__animated animate__fadeInUp
           <div className="currently_pa ">
-            <div className="currently_child currently_left">
+            <div className="currently_child currently_left animate__animated animate__fadeInUp">
               <img src="n.png" className="slideAndRotate " />
               <div className="currently_text currently_text_left">
                 <h4>Digital business card</h4>
@@ -58,7 +58,7 @@ function Currently({isJapanese}) {
               </div>
             </div>
 
-            <div className="currently_child currently_middle">
+            <div className="currently_child currently_middle animate__animated animate__fadeInUp animate__delay-1s ">
               <img
                 src="netlify-travel-journal.png"
                 className="slideAndRotate"
@@ -88,7 +88,7 @@ function Currently({isJapanese}) {
               </div>
             </div>
 
-            <div className="currently_child currently_right">
+            <div className="currently_child currently_right animate__animated animate__fadeInUp animate__delay-2s">
               <img src="netlify-meme.png" className="slideAndRotate" />
               <div className="currently_text currently_text_right">
                 <h4>Meme generator</h4>

@@ -188,7 +188,7 @@ h2 {
 
 .nav-link {
   font-size: 2.5rem;
-  color: #52a5ba;
+  color: #506f73;
 }
 
 
@@ -437,7 +437,7 @@ h2 {
   width: 25%;
   height: auto;
   margin: 0 auto;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 50%;
 }
 
@@ -546,7 +546,7 @@ h2 {
 }
 
 .currently_left {
-  animation-name: slideAndRotateLeft;
+  /* animation-name: slideAndRotateLeft; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
@@ -572,14 +572,7 @@ h2 {
   }
 }
 
-.currently_text_left {
-  /* transform: translateY(300%); */
 
-}
-
-/* .currently_left p {
-
-} */
 
 /* ----- */
 
@@ -589,7 +582,7 @@ h2 {
 }
 
 .currently_middle {
-  animation-name: slideAndRotateMiddle;
+  /* animation-name: slideAndRotateMiddle; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
@@ -619,7 +612,7 @@ h2 {
 }
 
 .currently_right {
-  animation-name: slideAndRotateRight;
+  /* animation-name: slideAndRotateRight; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
@@ -683,7 +676,7 @@ h2 {
 
   /* HERO */
   .hero {
-    /* height: auto; */
+    height: 60rem;
   }
   .hero_width {
     flex-direction: column;
@@ -713,9 +706,13 @@ h2 {
   height: 75rem;
 }
 
+.bio_p {
+  width: 80%;
+}
 
 /* CURRENTLY */
   .currently {
+    height: auto;
     width: 90vw;
     margin: 0 auto;
   }
