@@ -40,11 +40,11 @@ function Hero({ isJapanese }) {
           <div className="hero_left">
             <div className="intro">
               {/* The provided delays are from 1 to 5 seconds.  */}
-              <h2
+              <h1
                 className={`animate__animated animate__fadeInUp animate__delay-3s`}
               >
                 Hi, I'm Iori !
-              </h2>
+              </h1>
               <h3
                 className={`animate__animated animate__fadeInUp animate__slow animate__delay-3s`}
               >

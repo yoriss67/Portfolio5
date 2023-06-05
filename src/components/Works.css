@@ -162,7 +162,14 @@
 
 @media all and (max-width: 767px) {
   .works {
-    width: 90vw;
+
+  }
+
+  .works h2 {
+    padding: 15vw 0 0;
+}
+  .works_bg {
+    background-size: 800%;
   }
   .works__flex {
     display: inline-block;

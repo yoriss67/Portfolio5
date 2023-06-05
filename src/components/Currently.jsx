@@ -4,20 +4,9 @@ import React, { useEffect, useState  } from 'react';
 
 // https://zenn.dev/himorishige/articles/e17b7d04fc7722
 import { useInView } from 'react-intersection-observer';
-import 'animate.css';
+// import 'animate.css';
 
 function Currently({isJapanese}) {
-  // useEffect(() => {
-  //   const currentlyLeftElement = document.querySelector('.currently_left');
-  //   const currentlyMiddleElement = document.querySelector('.currently_middle');
-  //   const currentlyRightElement = document.querySelector('.currently_right');
-
-  //   currentlyLeftElement.addEventListener('animationend', () => {
-  //     currentlyMiddleElement.style.opacity = 1;
-  //     // currentlyMiddleElement.style.left = '35%'; // currently_rightの初期位置（画面の中央）に設定
-
-  //   });
-  // }, []);
 
   const { ref, inView } = useInView({
     // オプション
@@ -25,14 +14,16 @@ function Currently({isJapanese}) {
     triggerOnce: true, // 最初の一度だけ実行
   });
 
+  const animationClassName = inView ? 'start-animation' : '';
+
   return (
 
       <div className='currently section' ref={ref} style={{ height: '30vh'}}>
         {inView && (
-          // animate__animated animate__fadeInUp
           <div className="currently_pa ">
-            <div className="currently_child currently_left animate__animated animate__fadeInUp">
-              <img src="n.png" className="slideAndRotate " />
+
+            <div className={`currently_child currently_left ${animationClassName}`}>
+              <img src="n.png" className="currently_img " />
               <div className="currently_text currently_text_left">
                 <h4>Digital business card</h4>
                 <a
@@ -58,10 +49,10 @@ function Currently({isJapanese}) {
               </div>
             </div>
 
-            <div className="currently_child currently_middle animate__animated animate__fadeInUp animate__delay-1s ">
+            <div className={`currently_child currently_middle ${animationClassName}`}>
               <img
                 src="netlify-travel-journal.png"
-                className="slideAndRotate"
+                className="currently_img"
               />
               <div className="currently_text currently_text_middle">
                 <h4>Travel journal</h4>
@@ -88,8 +79,8 @@ function Currently({isJapanese}) {
               </div>
             </div>
 
-            <div className="currently_child currently_right animate__animated animate__fadeInUp animate__delay-2s">
-              <img src="netlify-meme.png" className="slideAndRotate" />
+            <div className={`currently_child currently_right ${animationClassName}`}>
+              <img src="netlify-meme.png" className="currently_img" />
               <div className="currently_text currently_text_right">
                 <h4>Meme generator</h4>
 
