@@ -16,7 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^0.9.356",
+    "@splinetool/runtime": "^0.9.357",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.0",
     "gsap": "^3.11.5",

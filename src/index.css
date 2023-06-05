@@ -1,3 +1,116 @@
+#cursor {
+  position: fixed;
+  background: #2DB696;
+  border-radius: 20px;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+}
+
+#stalker {
+  position: fixed;
+  background: #E0E2C5;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin: -5px 0 0 -5px;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@media all and (min-width: 768px) {
+  .left-align {
+    text-align: left;
+  }
+}
+
+.toggleBox-jp {
+  font-family: 'Noto Serif JP', serif;
+  font-size: min(7vw, 1rem);
+  line-height: 2rem;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* https://into-the-program.com/javascript-loader/ */
+#loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sun {
+  width: 40vw;
+  height: 40vw;
+  margin: 0 auto;
+  animation: rotate 10s ease infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#loader.loaded {
+    animation: fadeOut 3s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      display: none;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  
+
+.dn-in-pc {
+  display: none;
+  width: 10%;
+}
+
+.dn-in-sp {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+
 /* 
 font-family: 'Crimson Pro', serif;
 font-family: 'Crimson Text', serif;
@@ -62,6 +175,7 @@ h2 {
   justify-content: flex-end;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
   text-align: center;
   height: 5vh;
   padding: 2vw;
@@ -106,14 +220,18 @@ h2 {
 
 .hero {
   display: flex;
-  height: 80vh;
+  height: 99vh;
   width: 100%;
   margin: 0 auto 15vh;
-  background-image: url(../public/expand-long.png);
+  /* background-image: url(../public/expand-long.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 25%; */
+  position: relative;
   /* background-image: url(../public/Surfers\ in\ lineup\ waiting\ -\ original\ painting\ by\ @lavater_art.jpg); */
 
   /* https://codepen.io/majidv/pen/MWjQaaQ */
-  overflow: hidden;
+  /* overflow: hidden;
   background: linear-gradient(
     180deg,
     #e3e5e8 0%,
@@ -127,7 +245,23 @@ h2 {
   );
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 30%; */
+}
+
+.hero_bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/expand-long.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 35%;
+
+
+  filter: blur(6px);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
@@ -209,6 +343,8 @@ h2 {
   display: flex;
   flex-direction: column;
   z-index: 9;
+
+  /* border: 1px solid black; */
 }
 
 .intro {
@@ -226,7 +362,7 @@ h2 {
 
 .hero .spline {
   /* CSS properties for the .spline class */
-  width: 80%;
+  width: 100%;
   height: 80%;
 }
 
@@ -238,12 +374,51 @@ h2 {
 
 .hero_right {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 90%;
   margin: 0 auto;
   z-index: 9;
 
+  /* border: 1px solid black; */
+
 }
+
+.hero_right_p1, .hero_right_p2 ,.hero_right_p3 {
+  animation: fadeUp 3s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero_right_p1 {
+  animation-delay: 3s;
+}
+
+.hero_right_p2 {
+  animation-delay: 3.5s;
+
+}
+
+.hero_right_p3 {
+  animation-delay: 4s;
+}
+
+/* .hero_right_p.loaded {
+  opacity: 1;
+} */
+
+
+
 
 
 

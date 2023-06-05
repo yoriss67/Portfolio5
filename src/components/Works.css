@@ -1,201 +1,198 @@
-.eye-container {
-    text-align: center;
-    display: inline-block;
-    margin: 2vw;
-  }
-  
+.works {
+  margin: 20vh auto;
+  position: relative;
+  height: auto;
+}
 
-  
-  .eye-container a {
-    font-size: min(6vw, 20px);
-  }
-  
-  .eye-container a.toggleBox-jp {
-    font-size: min(2vw, 1rem);
-  }
+.works_bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/expand-long.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: center 90%;
 
+  margin: 0;
 
+  filter: blur(6px);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.works h2 {
+  padding: 5vw;
+}
+
+.works__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50vh;
+  width: 100%;
+  margin: 14vh auto;
+  padding: 0 10%;
+  /* height: 70vh; */
+  z-index: 9;
+  position: relative;
+}
+
+.works__image {
+  position: relative;
+  background-size: cover;
+  /* border: 1px solid #000; */
+  /* border-radius: 10px; */
+  background: -moz-linear-gradient(top left, #d2d984, #da7daf);
+  background: -webkit-linear-gradient(top left, #73fb12, #553a8f);
+  background: linear-gradient(to bottom right, #eee8cc, #c3dcde);
+  width: 50%;
+  height: 60%;
+}
+
+.works__image::after {
+  filter: blur(75px);
+  z-index: -1;
+
+  position: absolute;
+  content: '';
+  width: 390px;
+  height: 390px;
+  border-radius: 100%;
+
+  background: #ffc285;
+  right: 5px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.works__image img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center 0%;
+  scale: 0.8;
+}
+
+.works__text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.works__text__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works__text__sent {
+  width: 85%;
+  padding: 10% 0;
+  margin: 0 auto;
+}
+
+.language-meter {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  /*🌸 The border-radius property isn't working because it's being applied to .language-meter which is the parent container for .meter-html, .meter-css, and .meter-js. The border-radius should be applied to the child elements instead. */
+  /* border-radius: 20px; */
+  height: 1rem;
+}
+
+/* - - - - - -  */
+
+.language-meter-info {
+  display: flex;
+  width: 85%;
+  margin: 2vh auto;
+  align-items: center;
+}
+
+.language-meter-info p {
+  font-size: 1rem;
+}
+
+.language-meter-info p:not(:last-of-type) {
+  padding-right: 1rem;
+}
+
+.meter-html {
+  background-color: #e56559;
+  border-radius: 20px 0 0 20px;
+}
+
+.meter-css {
+  background-color: #563d7c;
+}
+
+.meter-js {
+  background-color: #f0e05a;
+  border-radius: 0 20px 20px 0;
+}
+
+.html-circle,
+.css-circle,
+.js-circle {
+  width: 2.5vw;
+  width: min(2vw, 1rem);
+  height: min(2vw, 1rem);
+  border-radius: 50%;
+  margin-right: 2px;
+  margin-bottom: 18px;
+}
+
+.html-circle {
+  background-color: #e34c26;
+}
+
+.css-circle {
+  background-color: #563d7c;
+}
+
+.js-circle {
+  background-color: #f1e05a;
+}
+
+/* mobile */
+
+@media all and (max-width: 767px) {
   .works {
-    margin: 20vh auto;
+    width: 90vw;
   }
-  
   .works__flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 50vh;
-    width: 100%;
-    margin: 14vh auto;
-    padding: 0 10%;
-    /* height: 70vh; */
-}
-  
+    display: inline-block;
+    height: auto;
+  }
   .works__image {
-    position: relative;
-    background-size: cover;
-    /* border: 1px solid #000; */
-    /* border-radius: 10px; */
-    background: -moz-linear-gradient(top left, #d2d984, #da7daf); 
-    background: -webkit-linear-gradient(top left, #73FB12, #553A8F); 
-    background: linear-gradient(to bottom right, #eee8cc, #94D3D9); 
-    width: 50%;
-    height: 60%;
-  }
-
-  .works__image::after {
-    filter: blur(75px);
-    z-index: -1;
-
-    position: absolute;
-    content: "";
-    width: 390px;
-    height: 390px;
-    border-radius: 100%;
-
-
-    background: #ffc285;
-    right: 5px;
-    top: 40%;
-    transform: translateY(-50%);
-  }
-  
-
-  .works__image img {
-    width: 100%;
     height: 40vh;
-    object-fit: cover;
-    object-position: center 0%;
-    scale: .8;
+    width: 100%;
   }
-
-  
   .works__text {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    align-items: center;
   }
-  
   .works__text__title {
-    display: flex;
+    display: inline-block;
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
-  
   .works__text__sent {
-    width: 85%;
-    padding: 10% 0;
+    width: 100%;
+    padding: 3vh 0;
     margin: 0 auto;
   }
-  
+
   .language-meter {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-    /*🌸 The border-radius property isn't working because it's being applied to .language-meter which is the parent container for .meter-html, .meter-css, and .meter-js. The border-radius should be applied to the child elements instead. */
-    /* border-radius: 20px; */
-    height: 1rem;
-  }
-  
-  
-  /* - - - - - -  */
-  
-  .language-meter-info {
-    display: flex;
-    width: 85%;
-    margin: 2vh auto;
-    align-items: center;
-  }
-  
-  .language-meter-info p {
-    font-size: 1rem;
-  }
-  
-  .language-meter-info p:not(:last-of-type) {
-    padding-right: 1rem;
-  }
-  
-  .meter-html {
-    background-color: #E56559;
-    border-radius: 20px 0 0 20px;
-  }
-  
-  .meter-css {
-    background-color: #563D7C;
-  }
-
-  .meter-js {
-    background-color: #F0E05A;
-    border-radius: 0 20px 20px 0;
-  }
-  
-  .html-circle,
-  .css-circle,
-  .js-circle {
-    width: 2.5vw;
-    width: min(2vw, 1rem);
-    height: min(2vw, 1rem);
-    border-radius: 50%;
-    margin-right: 2px;
-    margin-bottom: 18px;
-  }
-  
-  .html-circle {
-    background-color: #e34c26;
-  }
-  
-  .css-circle {
-    background-color: #563D7C;
-  }
-  
-  .js-circle {
-    background-color: #f1e05a;
-  }
-  
-  
-  /* mobile */
-  
-  @media all and (max-width: 767px) {
-    .works {
-      width: 90vw;
-    }
-    .works__flex {
-        display: inline-block;
-        height: auto;
-    }
-    .works__image {
-        height: 40vh;
-        width: 100%;
-    }
-    .works__text {
-        margin-top: 10vh;
-        width: 100%;
-        align-items: center;
-    }
-    .works__text__title {
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-    }
-    .works__text__sent {
-        width: 100%;
-        padding: 3vh 0;
-        margin: 0 auto;
-    }
-
-    .language-meter {
-      width: 100%;
+    width: 100%;
   }
 
   .language-meter-info {
     width: 100%;
-  
-}
   }
-  
-  
-
-
-
+}
