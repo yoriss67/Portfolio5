@@ -223,6 +223,7 @@ h2 {
   right: -20%;
 }
 .hero_width {
+  position: absolute;
   width: 80%;
   margin: 20vh auto 0;
     display: flex;
@@ -254,10 +255,25 @@ h2 {
   font-size: 2rem;
 }
 
-.hero .spline {
-  /* CSS properties for the .spline class */
+/* .hero .spline {
   width: 100%;
   height: 80%;
+} */
+
+.spline_waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/expand-long.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 35%;
+
+
+  filter: blur(3px);
+
+  top: 0;
+  left: 0;
 }
 
 .hero canvas {
@@ -624,6 +640,9 @@ h2 {
   height: 80%;
 }
 
+.hero canvas {
+  transform: translateY(21%);
+}
 
 /* BIO */
 .bio.section {

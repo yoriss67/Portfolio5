@@ -32,7 +32,9 @@ function Hero({ isJapanese }) {
 
   return (
     <div className="hero" ref={ref}>
-      <div className="hero_bg"></div>
+      {/* <div className="hero_bg"></div> */}
+      <Spline className='spline_waves' scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode" />
+
       {inView && (
         <div className="hero_width">
           <div className="circles"></div>
@@ -53,7 +55,7 @@ function Hero({ isJapanese }) {
             </div>
             <div className="spline">
               {/* <Spline scene="https://prod.spline.design/Yf-lxfYRDOlgM0NW/scene.splinecode" /> */}
-              <Spline scene="https://prod.spline.design/pIljFw02dlaoJp6S/scene.splinecode" />
+              {/* <Spline scene="https://prod.spline.design/pIljFw02dlaoJp6S/scene.splinecode" /> */}
             </div>
           </div>
 
