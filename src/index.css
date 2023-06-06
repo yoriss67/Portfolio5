@@ -73,6 +73,7 @@ h2 {
   height: 5vh;
   padding: 2vw;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-item {
@@ -621,6 +622,7 @@ h2 {
   .hero_width {
     flex-direction: column;
     width: 90%;
+    position: relative;
   }
   .hero::before, .hero::after {
     position: absolute;
@@ -641,7 +643,7 @@ h2 {
 }
 
 .hero canvas {
-  transform: translateY(21%);
+  transform: translateY(18%);
 }
 
 /* BIO */
