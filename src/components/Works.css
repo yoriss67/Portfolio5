@@ -79,7 +79,7 @@
   border-radius: 20px;
 }
 
-.works__image::after {
+/* .works__image::after {
   filter: blur(75px);
   z-index: -1;
 
@@ -93,7 +93,7 @@
   right: 5px;
   top: 40%;
   transform: translateY(-50%);
-}
+} */
 
 .works__image img {
   width: 100%;
@@ -200,7 +200,7 @@
     background-size: 800%;
   }
   .works__flex {
-    height: auto;
+    /* height: auto; */
     padding: 5%;
   }
   .works__image {
