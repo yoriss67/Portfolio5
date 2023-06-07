@@ -13,8 +13,8 @@ const Works = ({isJapanese}) => {
   });
 
   return (
-    <div className="works section">
-      <div className="works_bg"></div>
+    <div className="works section works_bg">
+      {/* <div className="works_bg"></div> */}
       <h2>Works</h2>
 
       {WorksData.map((work) => (

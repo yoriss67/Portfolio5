@@ -1,25 +1,49 @@
 .works {
-  margin: 20vh auto;
-  position: relative;
-  height: auto;
+  /* margin: 20vh auto;
+  position: relative; */
+  /* https://onishi-noboru.com/css-how-to-fix-background-image */
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-position: center 1%;
+  padding: 5vh 0;
+
 }
 
 .works_bg {
+  background-image: url(../public/expand-long.png);
+  position: relative;
+
+}
+
+.works_bg::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
+  background-color: rgba(183, 175, 148, 0.468);
+}
+
+/* 
+.works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url(../public/expand-long.png);
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: center 90%;
-
-  margin: 0;
-
   filter: blur(6px);
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+} */
 
 .works h2 {
   padding: 5vw;
@@ -31,12 +55,15 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 50vh;
-  width: 100%;
+  width: 90%;
   margin: 14vh auto;
-  padding: 0 10%;
+  padding: 2% 5%;
   /* height: 70vh; */
   z-index: 9;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.373);
+  border-radius: 20px;
+
 }
 
 .works__image {
@@ -49,6 +76,7 @@
   background: linear-gradient(to bottom right, #eee8cc, #c3dcde);
   width: 50%;
   height: 60%;
+  border-radius: 20px;
 }
 
 .works__image::after {
@@ -172,15 +200,15 @@
     background-size: 800%;
   }
   .works__flex {
-    display: inline-block;
     height: auto;
+    padding: 5%;
   }
   .works__image {
     height: 40vh;
     width: 100%;
   }
   .works__text {
-    margin-top: 10vh;
+    margin-top: 5vh;
     width: 100%;
     align-items: center;
   }

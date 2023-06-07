@@ -14,12 +14,14 @@ function Bio({ isJapanese }) {
     <div className="bio section" ref={ref} >
       {inView && (
         <>
+        <div className="bio_img_pa animate__animated animate__fadeInUp">
           <img
-            className="bio_img animate__animated animate__fadeInUp"
+            className="bio_img "
             src="profile.png"
           ></img>
+          </div>
           <div className="bio_p">
-            <h3 className="bio_name">Iori Kawano</h3>
+            <h2 className="bio_name">Iori Kawano</h2>
 
             <div
               className={`bio_snt bio_snt1 animate__animated animate__fadeInUp animate__slow animate__delay-1s left-align toggleBox-en ${

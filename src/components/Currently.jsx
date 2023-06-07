@@ -22,7 +22,9 @@ function Currently({ isJapanese }) {
           <div
             className={`currently_child currently_left ${animationClassName}`}
           >
-            <img src="n.png" className="currently_img " />
+            <div className="currently_img_pa">
+              <img src="n.png" className="currently_img " />
+            </div>
             <div className="currently_text currently_text_left">
               <h4>Digital business card</h4>
               <a
@@ -61,7 +63,9 @@ function Currently({ isJapanese }) {
           <div
             className={`currently_child currently_middle ${animationClassName}`}
           >
-            <img src="netlify-travel-journal.png" className="currently_img" />
+            <div className="currently_img_pa">
+              <img src="netlify-travel-journal.png" className="currently_img" />
+            </div>
             <div className="currently_text currently_text_middle">
               <h4>Travel journal</h4>
               <a
@@ -101,7 +105,9 @@ function Currently({ isJapanese }) {
           <div
             className={`currently_child currently_right ${animationClassName}`}
           >
-            <img src="netlify-meme.png" className="currently_img" />
+            <div className="currently_img_pa">
+              <img src="netlify-meme.png" className="currently_img" />
+            </div>
             <div className="currently_text currently_text_right">
               <h4>Meme generator</h4>
 
