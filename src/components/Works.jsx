@@ -47,7 +47,7 @@ const Works = ({isJapanese}) => {
                   view site
                 </a>
                 <a
-                  className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
+                  className={`eye-text toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
                   href={work.siteLink}
                   target="_blank"
                   rel="noopener noreferrer"

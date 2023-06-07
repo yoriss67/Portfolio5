@@ -38,7 +38,7 @@ function Currently({ isJapanese }) {
                 view site
               </a>
               <a
-                className={`eye-text toggleBox-en ${
+                className={`eye-text toggleBox-jp ${
                   isJapanese ? '' : 'display-none'
                 }`}
                 href="https://myprofile-card-yoriss67.netlify.app/"
@@ -53,7 +53,7 @@ function Currently({ isJapanese }) {
                 This is first solo React project!
               </p>
               <p
-                className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}
+                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
               >
                 最初のReactプロジェクトです！
               </p>
@@ -79,7 +79,7 @@ function Currently({ isJapanese }) {
                 view site
               </a>
               <a
-                className={`eye-text toggleBox-en ${
+                className={`eye-text toggleBox-jp ${
                   isJapanese ? '' : 'display-none'
                 }`}
                 href="https://yoriss67travel-journal.netlify.app/"
@@ -95,7 +95,7 @@ function Currently({ isJapanese }) {
                 static...
               </p>
               <p
-                className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}
+                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
               >
                 旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...
               </p>
@@ -134,7 +134,7 @@ function Currently({ isJapanese }) {
                 I am literally developing now!🙋‍♀️
               </p>
               <p
-                className={`toggleBox-jp" ${isJapanese ? '' : 'display-none'}`}
+                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
               >
                 まさに今開発中です！🙋‍♀️
               </p>
