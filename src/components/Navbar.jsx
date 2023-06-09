@@ -23,12 +23,7 @@ export default function Navbar() {
 
       
             <nav className="navbar navbar-expand-lg ">
-              {/* <a className="navbar-brand" href="#">Navbar</a> */}
-              <img className='navbar-brand' src="sun.png" alt="logo" />
-              {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" />
-              </button> */}
-              
+              <img className='navbar-brand' src="sun.png" alt="logo" />              
                 <ul className="navbar-nav">
 
                   <li className="nav-item ">

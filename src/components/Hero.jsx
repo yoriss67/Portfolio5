@@ -1,43 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Spline from '@splinetool/react-spline';
 
 import { useInView } from 'react-intersection-observer';
 
 function Hero({ isJapanese }) {
-  // const [count, setCount] = useState(0);
-  const [loaded, setLoaded] = useState(false); // New loading state
-
-  //   window.onload = ()=>{
-  //     const heroRight = document.querySelector('.hero_right');
-  //     heroRight.classList.add('loaded');
-  // }
 
   const { ref, inView } = useInView({
-    // Optionについては、rootMarginを設定。要素が400pxより上に入った段階でinViewを取得できます。
     rootMargin: '-50px 0px', // px以外は❌??
-    triggerOnce: true, // 最初の一度だけ実行
+    triggerOnce: true, 
   });
-
-  // 🤔loadingがおわってからanimation
-  // 🌸
-  // useEffect(() => {
-  //   if (inView) {
-  //     const timer = setTimeout(() => {
-  //       setLoaded(true);
-  //     }, 6000); // Wait for 1 second or the amount of time it takes for your component to load
-
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [inView]);
 
   return (
     <div className="hero" ref={ref}>
-      {/* <div className="hero_bg"></div> */}
-      {/* <Spline className='spline_waves' scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode" /> */}
-      <Spline
-        className="spline_waves"
-        scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode"
-      />
+      <Spline className="spline_waves" scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode"/>
       {inView && (
         <div className="hero_width">
 
@@ -64,10 +39,9 @@ function Hero({ isJapanese }) {
             </p>
             <p
               className={`hero_right_p hero_right_p hero_right_p1 toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-              {' '}
+           
               独学で学ぶ者として、私は自分の能力を磨くために新しい挑戦と機会を追い求め続けています。
             </p>
-
             <p
               className={`hero_right_p hero_right_p hero_right_p2 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
               My passion lies in acquiring knowledge and staying abreast with

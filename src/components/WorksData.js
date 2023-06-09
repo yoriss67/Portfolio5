@@ -1,23 +1,8 @@
 const ProjectsData = [
-
-
   {
     id: 1,
     title: 'E-commerce Website',
-    // images: {
-    //     slides: [
-    //         "./images/screencapture-home.png",
-    //         "./images/screencapture-shop.png",
-    //         "./images/screencapture-readme.png",
-    //         "./images/screencapture-about.png",
-    //         "./images/screencapture-contact.png",
-    //         "./images/screencapture-sproduct.png",
-    //         "./images/screencapture-cart.png",
-    //     ],
-    // },
-
     image: 'e-commerce.png',
-
     siteLink: 'https://yoriss67.github.io/Tech2-etc-Ecommerce-Website/',
     descriptionEn:
       'This project is free open tutorial by Tech2 etc on YouTube. I enjoyed and learned how to structure code by guessing before watching his instructions. The most important takeaway from this project is to develop solid foundation in advance.',
@@ -38,11 +23,6 @@ const ProjectsData = [
   {
     id: 2,
     title: 'Easybank Landing Page',
-    // images: {
-    //     desktop: "./images/easybank-desktop.jpg",
-    //     tablet: "./images/easybank-tablet.jpg",
-    //     mobile: "./images/easybank-mobile.jpg",
-    // },
     image: '/easybank-desktop.jpg',
     siteLink:
       'https://yoriss67.github.io/Frontend-mentor-Easybank-landing-page/',

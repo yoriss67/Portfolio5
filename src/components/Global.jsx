@@ -2,14 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Global.css';
 
 function Global({ isJapanese, setLanguage })  {
-
-  // useEffect(() => {
-  //   const loader = document.getElementById('loading');
-  //   loader.classList.add('loaded');
-  // }, []);
-
-
-
   window.onload = ()=>{
     const loader = document.getElementById('loader');
     loader.classList.add('loaded');
@@ -37,6 +29,8 @@ function Global({ isJapanese, setLanguage })  {
         stalker.style.top = `${y}px`;
       }, 140);
     };
+
+    // ここまで
 
     document.addEventListener('mousemove', mouseMoveHandler);
 

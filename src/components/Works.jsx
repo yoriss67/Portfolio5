@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect, useState } from 'react';
-import WorksData from './WorksData'; // replace with the actual path to your data file
+import WorksData from './WorksData'; 
 import './Works.css';
 
 import { useInView } from 'react-intersection-observer';
@@ -22,8 +22,10 @@ const Works = ({isJapanese}) => {
           key={work.id}
           className={`works__flex ${work.title
             .replace(/\s+/g, '')
-            .toLowerCase()}`}
+            }`}
         >
+          {/* .toLowerCase() */}
+          
           <div className="works__image" ref={ref}>
                 <img
                   className='animate__animated animate__fadeInUp'

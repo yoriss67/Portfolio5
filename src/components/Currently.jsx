@@ -8,7 +8,6 @@ import { useInView } from 'react-intersection-observer';
 
 function Currently({ isJapanese }) {
   const { ref, inView } = useInView({
-    // オプション
     rootMargin: '10px', // ref要素が現れてから50px過ぎたら
     triggerOnce: true, // 最初の一度だけ実行
   });
@@ -144,21 +143,6 @@ function Currently({ isJapanese }) {
       )}
     </div>
 
-    //   <div>
-    //   <div style={{ height: '2000px', backgroundColor: 'blue' }}>contents</div>
-    //   {/* refを与えた要素がウインドウ内に現れるとinViewがtrueになります */}
-    //   <div ref={ref} style={{ height: '300px' }}>
-    //     {inView && (
-    //       <div
-    //         className="animate__animated animate__fadeInUp"
-    //         style={{ backgroundColor: 'yellow' }}
-    //       >
-    //         <p>黄色の要素が出現！</p>
-    //       </div>
-    //     )}
-    //   </div>
-    // </div>
-    // </div>
   );
 }
 
