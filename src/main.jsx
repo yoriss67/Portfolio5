@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'animate.css';
-import { Header, Hero, Bio, Avatar, Currently, Works, Global, Horizontal, Gsap, Navbar} from './index';
+import { Header, Hero, Bio, Avatar, Currently, Works, Global, Gsap, Navbar} from './index';
 
 // import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,7 +20,6 @@ function Main() {
       <Works isJapanese={isJapanese} />
       <Avatar />
       <Currently  isJapanese={isJapanese}/>
-      {/* <Horizontal /> */}
       {/* <Gsap /> */}
     </>
   );

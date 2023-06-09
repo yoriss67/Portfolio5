@@ -21,10 +21,10 @@ const Works = ({isJapanese}) => {
         <div
           key={work.id}
           className={`works__flex ${work.title
-            .replace(/\s+/g, '')
+            
             }`}
         >
-          {/* .toLowerCase() */}
+          {/* .replace(/\s+/g, '').toLowerCase() */}
           
           <div className="works__image" ref={ref}>
                 <img

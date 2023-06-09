@@ -5,6 +5,5 @@ export { default as Avatar } from './components/Avatar';
 export { default as Currently } from './components/Currently';
 export { default as Works } from './components/Works';
 export { default as Global } from './components/Global';
-export { default as Horizontal } from './components/scenes/Horizontal';
 export { default as Gsap } from './components/Gsap';
 export { default as Navbar } from './components/Navbar';
