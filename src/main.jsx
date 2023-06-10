@@ -14,10 +14,10 @@ function Main() {
     <>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       <Navbar />
-      {/* <Hero isJapanese={isJapanese} /> */}
+      <Hero isJapanese={isJapanese} />
       <Bio isJapanese={isJapanese} />
-      {/* <Works isJapanese={isJapanese} /> */}
-      {/* <Avatar /> */}
+      <Works isJapanese={isJapanese} />
+      <Avatar />
       <Currently  isJapanese={isJapanese}/>
     </>
   );
