@@ -6,13 +6,10 @@ import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
 function Currently({ isJapanese }) {
-
-// https://betterprogramming.pub/react-useinview-hook-intersection-observer-animations-and-multiple-refs-73c68a33b5b1
+  // https://betterprogramming.pub/react-useinview-hook-intersection-observer-animations-and-multiple-refs-73c68a33b5b1
   // const firstParagraphRef = useRef(null);
   // const secondParagraphRef = useRef(null);
   // const observedElements = useInView([firstParagraphRef, secondParagraphRef]);
-
-
 
   // const [ref, inView] = useInView({
   //   rootMargin: '-10px',
@@ -27,7 +24,6 @@ function Currently({ isJapanese }) {
   // const animationClassName = inView ? 'start-animation' : '';
   // みっつ下をつけてたけどいったやめた
   //  ${animationClassName}
-
 
   // 🌸
   const [refLeft, inViewLeft] = useInView({
@@ -48,89 +44,102 @@ function Currently({ isJapanese }) {
   return (
     <div className="currently section" style={{ height: '30vh' }}>
       <div className="currently_pa ">
-
- 
-          <div className={`currently_child currently_left   ${inViewLeft ? "animate__animated animate__fadeInUp animate__slower" : ""} `} ref={refLeft}>
-            <div className="currently_img_pa">
-              <img src="n.png" className="currently_img " />
-            </div>
-            <div className="currently_text currently_text_left">
-              <h4>Digital business card</h4>
-              <a
-                className={`eye-text toggleBox-en ${
-                  isJapanese ? 'display-none' : ''
-                }`}
-                href="https://myprofile-card-yoriss67.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view site
-              </a>
-              <a
-                className={`eye-text toggleBox-jp ${
-                  isJapanese ? '' : 'display-none'
-                }`}
-                href="https://myprofile-card-yoriss67.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                サイトを見る
-              </a>
-              <p
-                className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}
-              >
-                This is first solo React project!
-              </p>
-              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                最初のReactプロジェクトです！
-              </p>
-            </div>
+        <div
+          className={`currently_child currently_left   ${
+            inViewLeft
+              ? 'animate__animated animate__fadeInUp animate__slower'
+              : ''
+          } `}
+          ref={refLeft}
+        >
+          <div className="currently_img_pa">
+            <img src="n.png" className="currently_img " />
           </div>
-
-
-      
-
-       
-          <div ref={refMiddle} className={`currently_child currently_middle ${inViewMiddle ? "animate__animated animate__fadeInUp animate__delay__5s" : ""}`}>            <div className="currently_img_pa">
-              <img src="netlify-travel-journal.png" className="currently_img" />
-            </div>
-            <div className="currently_text currently_text_middle">
-              <h4>Travel journal</h4>
-              <a
-                className={`eye-text toggleBox-en ${
-                  isJapanese ? 'display-none' : ''
-                }`}
-                href="https://yoriss67travel-journal.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view site
-              </a>
-              <a
-                className={`eye-text toggleBox-jp ${
-                  isJapanese ? '' : 'display-none'
-                }`}
-                href="https://yoriss67travel-journal.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                サイトを見る
-              </a>
-              <p
-                className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}
-              >
-                NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still
-                static...
-              </p>
-              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...
-              </p>
-            </div>
+          <div className="currently_text currently_text_left">
+            <h4>Digital business card</h4>
+            <a
+              className={`eye-text toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+              href="https://myprofile-card-yoriss67.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              view site
+            </a>
+            <a
+              className={`eye-text toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+              href="https://myprofile-card-yoriss67.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              サイトを見る
+            </a>
+            <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+              This is first solo React project!
+            </p>
+            <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+              最初のReactプロジェクトです！
+            </p>
           </div>
+        </div>
 
+        <div
+          ref={refMiddle}
+          className={`currently_child currently_middle ${
+            inViewMiddle
+              ? 'animate__animated animate__fadeInUp animate__delay__5s'
+              : ''
+          }`}
+        >
+          {' '}
+          <div className="currently_img_pa">
+            <img src="netlify-travel-journal.png" className="currently_img" />
+          </div>
+          <div className="currently_text currently_text_middle">
+            <h4>Travel journal</h4>
+            <a
+              className={`eye-text toggleBox-en ${
+                isJapanese ? 'display-none' : ''
+              }`}
+              href="https://yoriss67travel-journal.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              view site
+            </a>
+            <a
+              className={`eye-text toggleBox-jp ${
+                isJapanese ? '' : 'display-none'
+              }`}
+              href="https://yoriss67travel-journal.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              サイトを見る
+            </a>
+            <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+              NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still
+              static...
+            </p>
+            <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+              旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...
+            </p>
+          </div>
+        </div>
 
-          <div ref={refRight} className={`currently_child currently_right ${inViewRight ? "animate__animated animate__fadeInUp animate__delay__5s" : ""}`}>
-        ...          <div className="currently_img_pa">
+        <div
+          ref={refRight}
+          className={`currently_child currently_right ${
+            inViewRight
+              ? 'animate__animated animate__fadeInUp animate__delay__5s'
+              : ''
+          }`}
+        >
+          ...{' '}
+          <div className="currently_img_pa">
             <img src="netlify-meme.png" className="currently_img" />
           </div>
           <div className="currently_text currently_text_right">
@@ -161,9 +170,7 @@ function Currently({ isJapanese }) {
             </p>
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }
