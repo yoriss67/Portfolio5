@@ -138,7 +138,7 @@ function Currently({ isJapanese }) {
               : ''
           }`}
         >
-          ...{' '}
+      
           <div className="currently_img_pa">
             <img src="netlify-meme.png" className="currently_img" />
           </div>
