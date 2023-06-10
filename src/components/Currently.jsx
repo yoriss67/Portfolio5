@@ -1,26 +1,56 @@
-// 🌸
-import React, { useEffect, useState } from 'react';
-// import './Currently.css';
+import { faL } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useRef } from 'react';
 
 // https://zenn.dev/himorishige/articles/e17b7d04fc7722
 import { useInView } from 'react-intersection-observer';
-// import 'animate.css';
+import 'animate.css';
 
 function Currently({ isJapanese }) {
-  const { ref, inView } = useInView({
-    rootMargin: '10px', // ref要素が現れてから50px過ぎたら
-    triggerOnce: true, // 最初の一度だけ実行
+
+// https://betterprogramming.pub/react-useinview-hook-intersection-observer-animations-and-multiple-refs-73c68a33b5b1
+  // const firstParagraphRef = useRef(null);
+  // const secondParagraphRef = useRef(null);
+  // const observedElements = useInView([firstParagraphRef, secondParagraphRef]);
+
+
+
+  // const [ref, inView] = useInView({
+  //   rootMargin: '-10px',
+  //   triggerOnce: true,
+  // });
+
+  // const [ref1, inView1] = useInView({
+  //   rootMargin: '-10px',
+  //   triggerOnce: false,
+  // });
+
+  // const animationClassName = inView ? 'start-animation' : '';
+  // みっつ下をつけてたけどいったやめた
+  //  ${animationClassName}
+
+
+  // 🌸
+  const [refLeft, inViewLeft] = useInView({
+    rootMargin: '-10px',
+    triggerOnce: true,
   });
 
-  const animationClassName = inView ? 'start-animation' : '';
+  const [refMiddle, inViewMiddle] = useInView({
+    rootMargin: '-10px',
+    triggerOnce: true,
+  });
+
+  const [refRight, inViewRight] = useInView({
+    rootMargin: '-10px',
+    triggerOnce: true,
+  });
 
   return (
-    <div className="currently section" ref={ref} style={{ height: '30vh' }}>
-      {inView && (
-        <div className="currently_pa ">
-          <div
-            className={`currently_child currently_left ${animationClassName}`}
-          >
+    <div className="currently section" style={{ height: '30vh' }}>
+      <div className="currently_pa ">
+
+ 
+          <div className={`currently_child currently_left   ${inViewLeft ? "animate__animated animate__fadeInUp animate__slower" : ""} `} ref={refLeft}>
             <div className="currently_img_pa">
               <img src="n.png" className="currently_img " />
             </div>
@@ -51,18 +81,17 @@ function Currently({ isJapanese }) {
               >
                 This is first solo React project!
               </p>
-              <p
-                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
-              >
+              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
                 最初のReactプロジェクトです！
               </p>
             </div>
           </div>
 
-          <div
-            className={`currently_child currently_middle ${animationClassName}`}
-          >
-            <div className="currently_img_pa">
+
+      
+
+       
+          <div ref={refMiddle} className={`currently_child currently_middle ${inViewMiddle ? "animate__animated animate__fadeInUp animate__delay__5s" : ""}`}>            <div className="currently_img_pa">
               <img src="netlify-travel-journal.png" className="currently_img" />
             </div>
             <div className="currently_text currently_text_middle">
@@ -93,24 +122,21 @@ function Currently({ isJapanese }) {
                 NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still
                 static...
               </p>
-              <p
-                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
-              >
+              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
                 旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...
               </p>
             </div>
           </div>
 
-          <div
-            className={`currently_child currently_right ${animationClassName}`}
-          >
-            <div className="currently_img_pa">
-              <img src="netlify-meme.png" className="currently_img" />
-            </div>
-            <div className="currently_text currently_text_right">
-              <h4>Meme generator</h4>
 
-              {/* <a
+          <div ref={refRight} className={`currently_child currently_right ${inViewRight ? "animate__animated animate__fadeInUp animate__delay__5s" : ""}`}>
+        ...          <div className="currently_img_pa">
+            <img src="netlify-meme.png" className="currently_img" />
+          </div>
+          <div className="currently_text currently_text_right">
+            <h4>Meme generator</h4>
+
+            {/* <a
                   className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                   href='   '
                   target="_blank"
@@ -127,22 +153,18 @@ function Currently({ isJapanese }) {
                   サイトを見る
                 </a> */}
 
-              <p
-                className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}
-              >
-                I am literally developing now!🙋‍♀️
-              </p>
-              <p
-                className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
-              >
-                まさに今開発中です！🙋‍♀️
-              </p>
-            </div>
+            <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+              I am literally developing now!🙋‍♀️
+            </p>
+            <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+              まさに今開発中です！🙋‍♀️
+            </p>
           </div>
         </div>
-      )}
-    </div>
 
+      </div>
+
+    </div>
   );
 }
 

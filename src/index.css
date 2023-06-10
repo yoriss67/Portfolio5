@@ -428,8 +428,7 @@ h2 {
 .currently_child {
   display: flex;
   flex-direction: column;
-  /* top: 30%;
-  position: absolute; */
+
   width: 30%;
   align-items: center;
   text-align: center;
@@ -541,7 +540,7 @@ h2 {
   /* transform: translateY(300%); */
 }
 
-.start-animation {
+/* .start-animation {
   animation: fadeUp 3s ease-in forwards;
   opacity: 0;
 }
@@ -558,15 +557,19 @@ h2 {
 }
 .currently_left {
   animation-delay: 0.5s;
-}
+} */
 
-.currently_middle {
+/* .currently_middle {
   animation-delay: 1s;
 }
 
 .currently_right {
   animation-delay: 1.5s;
-}
+} */
+
+
+
+
 
 @media all and (max-width: 768px) {
   h3 {
