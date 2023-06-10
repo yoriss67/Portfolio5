@@ -255,7 +255,7 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(../public/expand-long.png);
+  background-image: url(../public/expand-long-min.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 35%;
@@ -326,7 +326,7 @@ h2 {
   width: 30%;
   height: auto;
   margin: 0 auto;
-  background-image: url(../public/expand-long.png);
+  background-image: url(../public/expand-long-min.png);
   background-position: center 30%;
   border-radius: 50%;
   display: flex;

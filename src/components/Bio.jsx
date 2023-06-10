@@ -15,7 +15,7 @@ function Bio({ isJapanese }) {
         <div className="bio_img_pa animate__animated animate__fadeInUp">
           <img
             className="bio_img "
-            src="profile.png"
+            src="profile-min.png"
           ></img>
           </div>
           <div className="bio_p">
