@@ -6,26 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
 function Currently({ isJapanese }) {
-  // https://betterprogramming.pub/react-useinview-hook-intersection-observer-animations-and-multiple-refs-73c68a33b5b1
-  // const firstParagraphRef = useRef(null);
-  // const secondParagraphRef = useRef(null);
-  // const observedElements = useInView([firstParagraphRef, secondParagraphRef]);
 
-  // const [ref, inView] = useInView({
-  //   rootMargin: '-10px',
-  //   triggerOnce: true,
-  // });
-
-  // const [ref1, inView1] = useInView({
-  //   rootMargin: '-10px',
-  //   triggerOnce: false,
-  // });
-
-  // const animationClassName = inView ? 'start-animation' : '';
-  // みっつ下をつけてたけどいったやめた
-  //  ${animationClassName}
-
-  // 🌸
   const [refLeft, inViewLeft] = useInView({
     rootMargin: '-10px',
     triggerOnce: true,
@@ -44,14 +25,7 @@ function Currently({ isJapanese }) {
   return (
     <div className="currently section" style={{ height: '30vh' }}>
       <div className="currently_pa ">
-        <div
-          className={`currently_child currently_left   ${
-            inViewLeft
-              ? 'animate__animated animate__fadeInUp animate__slower'
-              : ''
-          } `}
-          ref={refLeft}
-        >
+        <div className={`currently_child currently_left   ${inViewLeft ? 'animate__animated animate__fadeInUp animate__slower' : '' } `} ref={refLeft}>
           <div className="currently_img_pa">
             <img src="n.png" className="currently_img " />
           </div>
@@ -86,16 +60,8 @@ function Currently({ isJapanese }) {
           </div>
         </div>
 
-        <div
-          ref={refMiddle}
-          className={`currently_child currently_middle ${
-            inViewMiddle
-              ? 'animate__animated animate__fadeInUp animate__delay__5s'
-              : ''
-          }`}
-        >
-          {' '}
-          <div className="currently_img_pa">
+        <div ref={refMiddle} className={`currently_child currently_middle ${ inViewMiddle ? 'animate__animated animate__fadeInUp animate__slower' : ''}`}>     
+         <div className="currently_img_pa">
             <img src="netlify-travel-journal.png" className="currently_img" />
           </div>
           <div className="currently_text currently_text_middle">
@@ -134,7 +100,7 @@ function Currently({ isJapanese }) {
           ref={refRight}
           className={`currently_child currently_right ${
             inViewRight
-              ? 'animate__animated animate__fadeInUp animate__delay__5s'
+              ? 'animate__animated animate__fadeInUp animate__slower'
               : ''
           }`}
         >
