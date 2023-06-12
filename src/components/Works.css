@@ -97,11 +97,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .works__text__sent {
   width: 85%;
-  padding: 10% 0;
+  padding: 5% 0 10%;
   margin: 0 auto;
 }
 
@@ -188,7 +189,6 @@
     align-items: center;
   }
   .works__text__title {
-    display: inline-block;
     align-items: center;
     text-align: center;
   }

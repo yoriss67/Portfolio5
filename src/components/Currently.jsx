@@ -164,13 +164,7 @@ function Currently({ isJapanese }) {
           } `}
           ref={refLeft}
         >
-          <motion.div
-            initial={{ opacity: 0.3, scale: 0.8, y: '10vw' }}
-            // animate={{ rotate: 360, opacity: 1, scale: 1 }}
-            animate={inViewLeft ? { y: '0vw', opacity: 1, scale: 1 } : {}}
-            // stiffnessはdefaultが100で、数値が大きいほど硬い
-            transition={{ duration: 1 }}
-          >
+          <motion.div initial={{ opacity: 0.3, scale: 0.8, y: '10vw' }} animate={inViewLeft ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 1 }} >
             <div className="currently_img_pa">
               <img src="n.png" className="currently_img " />
             </div>

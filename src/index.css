@@ -117,10 +117,9 @@ h2 {
   height: 99vh;
   width: 100%;
   margin: 0 auto 15vh;
-  /* background-image: url(../public/expand-long.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 25%; */
+
+  color: #fff;
+
   position: relative;
   /* background-image: url(../public/Surfers\ in\ lineup\ waiting\ -\ original\ painting\ by\ @lavater_art.jpg); */
 
@@ -235,7 +234,7 @@ h2 {
 
 .hero_left {
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   gap: 4vw;
 }
@@ -283,7 +282,7 @@ h2 {
   margin: 0 auto;
 }
 
-.hero_right_p1,
+/* .hero_right_p1,
 .hero_right_p2,
 .hero_right_p3 {
   animation: fadeUp 3s ease-in forwards;
@@ -310,7 +309,7 @@ h2 {
 
 .hero_right_p3 {
   animation-delay: 4s;
-}
+} */
 
 /* .hero_right_p.loaded {
   opacity: 1;
@@ -354,7 +353,6 @@ h2 {
 
 .bio_name {
   text-align: center;
-  font-weight: bold;
 }
 
 .bio_snt {
