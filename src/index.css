@@ -378,8 +378,12 @@ h2 {
 
 /* AVATAR */
 .avatar {
-  height: 20vh;
+  min-height: 20vh;
 }
+.avatar .canvas_pa {
+  height: 30vh;
+}
+
 .avatar .spline {
   width: 100%;
   height: 100%;

@@ -142,17 +142,17 @@ function Currently({ isJapanese }) {
 
   const [refLeft, inViewLeft] = useInView({
     rootMargin: '-10px',
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const [refMiddle, inViewMiddle] = useInView({
     rootMargin: '-10px',
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const [refRight, inViewRight] = useInView({
     rootMargin: '-10px',
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (
