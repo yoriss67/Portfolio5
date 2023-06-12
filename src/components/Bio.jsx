@@ -2,6 +2,9 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
+
+
+
 function Bio({ isJapanese }) {
 
   const [ref1, inView1] = useInView({
@@ -26,6 +29,7 @@ function Bio({ isJapanese }) {
 
   return (
     <div className="bio section" >
+
         <>
         <div className="bio_img_pa animate__animated animate__fadeInUp">
           <img
@@ -119,6 +123,7 @@ function Bio({ isJapanese }) {
           </div>
         </>
 
+        
     </div>
   );
 }

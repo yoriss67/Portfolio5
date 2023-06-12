@@ -7,3 +7,4 @@ export { default as Works } from './components/Works';
 export { default as Global } from './components/Global';
 export { default as Gsap } from './components/Gsap';
 export { default as Navbar } from './components/Navbar';
+export { default as Framer } from './components/Framer';

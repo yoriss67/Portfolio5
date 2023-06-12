@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Spline from '@splinetool/react-spline';
+// import Spline from '@splinetool/react-spline';
 
 import { useInView } from 'react-intersection-observer';
 
@@ -12,7 +12,9 @@ function Hero({ isJapanese }) {
 
   return (
     <div className="hero" ref={ref}>
-      <Spline className="spline_waves" scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode"/>
+      {/* <Spline className="spline_waves" scene="https://prod.spline.design/TVtHs7EEwNMWNjKT/scene.splinecode"/> */}
+          <div className="spline_waves"></div>
+
       {inView && (
         <div className="hero_width">
 

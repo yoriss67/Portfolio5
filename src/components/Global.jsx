@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Global.css';
 
 function Global({ isJapanese, setLanguage })  {
+
   window.onload = ()=>{
     const loader = document.getElementById('loader');
     loader.classList.add('loaded');
