@@ -1,9 +1,8 @@
 import { faL } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 // https://zenn.dev/himorishige/articles/e17b7d04fc7722
 import { useInView } from 'react-intersection-observer';
-// import 'animate.css';
 
 import { motion } from 'framer-motion';
 
@@ -219,12 +218,12 @@ function Currently({ isJapanese }) {
             </div>
 
             <div className="currently_text currently_text_middle">
-              <h4>Travel journal</h4>
+              <h4>Top companies</h4>
               <a
                 className={`eye-text toggleBox-en ${
                   isJapanese ? 'display-none' : ''
                 }`}
-                href="https://yoriss67travel-journal.netlify.app/"
+                href="https://yoriss67top-companies.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -243,11 +242,10 @@ function Currently({ isJapanese }) {
               <p
                 className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}
               >
-                NOT ABOUT TRAVEL😂Showcase of top 5 companies in te world. Still
-                static...
+                I learned how to use props and array map.
               </p>
               <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                旅行関係ないです😂世界のトップ5の会社をリストにしました。でもまだ静的です...
+                propsとarray mapの使い方を学びました。
               </p>
             </div>
           </motion.div>

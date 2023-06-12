@@ -7,9 +7,19 @@ export default function Framer() {
 
     <div>
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ rotate: 360, opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5}}
+    className="box"
+      initial={{ opacity: 0.4, scale: 0.5, backgroundColor: "salmon" }}
+      animate={{ 
+        rotate: -360,
+         opacity: 1, 
+         scale: 1, 
+         x: "40vw",
+         y: "40vh",
+       backgroundColor: "greenyellow",
+       scale: 1.5
+         }}
+      // dampingのdefaultは10
+      transition={{ duration: 0.5, type: "spring",stiffness: 20, damping: 20}}
 
       whileHover={{
         scale: .8,
@@ -22,7 +32,7 @@ export default function Framer() {
         console.log('end');
       }}
     >
-        <div className="box">box</div>
+     
 
 
     </motion.div>
