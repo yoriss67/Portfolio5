@@ -619,6 +619,7 @@ h2 {
     left: 8%;
     margin: 0 auto;
     gap: 20vw;
+    height: 100%;
   }
 
   .hero canvas {

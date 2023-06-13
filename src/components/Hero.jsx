@@ -32,7 +32,7 @@ function Hero({ isJapanese }) {
   });
 
   const [ref3, inView3] = useInView({
-    rootMargin: '-50px',
+    rootMargin: '-30px',
     triggerOnce: true,
   });
 
@@ -105,8 +105,7 @@ function Hero({ isJapanese }) {
 
             <div className={`hero_right_p3 ${inView3 ?  'true' : 'false' }`} ref={ref3} >
             <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView3 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 8  }} >
-                            <p
-                className={`hero_right_p hero_right_p3 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
+<p className={`hero_right_p hero_right_p3 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
                 Driven by curiosity and a desire for personal growth, I strive to
                 turn insights into impactful actions.
               </p>
