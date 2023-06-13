@@ -72,7 +72,7 @@ function Hero({ isJapanese }) {
           <div className={`hero_right`}>
 
             <div className={`hero_right_p1 ${inView1 ?  'true' : 'false' }`} ref={ref1} >
-            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView1 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 7  }} >
+            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView1 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 5.5  }} >
 
               <p
                 className={`hero_right_p toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
@@ -88,7 +88,7 @@ function Hero({ isJapanese }) {
 
 
             <div className={`hero_right_p2 ${inView2 ?  'true' : 'false' }`} ref={ref2} >
-            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView2 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 7.2  }} >
+            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView2 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 6  }} >
               <p
                 className={`hero_right_p hero_right_p2 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
                 My passion lies in acquiring knowledge and staying abreast with
