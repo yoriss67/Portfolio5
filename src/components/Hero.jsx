@@ -88,7 +88,7 @@ function Hero({ isJapanese }) {
 
 
             <div className={`hero_right_p2 ${inView2 ?  'true' : 'false' }`} ref={ref2} >
-            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView2 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 7.5  }} >
+            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView2 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 7.2  }} >
               <p
                 className={`hero_right_p hero_right_p2 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
                 My passion lies in acquiring knowledge and staying abreast with
@@ -104,7 +104,7 @@ function Hero({ isJapanese }) {
 
 
             <div className={`hero_right_p3 ${inView3 ?  'true' : 'false' }`} ref={ref3} >
-            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView3 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 8  }} >
+            <motion.div initial={{ opacity: 0, y: '5vh' }} animate={inView3 ? { y: '0vw', opacity: 1, scale: 1 } : {}} transition={{ duration: 3, delay: 7.5  }} >
 <p className={`hero_right_p hero_right_p3 toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
                 Driven by curiosity and a desire for personal growth, I strive to
                 turn insights into impactful actions.
