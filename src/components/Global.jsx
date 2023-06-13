@@ -31,7 +31,7 @@ function Global({ isJapanese, setLanguage })  {
       }, 140);
     };
 
-    // ここまで
+
 
     document.addEventListener('mousemove', mouseMoveHandler);
 

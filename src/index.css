@@ -597,7 +597,7 @@ h2 {
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding: 0;
-    margin: 0 3vw 0 auto;
+    margin: 0 4vw 0 auto;
   }
 
   /* NAVBAR */
@@ -610,7 +610,7 @@ h2 {
 
   /* HERO */
   .hero {
-    height: 55rem;
+    min-height: 55rem;
   }
   .hero_width {
     flex-direction: column;
