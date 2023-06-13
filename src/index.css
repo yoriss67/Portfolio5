@@ -610,16 +610,17 @@ h2 {
 
   /* HERO */
   .hero {
-    min-height: 55rem;
+    min-height: 53rem;
   }
   .hero_width {
     flex-direction: column;
     /* position: relative; */
     top: 20%;
     left: 8%;
-    margin: 0 auto;
+    margin: 10vh auto 0;
     gap: 20vw;
     height: 100%;
+    justify-content: flex-start;
   }
 
   .hero canvas {
