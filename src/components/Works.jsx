@@ -7,10 +7,10 @@ import { useInView } from 'react-intersection-observer';
 import 'animate.css';
 
 const Works = ({isJapanese}) => {
-  const { ref, inView } = useInView({
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
+  // const { ref, inView } = useInView({
+  //   rootMargin: '-100px',
+  //   triggerOnce: true,
+  // });
 
   return (
     <div className="works section works_bg">
@@ -24,9 +24,10 @@ const Works = ({isJapanese}) => {
             
             }`}
         >
-          {/* .replace(/\s+/g, '').toLowerCase() */}
+          {/* 使わない .replace(/\s+/g, '').toLowerCase() */}
           
-          <div className="works__image" ref={ref}>
+          {/* 使わない<div className="works__image" ref={ref}> */}
+          <div className="works__image">
                 <img
                   className='animate__animated animate__fadeInUp'
                   key={work.id}

@@ -17,8 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-}
 
 h2 {
   text-align: center;
@@ -86,10 +84,8 @@ h2 {
 
 .nav-link {
   font-size: 2.5rem;
-  color: #A3B1AF;
+  color: #a3b1af;
   color: #75a19b;
-
-
 }
 
 .fa-twitter:hover {
@@ -120,38 +116,13 @@ h2 {
   height: 99vh;
   width: 100%;
   margin: 0 auto 15vh;
-
   color: #fff;
-
   position: relative;
-  /* background-image: url(../public/Surfers\ in\ lineup\ waiting\ -\ original\ painting\ by\ @lavater_art.jpg); */
-
-  /* https://codepen.io/majidv/pen/MWjQaaQ */
-  /* overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    #e3e5e8 0%,
-    #ebe4e3 10%,
-    #e4e1e0 25%,
-    #e8d9a9 45%,
-    #66d2f0 60%,
-    #a2e5ce 75%,
-    #8ba9bf55 85%,
-    hsla(220, 19%, 88%, 0) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 30%; */
 }
 
 .hero_bg {
   width: 100%;
   height: 100%;
-  /* background-image: url(expand-long.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 35%; */
-
   filter: blur(6px);
   z-index: -1;
   position: absolute;
@@ -159,71 +130,6 @@ h2 {
   left: 0;
 }
 
-/* 
-.hero::before,
-.hero::after,
-.hero > .circles,
-.hero > .circles::before,
-.hero > .circles::after {
-  filter: blur(75px);
-}
-
-.hero::before,
-.hero::after {
-  position: absolute;
-  content: '';
-  width: 390px;
-  height: 390px;
-  border-radius: 100%;
-}
-
-.hero::before {
-  background: #c4d1b6;
-  top: 100px;
-  left: 200px;
-}
-
-.hero::after {
-  background: #ffc285;
-  right: 5px;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.hero > .circles,
-.hero > .circles::before,
-.hero > .circles::after {
-  border-radius: 100%;
-  position: absolute;
-}
-
-.hero > .circles::before,
-.hero > .circles::after {
-  content: '';
-  width: 140px;
-  height: 140px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hero > .circles {
-  width: 230px;
-  height: 230px;
-  background: #ffc285;
-  background: #00a5f4;
-  bottom: 400px;
-  left: 300px;
-} 
-
-.hero > .circles::before {
-  background: #9371b0;
-  left: -40%;
-}
-
-.hero > .circles::after {
-  background: #aa9696;
-  right: -20%;
-} */
 
 .hero_width {
   width: 80%;
@@ -252,10 +158,7 @@ h2 {
   font-size: 3rem;
 }
 
-/* .hero .spline {
-  width: 100%;
-  height: 80%;
-} */
+
 
 .spline_waves {
   position: absolute;
@@ -277,46 +180,11 @@ h2 {
 
 .hero_right {
   text-align: left;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   width: 100%;
   margin: 0 auto;
 }
 
-/* .hero_right_p1,
-.hero_right_p2,
-.hero_right_p3 {
-  animation: fadeUp 3s ease-in forwards;
-  opacity: 0;
-}
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.hero_right_p1 {
-  animation-delay: 3s;
-}
-
-.hero_right_p2 {
-  animation-delay: 3.5s;
-}
-
-.hero_right_p3 {
-  animation-delay: 4s;
-} */
-
-/* .hero_right_p.loaded {
-  opacity: 1;
-} */
 
 /* BIO */
 .bio {
@@ -344,7 +212,6 @@ h2 {
   width: 95%;
   height: 95%;
   margin: 0 auto;
-  /* border: 1px solid #000; */
   border-radius: 50%;
 }
 
@@ -367,18 +234,6 @@ h2 {
   opacity: 1;
 }
 
-.bio_snt1 {
-}
-
-.bio_snt2 {
-}
-
-.bio_snt3 {
-}
-
-.bio_snt4 {
-}
-
 /* AVATAR */
 .avatar {
   min-height: 20vh;
@@ -396,23 +251,20 @@ h2 {
 
 .currently_pa {
   position: relative;
-  /* display: flex; */
-  /* border: 1px solid black; */
   width: 80vw;
   height: 50vh;
   margin: 10vh auto;
 }
+
 .currently_img_pa {
   position: relative;
   background-size: cover;
-
   background: -moz-linear-gradient(top left, #d2d984, #da7daf);
   background: -webkit-linear-gradient(top left, #73fb12, #553a8f);
   background: linear-gradient(to bottom right, #eee8cc, #c3dcde);
   background-image: url(../public/expand-long.png);
   background-position: center 20%;
   background-color: #fff;
-
   width: 15rem;
   height: 15rem;
   border-radius: 20px;
@@ -447,7 +299,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* height: 15vh; */
   margin: 5vh auto;
   text-align: left;
   text-align: center;
@@ -455,37 +306,12 @@ h2 {
 
 .currently_left {
   position: absolute;
-  /* left: 10%; */
 }
 
 .currently_left {
-  /* animation-name: slideAndRotateLeft; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
-
-/* @keyframes slideAndRotateLeft {
-  0% {
-    opacity: 0;
-    transform: translateY(1000%);
-
-    left: 40%;
-  }
-  50% {
-    opacity: 0.5;
-
-    left: 40%;
-  }
-  70% {
-    left: 40%;
-  }
-  100% {
-    opacity: 1;
-    left: 0%;
-  }
-} */
-
-/* ----- */
 
 .currently_middle {
   position: absolute;
@@ -493,29 +319,11 @@ h2 {
 }
 
 .currently_middle {
-  /* animation-name: slideAndRotateMiddle; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
 
-/* @keyframes slideAndRotateMiddle {
-  0% {
-    opacity: 0;
-    transform: translateY(1000%);
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 
-.currently_text_middle {
-  /* transform: translateY(300%); */
-}
-
-/* ------ */
 
 .currently_right {
   position: absolute;
@@ -523,61 +331,9 @@ h2 {
 }
 
 .currently_right {
-  /* animation-name: slideAndRotateRight; */
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
-
-/* @keyframes slideAndRotateRight {
-  0% {
-    opacity: 0;
-    transform: translateY(1000%);
-    left: 37.5%;
-    left: 40%;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  70% {
-    left: 40%;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-.currently_text_right {
-  /* transform: translateY(300%); */
-}
-
-/* .start-animation {
-  animation: fadeUp 3s ease-in forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.currently_left {
-  animation-delay: 0.5s;
-} */
-
-/* .currently_middle {
-  animation-delay: 1s;
-}
-
-.currently_right {
-  animation-delay: 1.5s;
-} */
-
-
 
 
 
@@ -614,7 +370,6 @@ h2 {
   }
   .hero_width {
     flex-direction: column;
-    /* position: relative; */
     top: 20%;
     left: 8%;
     margin: 10vh auto 0;
@@ -691,13 +446,3 @@ h2 {
   }
 }
 
-
-
-
-/* ---------------------------- */
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: salmon;
-}

@@ -8,11 +8,10 @@ function Global({ isJapanese, setLanguage })  {
     loader.classList.add('loaded');
 }
 
-
-
   const handleTranslateClick = () => {
     setLanguage(!isJapanese);
   };
+  
   
   useEffect(() => {
     const cursor = document.getElementById('cursor');
