@@ -32,7 +32,7 @@ function Hero({ isJapanese }) {
   });
 
   const [ref3, inView3] = useInView({
-    rootMargin: '-50px',
+    rootMargin: '10px',
     triggerOnce: true,
   });
 
