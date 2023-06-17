@@ -103,14 +103,14 @@ function Currently({ isJapanese }) {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <div className="currently_img_pa">
-              <img src="netlify-meme.png" className="currently_img" />
+              <img src="meme-generator.png" className="currently_img" />
             </div>
             <div className="currently_text currently_text_right">
               <h4>Meme generator</h4>
 
-              {/* <a
+              <a
                   className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
-                  href='   '
+                  href='https://yoriss67meme-generator.netlify.app/'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -118,15 +118,15 @@ function Currently({ isJapanese }) {
                 </a>
                 <a
                   className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
-                  href='   '
+                  href='https://yoriss67meme-generator.netlify.app/'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   サイトを見る
-                </a> */}
+                </a>
 
-              <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>I am literally developing now!🙋‍♀️</p>
-              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>まさに今開発中です！🙋‍♀️</p>
+              <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>There were so many concepts to learn for me! I experienced how to use useState, useEffect, API calls and async function.</p>
+              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>私にとっては学ぶべき概念がたくさんありました！useState、useEffect、APIコール、async関数の使い方を体験しました。</p>
             </div>
           </motion.div>
         </div>
