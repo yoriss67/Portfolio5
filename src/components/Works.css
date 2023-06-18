@@ -55,15 +55,18 @@
   width: 50%;
   height: 60%;
   border-radius: 20px;
+  margin: 5vh auto;
 }
 
-.works__image img {
+.works__image__img {
   width: 100%;
   height: 40vh;
   object-fit: cover;
   object-position: center 0%;
   scale: 0.8;
 }
+
+
 
 .works__text {
   width: 50%;
@@ -82,7 +85,7 @@
 
 .works__text__sent {
   width: 85%;
-  padding: 5% 0 10%;
+  padding: 5% 0 ;
   margin: 0 auto;
 }
 

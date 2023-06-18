@@ -384,8 +384,12 @@ FontAwesomeIcon {
   flex-direction: column;
   justify-content: space-evenly;
   margin: 5vh auto;
-  text-align: left;
   text-align: center;
+}
+
+.currently_text p {
+  text-align: left;
+
 }
 
 .currently_left {

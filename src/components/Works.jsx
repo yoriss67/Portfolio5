@@ -3,12 +3,15 @@ import React, { useRef, useEffect, useState } from 'react';
 import WorksData from './WorksData'; 
 import './Works.css';
 
+
 import { useInView } from 'react-intersection-observer';
-import 'animate.css';
+import { motion } from 'framer-motion';
+
 
 const Works = ({isJapanese}) => {
+
   // const { ref, inView } = useInView({
-  //   rootMargin: '-100px',
+  //   rootMargin: '-10px',
   //   triggerOnce: true,
   // });
 
@@ -20,20 +23,33 @@ const Works = ({isJapanese}) => {
       {WorksData.map((work) => (
         <div
           key={work.id}
-          className={`works__flex ${work.title
-            
-            }`}
+          // ref={ref}
+          
+          className={`
+          works__flex
+           ${work.title}
+            `}
         >
           {/* 使わない .replace(/\s+/g, '').toLowerCase() */}
           
           {/* 使わない<div className="works__image" ref={ref}> */}
           <div className="works__image">
-                <img
-                  className='animate__animated animate__fadeInUp'
+      
+                <motion.img
+                  className='works__image__img'
                   key={work.id}
                   src={work.image}
                   alt={`${work.title} image `}
+
+                  initial={{ opacity: 0.8, scale: 1}}
+                  // animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  whileHover={{ 
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: { duration: .5 },
+                   }}
                 />
+                {/* {console.log(inView)} */}
           </div>
 
           <div className="works__text">
