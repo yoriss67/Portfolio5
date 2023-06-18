@@ -4,11 +4,15 @@ import { faTwitter, faInstagram, faLinkedinIn, faGithub } from '@fortawesome/fre
 import { faNoteSticky } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
+
+
+
   return (
     <nav className="navbar navbar-expand-lg ">
+
       <img className="navbar-brand" src="sun.png" alt="logo" />
       <ul className="navbar-nav">
-        <li className="nav-item ">
+        <li className="nav-item">
           <a
             className="nav-link "
             aria-current="page"

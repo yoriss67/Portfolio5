@@ -21,11 +21,29 @@ body {
 h2 {
   text-align: center;
   font-size: max(2rem, 3vw);
+  font-weight: bold;
 }
 
 .section {
   margin: 5vh auto;
 }
+
+a {
+  color: #E16C64;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+}
+
+a:hover {
+  color: #af8d8a;
+  color: #7AA19A;
+
+  /* text-decoration: underline; */
+
+}
+
+
 
 /* TRANSLATE */
 
@@ -37,7 +55,7 @@ h2 {
   writing-mode: vertical-rl;
   text-orientation: upright;
   z-index: 9999;
-  color: #dcb9b4;
+  color: #B3966D;
   border: none;
   background-color: transparent;
   min-width: 1rem;
@@ -86,7 +104,58 @@ h2 {
   font-size: 2.5rem;
   color: #a3b1af;
   color: #75a19b;
+
+
+  position: relative;
+
+
 }
+
+
+
+/* 🌸 */
+/* .nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+FontAwesomeIcon {
+  position: relative;
+  z-index: 2;
+} */
+
+
+
+.fa-twitter {
+  color:#739DA4;
+}
+
+.fa-instagram {
+  color: #E16C64;
+}
+
+.fa-linkedin-in {
+  color: #36457dc4;
+}
+
+.fa-github {
+  color: #76838E;
+}
+
+.fa-note-sticky {
+  color: #839B85;
+}
+
 
 .fa-twitter:hover {
   color: #1d9bf0;
@@ -223,6 +292,21 @@ h2 {
 
 .bio_name {
   text-align: center;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgb(98, 121, 129) 0%,
+    rgb(103, 138, 163) 20%,
+    rgb(91, 121, 83) 35%,
+    rgba(188, 168, 120, 0.842) 71%,
+    rgba(202, 197, 152, 0.842) 85%,
+    rgba(190, 161, 88, 0.808) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
 }
 
 .bio_snt {
