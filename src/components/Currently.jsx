@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 function Currently({ isJapanese }) {
+  
   const [refLeft, inViewLeft] = useInView({
     rootMargin: '-10px',
     triggerOnce: true,
@@ -32,7 +33,7 @@ function Currently({ isJapanese }) {
             transition={{ duration: 1 }}
           >
             <div className="currently_img_pa">
-              <img src="n.png" className="currently_img " />
+              <img src="digital-business-card.png" className="currently_img " />
             </div>
             <div className="currently_text currently_text_left">
               <h4>Digital business card</h4>

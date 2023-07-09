@@ -22,7 +22,7 @@ export default function Navbar() {
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-        </li>
+        </li> 
 
         <li className="nav-item">
           <a className="nav-link" href="https://www.instagram.com/ioriiii_13/" target="_blank" rel="noreferrer">
