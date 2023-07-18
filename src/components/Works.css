@@ -101,6 +101,7 @@
   width: 85%;
   margin: 2vh auto;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .language-meter-info p {
@@ -120,6 +121,10 @@
   background-color: #563d7c;
 }
 
+.meter-ts {
+  background-color: #007acc;
+}
+
 .meter-js {
   background-color: #f0e05a;
   border-radius: 0 20px 20px 0;
@@ -127,12 +132,13 @@
 
 .html-circle,
 .css-circle,
+.ts-circle,
 .js-circle {
   width: 2.5vw;
   width: min(2vw, 1rem);
   height: min(2vw, 1rem);
   border-radius: 50%;
-  margin-right: 2px;
+  margin-right: 4px;
   margin-bottom: 18px;
 }
 
@@ -144,9 +150,15 @@
   background-color: #563d7c;
 }
 
+.ts-circle {
+  background-color: #007acc;
+}
+
 .js-circle {
   background-color: #f1e05a;
 }
+
+
 
 
 

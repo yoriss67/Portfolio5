@@ -1,15 +1,11 @@
-
 import React, { useRef, useEffect, useState } from 'react';
-import WorksData from './WorksData'; 
+import WorksData from './WorksData';
 import './Works.css';
 
-
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
-
-const Works = ({isJapanese}) => {
-
+const Works = ({ isJapanese }) => {
   // const { ref, inView } = useInView({
   //   rootMargin: '-10px',
   //   triggerOnce: true,
@@ -24,39 +20,36 @@ const Works = ({isJapanese}) => {
         <div
           key={work.id}
           // ref={ref}
-          
+
           className={`
           works__flex
            ${work.title}
             `}
         >
           {/* 使わない .replace(/\s+/g, '').toLowerCase() */}
-          
+
           {/* 使わない<div className="works__image" ref={ref}> */}
           <div className="works__image">
-      
-                <motion.img
-                  className='works__image__img'
-                  key={work.id}
-                  src={work.image}
-                  alt={`${work.title} image `}
-
-                  initial={{ opacity: 0.8, scale: 1}}
-                  // animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  whileHover={{ 
-                    scale: 1.05,
-                    opacity: 1,
-                    transition: { duration: .5 },
-                   }}
-                />
-                {/* {console.log(inView)} */}
+            <motion.img
+              className="works__image__img"
+              key={work.id}
+              src={work.image}
+              alt={`${work.title} image `}
+              initial={{ opacity: 0.8, scale: 1 }}
+              // animate={inView ? { opacity: 1, scale: 1 } : {}}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: { duration: 0.5 },
+              }}
+            />
+            {/* {console.log(inView)} */}
           </div>
 
           <div className="works__text">
             <div className="works__text__title">
               <h3>{work.title}</h3>
               <div className="eye-container">
-                
                 <a
                   className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                   href={work.siteLink}
@@ -84,27 +77,29 @@ const Works = ({isJapanese}) => {
             <div className="language-meter">
               {work.languages.html && (
                 <div
-                  className={`${work.title
-                    .replace(/\s+/g, '')
-                    .toLowerCase()}-meter-html meter-html`}
+                  className={`${work.title.replace(/\s+/g, '').toLowerCase()}-meter-html meter-html`}
                   style={{ width: work.languageDistribution.html }}
                 ></div>
               )}
 
               {work.languages.css && (
                 <div
-                  className={`${work.title
-                    .replace(/\s+/g, '')
-                    .toLowerCase()}-meter-css meter-css`}
+                  className={`${work.title.replace(/\s+/g, '').toLowerCase()}-meter-css meter-css`}
                   style={{ width: work.languageDistribution.css }}
+                ></div>
+              )}
+
+{/* 🙋‍♀️ */}
+              {work.languages.ts && (
+                <div
+                  className={`${work.title.replace(/\s+/g, '').toLowerCase()}-meter-ts meter-ts`}
+                  style={{ width: work.languageDistribution.ts }}
                 ></div>
               )}
 
               {work.languages.js && (
                 <div
-                  className={`${work.title
-                    .replace(/\s+/g, '')
-                    .toLowerCase()}-meter-js meter-js`}
+                  className={`${work.title.replace(/\s+/g, '').toLowerCase()}-meter-js meter-js`}
                   style={{ width: work.languageDistribution.js }}
                 ></div>
               )}
@@ -123,6 +118,14 @@ const Works = ({isJapanese}) => {
                   <p>CSS</p>
                 </>
               )}
+
+              {/* 🙋‍♀️ */}
+              {work.languages.ts && (
+                <>
+                  <div className="ts-circle"></div>
+                  <p>TypeScript</p>
+                </>
+              )}
               {work.languages.js && (
                 <>
                   <div className="js-circle"></div>
@@ -133,7 +136,6 @@ const Works = ({isJapanese}) => {
           </div>
         </div>
       ))}
-
     </div>
   );
 };

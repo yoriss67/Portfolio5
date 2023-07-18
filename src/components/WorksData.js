@@ -89,6 +89,29 @@ const ProjectsData = [
   },
   {
     id: 2,
+    title: 'Pomodoro Focus Timer',
+    image: 'pomodoro.png',
+    siteLink: 'https://yoriss67pomodoro-focus-timer.netlify.app/',
+    descriptionEn:
+      'This is my first TypeScript x React project. I made a pomodoro timer with a focus on convenience which includes to-do list and BGM.',
+    descriptionJp:
+      '初めてのTypeScript x Reactプロジェクトです。ToDoリストやBGMなど、利便性を重視したポモドーロタイマーを作りました。',
+    languages: {
+      html: true,
+      css: true,
+      ts: true,
+      js: true,
+    },
+    languageDistribution: {
+      html: '4.3%',
+      css: '12.0%',
+      ts: '80.6%',
+      js: '3.1%',
+    },
+    on: true,
+  },
+  {
+    id: 3,
     title: 'Ninbai-profession',
     image: 'ninbai.png',
     siteLink: 'https://ninbai-profession.com/',
@@ -108,6 +131,7 @@ const ProjectsData = [
     },
     on: true,
   },
+
 
 ];
 
