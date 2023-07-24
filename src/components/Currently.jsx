@@ -33,7 +33,7 @@ function Currently({ isJapanese }) {
             transition={{ duration: 1 }}
           >
             <div className="currently_img_pa">
-              <img src="digital-business-card.png" className="currently_img " />
+              <img src="digital-business-card.avif" className="currently_img " />
             </div>
             <div className="currently_text currently_text_left">
               <h4>Digital business card</h4>
@@ -66,7 +66,7 @@ function Currently({ isJapanese }) {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="currently_img_pa">
-              <img src="netlify-travel-journal.png" className="currently_img" />
+              <img src="netlify-travel-journal.avif" className="currently_img" />
             </div>
 
             <div className="currently_text currently_text_middle">
@@ -104,7 +104,7 @@ function Currently({ isJapanese }) {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <div className="currently_img_pa">
-              <img src="meme-generator.png" className="currently_img" />
+              <img src="meme-generator.avif" className="currently_img" />
             </div>
             <div className="currently_text currently_text_right">
               <h4>Meme generator</h4>

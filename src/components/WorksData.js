@@ -69,7 +69,7 @@ const ProjectsData = [
   {
     id: 1,
     title: 'Lean',
-    image: 'lean.png',
+    image: 'lean.avif',
     siteLink: 'https://ypross67lean.netlify.app/',
     descriptionEn:
       "This is a virtual ice cream landing page. I created this project to learn how to use a little more advanced React. I've got a good understanding of framer motion and parallax effect.",
@@ -90,7 +90,7 @@ const ProjectsData = [
   {
     id: 2,
     title: 'Pomodoro Focus Timer',
-    image: 'pomodoro.png',
+    image: 'pomodoro.avif',
     siteLink: 'https://yoriss67pomodoro-focus-timer.netlify.app/',
     descriptionEn:
       'This is my first TypeScript x React project. I made a pomodoro timer with a focus on convenience which includes to-do list and BGM.',
@@ -113,7 +113,7 @@ const ProjectsData = [
   {
     id: 3,
     title: 'Ninbai-profession',
-    image: 'ninbai.png',
+    image: 'ninbai.avif',
     siteLink: 'https://ninbai-profession.com/',
     descriptionEn:
       'I created a landing page for a real estate consultation service for the voluntary sale of real estate. I not only created the pages, but also learned a lot about servers, file transfer, and other practical matters.',
