@@ -90,7 +90,7 @@ const ProjectsData = [
   {
     id: 2,
     title: 'Pomodoro Focus Timer',
-    image: 'pomodoro.avif',
+    image: 'pomodoro.png',
     siteLink: 'https://yoriss67pomodoro-focus-timer.netlify.app/',
     descriptionEn:
       'This is my first TypeScript x React project. I made a pomodoro timer with a focus on convenience which includes to-do list and BGM.',
@@ -113,7 +113,7 @@ const ProjectsData = [
   {
     id: 3,
     title: 'Ninbai-profession',
-    image: 'ninbai.avif',
+    image: 'ninbai.png',
     siteLink: 'https://ninbai-profession.com/',
     descriptionEn:
       'I created a landing page for a real estate consultation service for the voluntary sale of real estate. I not only created the pages, but also learned a lot about servers, file transfer, and other practical matters.',
