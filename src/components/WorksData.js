@@ -70,7 +70,7 @@ const ProjectsData = [
     id: 1,
     title: 'Lean',
     image: 'lean.avif',
-    siteLink: 'https://ypross67lean.netlify.app/',
+    siteLink: 'https://yoriss67lean.netlify.app/',
     descriptionEn:
       "This is a virtual ice cream landing page. I created this project to learn how to use a little more advanced React. I've got a good understanding of framer motion and parallax effect.",
     descriptionJp:
