@@ -68,7 +68,7 @@ function Currently({ isJapanese }) {
           >
             <h3>Top companies</h3>
             <div className="currently_img_pa">
-              <img src="netlify-travel-journal.avif" className="currently_img" />
+              <img src="netlify-travel-journal.png" className="currently_img" />
             </div>
 
             <div className="currently_text currently_text_middle">

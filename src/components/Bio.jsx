@@ -28,7 +28,7 @@ function Bio({ isJapanese }) {
 
       <>
         <div className="bio_img_container">
-          <img className="bio_img " src="profile-min.avif"></img>
+          <img className="bio_img " src="profile-min.png"></img>
         </div>
         <div className="bio_text">
           <h2 className="bio_name">Iori Kawano</h2>
