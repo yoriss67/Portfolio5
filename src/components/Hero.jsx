@@ -33,16 +33,16 @@ function Hero({ isJapanese }) {
 
 
 
-  const isPhone = window.innerWidth <= 768;
+  const isPhone = window.innerWidth <= 768; // or any width that you consider makes the device a phone
 
 const phoneTransition = {
   duration: 3,
-  delay: 1.2,  // Adjust this delay for phone
+  delay: 1.5,  // Adjust this delay for phone
 };
 
 const defaultTransition = {
   duration: 3,
-  delay: 2.8,  //  original delay
+  delay: 2.8,  // Your original delay
 };
 
   return (
@@ -91,7 +91,7 @@ const defaultTransition = {
             <motion.div
               initial={{ opacity: 0, y: '5vh' }}
               animate={inViewBc1 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
-              transition={isPhone ? phoneTransition : defaultTransition}
+              transition={{ duration: 3, delay: 2.8 }}
             >
               <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Curiosity</h3>
               <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>好奇心</h3>
@@ -111,7 +111,7 @@ const defaultTransition = {
             <motion.div
               initial={{ opacity: 0, y: '5vh' }}
               animate={inViewBc2 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 3, delay: 3.0 }}
+              transition={isPhone ? phoneTransition : defaultTransition}
             >
               <h3 className="hero-bc-h heading">Perseverance</h3>
 
