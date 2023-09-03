@@ -37,7 +37,7 @@ function Hero({ isJapanese }) {
 
 const phoneTransition = {
   duration: 3,
-  delay: 1.5,  // Adjust this delay for phone
+  delay: .8,  // Adjust this delay for phone
 };
 
 const defaultTransition = {
