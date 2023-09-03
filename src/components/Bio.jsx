@@ -25,11 +25,12 @@ function Bio({ isJapanese }) {
 
   return (
     <div className="bio section">
+
       <>
-        <div className="bio_img_pa">
-          <img className="bio_img " src="profile-min.png"></img>
+        <div className="bio_img_container">
+          <img className="bio_img " src="profile-min.avif"></img>
         </div>
-        <div className="bio_p">
+        <div className="bio_text">
           <h2 className="bio_name">Iori Kawano</h2>
 
           <div className={`bio_first ${inView1 ? 'true' : 'false'} `} ref={ref1}>

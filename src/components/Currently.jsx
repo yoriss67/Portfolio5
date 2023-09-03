@@ -1,4 +1,3 @@
-import { faL } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 // https://zenn.dev/himorishige/articles/e17b7d04fc7722
@@ -7,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 function Currently({ isJapanese }) {
-  
   const [refLeft, inViewLeft] = useInView({
     rootMargin: '-10px',
     triggerOnce: true,
@@ -24,21 +22,23 @@ function Currently({ isJapanese }) {
   });
 
   return (
-    <div className="currently section" style={{ height: '30vh' }}>
-      <div className="currently_pa ">
+    <div className="currently section">
+      <h2>I’m learning <br className='dn-in-pc'/> React now!</h2>
+      
+      <div className="currently_container">
         <div className={`currently_child currently_left ${inViewLeft ? 'true' : 'false'} `} ref={refLeft}>
           <motion.div
             initial={{ opacity: 0.3, scale: 0.8, y: '10vw' }}
             animate={inViewLeft ? { y: '0vw', opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1 }}
           >
+            <h3>Digital business card</h3>
             <div className="currently_img_pa">
               <img src="digital-business-card.avif" className="currently_img " />
             </div>
             <div className="currently_text currently_text_left">
-              <h4>Digital business card</h4>
               <a
-                className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                className={`heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                 href="https://myprofile-card-yoriss67.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -46,13 +46,14 @@ function Currently({ isJapanese }) {
                 view site
               </a>
               <a
-                className={`eye-text toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
+                className={`heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
                 href="https://myprofile-card-yoriss67.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 サイトを見る
               </a>
+
               <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>This is first solo React project!</p>
               <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>最初のReactプロジェクトです！</p>
             </div>
@@ -65,14 +66,14 @@ function Currently({ isJapanese }) {
             animate={inViewMiddle ? { y: '0vw', opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
+            <h3>Top companies</h3>
             <div className="currently_img_pa">
-              <img src="netlify-travel-journal.png" className="currently_img" />
+              <img src="netlify-travel-journal.avif" className="currently_img" />
             </div>
 
             <div className="currently_text currently_text_middle">
-              <h4>Top companies</h4>
               <a
-                className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                className={`heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                 href="https://yoriss67top-companies.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,7 +81,7 @@ function Currently({ isJapanese }) {
                 view site
               </a>
               <a
-                className={`eye-text toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
+                className={`heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
                 href="https://yoriss67travel-journal.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,31 +104,34 @@ function Currently({ isJapanese }) {
             animate={inViewRight ? { y: '0vw', opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.5 }}
           >
+            <h3>Meme generator</h3>
             <div className="currently_img_pa">
               <img src="meme-generator.avif" className="currently_img" />
             </div>
             <div className="currently_text currently_text_right">
-              <h4>Meme generator</h4>
-
               <a
-                  className={`eye-text toggleBox-en ${isJapanese ? 'display-none' : ''}`}
-                  href='https://yoriss67meme-generator.netlify.app/'
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  view site
-                </a>
-                <a
-                  className={`eye-text toggleBox-en ${isJapanese ? '' : 'display-none'}`}
-                  href='https://yoriss67meme-generator.netlify.app/'
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  サイトを見る
-                </a>
+                className={`heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                href="https://yoriss67meme-generator.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                view site
+              </a>
+              <a
+                className={`heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
+                href="https://yoriss67meme-generator.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                サイトを見る
+              </a>
 
-              <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>There were so many concepts to learn for me! I experienced how to use useState, useEffect, API calls and async function.</p>
-              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>私にとっては学ぶべき概念がたくさんありました！useState、useEffect、APIコール、async関数の使い方を体験しました。</p>
+              <p className={`toggleBox-en" ${isJapanese ? 'display-none' : ''}`}>
+                There were so many concepts to learn ! I learned how to use basic hooks, API calls and async function.
+              </p>
+              <p className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+                学ぶべき概念がたくさんありました！基本のHooksやAPIコール、async関数の使い方などを学びました。
+              </p>
             </div>
           </motion.div>
         </div>

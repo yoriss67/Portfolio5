@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #3A5D42;
 }
 
 
@@ -47,7 +48,7 @@ a:hover {
 
 /* TRANSLATE */
 
-#translate {
+/* #translate {
   position: fixed;
   top: 17rem;
   right: 0.5rem;
@@ -65,6 +66,25 @@ a:hover {
   right: 2rem;
   -ms-writing-mode: lr-bt;
   writing-mode: horizontal-tb;
+} */
+
+#translate {
+  position: fixed;
+  top: 17rem;
+  right: 0.5rem;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 9999;
+  color: #b3966d;
+  border: none;
+  background-color: transparent;
+  min-width: 1rem;
+  min-height: 5rem;
+  top: 5rem;
+  right: 2rem;
+  -ms-writing-mode: lr-bt;
+  writing-mode: horizontal-tb;
 }
 
 #translate p {
@@ -74,6 +94,80 @@ a:hover {
 }
 
 /* NAVBAR */
+
+/* 
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  height: 5vh;
+  padding: 2vw;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar-brand {
+  width: 5rem;
+  height: auto;
+}
+
+li
+.nav-item {
+  margin: 0 1vw;
+  position: relative;
+}
+
+a
+.nav-link {
+  width: 3rem;
+  position: relative;
+  font-size: 2.5rem;
+  z-index: 2;
+}
+
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+
+img
+.nav-link .social-icon {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media all and (max-width: 768px) {
+    .navbar-brand {
+      width: 3rem;
+      padding-top: 8px;
+    }
+    .nav-link {
+      font-size: 2rem;
+    }
+} */
+
+
+
+/* old navbar */
+
 
 .navbar {
   position: fixed;
@@ -102,15 +196,29 @@ a:hover {
 
 .nav-link {
   font-size: 2.5rem;
-  color: #a3b1af;
-  color: #75a19b;
-
-
   position: relative;
-
 
 }
 
+.nav-link svg {
+  width: 28px;
+  height: 28px;
+  /* display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em; */
+}
+
+
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+}
 
 
 /* 🌸 */
@@ -135,47 +243,14 @@ FontAwesomeIcon {
 } */
 
 
-
-.fa-twitter {
-  color:#739DA4;
-}
-
-.fa-instagram {
-  color: #E16C64;
-}
-
-.fa-linkedin-in {
-  color: #36457dc4;
-}
-
-.fa-github {
-  color: #76838E;
-}
-
-.fa-note-sticky {
-  color: #839B85;
-}
-
-
-.fa-twitter:hover {
-  color: #1d9bf0;
-}
-
-.fa-instagram:hover {
-  color: #e905ab;
-}
-
-.fa-linkedin-in:hover {
-  color: #004182;
-  color: #1472d1;
-}
-
-.fa-github:hover {
-  color: rgb(158, 154, 154);
-}
-
-.fa-note-sticky:hover {
-  color: #2cb696;
+@media all and (max-width: 768px) {
+  /* NAVBAR */
+  .navbar-brand {
+    width: 3rem;
+  }
+  .nav-link {
+    font-size: 2rem;
+  }
 }
 
 /* HERO */
@@ -185,7 +260,6 @@ FontAwesomeIcon {
   height: 99vh;
   width: 100%;
   margin: 0 auto 15vh;
-  color: #fff;
   position: relative;
 }
 
@@ -233,11 +307,12 @@ FontAwesomeIcon {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(../public/expand-long-min.avif);
+  /* background-image: url(../public/expand-long-min.avif); */
+background-color: #EECC98;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 35%;
-
+  opacity: 20%;
   filter: blur(3px);
 
   top: 0;
@@ -461,16 +536,11 @@ FontAwesomeIcon {
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding: 0;
-    margin: 0 4vw 0 auto;
+    margin:  0 auto;
   }
 
-  /* NAVBAR */
-  .navbar-brand {
-    width: 3rem;
-  }
-  .nav-link {
-    font-size: 2rem;
-  }
+
+
 
   /* HERO */
   .hero {
@@ -553,4 +623,13 @@ FontAwesomeIcon {
     left: 0%;
   }
 }
+
+
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-nav .nav-link {
+    /* padding: 0 .5rem; */
+}
+}
+
 
