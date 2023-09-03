@@ -430,10 +430,16 @@ a:hover {
   .navbar-nav {
     gap: 1rem;
   }
+
   .nav-link {
     width: 2rem;
     padding: 0;
   }
+
+  .nav-item {
+    margin: 0 auto;
+  }
+
 
   /* HERO */
   .hero {
@@ -548,8 +554,8 @@ a:hover {
 
 @media all and (max-width: 991px) {
   #translate {
-    top: 19rem;
-    right: 0.8rem;
+    top: 18rem;
+    right: 2rem;
     padding: 0;
   }
 
