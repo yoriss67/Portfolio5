@@ -556,7 +556,7 @@ a:hover {
 @media all and (max-width: 991px) {
   #translate {
     top: 18rem;
-    right: 3rem;
+    right: 3.3rem;
     padding: 0;
   }
 
