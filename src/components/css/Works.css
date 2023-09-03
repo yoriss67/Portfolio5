@@ -242,6 +242,7 @@
   .works_flex {
     padding: 5%;
     height: auto;
+    width: 80%;
 }
   .works_image {
     height: 40vh;
