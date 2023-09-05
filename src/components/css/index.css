@@ -59,6 +59,10 @@ a:hover {
   padding: 0.5rem 1rem;
 }
 
+.heading.toggleBox-jp  {
+  /* font-size: .5rem; */
+}
+
 /* TRANSLATE */
 
 #translate {
@@ -364,7 +368,10 @@ a:hover {
 
 .currently_text .heading {
   margin: 1rem auto;
+
 }
+
+
 
 .currently_text p {
   text-align: left;
@@ -545,6 +552,11 @@ a:hover {
     left: 0%;
   }
 
+  .currently_text .heading {
+      font-size: 1.1rem;
+      padding: 0.5rem 0.75rem;
+    }
+    
 
   .currently_text p {
     text-align: left;

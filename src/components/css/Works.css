@@ -142,6 +142,7 @@
   padding: 0.25rem 0.5rem;
 }
 
+
 .works_text_sent {
   width: 100%;
   padding: 1.5rem 0 2rem;
@@ -299,6 +300,12 @@
     text-align: center;
     flex-direction: column;
   }
+  .works_text_title a.toggleBox-jp {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+  
+  }
+
   .works_text_sent {
     width: 100%;
     padding: 3vh 0;

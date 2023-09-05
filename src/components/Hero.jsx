@@ -113,7 +113,10 @@ const defaultTransition = {
               animate={inViewBc2 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={isPhone ? phoneTransition : defaultTransition}
             >
-              <h3 className="hero-bc-h heading">Perseverance</h3>
+
+              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Perseverance</h3>
+              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>粘り強さ</h3>
+
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
