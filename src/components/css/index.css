@@ -172,6 +172,8 @@ a:hover {
   font-size: 5rem;
   background-color: transparent;
   font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 .hero-top h3 {
@@ -349,7 +351,7 @@ a:hover {
   width: 30%;
   align-items: center;
   text-align: center;
-  padding: 0 2%;
+  padding: 0 2rem;
   position: relative;
 }
 
