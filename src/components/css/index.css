@@ -51,6 +51,10 @@ a:hover {
   z-index: 99;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .heading {
   background-color: var(--text);
   border-radius: 10px;
