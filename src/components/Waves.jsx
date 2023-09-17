@@ -23,12 +23,12 @@ const Square = ({ height, backgroundColor, delay, zIndex }) => (
 
 function Waves() {
   const squaresData = [
-    { height: 220, backgroundColor: '#67A675', delay: 4.2, offset: 600, zIndex: 1, stiffness: 200 },
+    { height: 220, backgroundColor: '#78957b', delay: 4.2, offset: 600, zIndex: 1, stiffness: 200 },
     { height: 160, backgroundColor: '#ead6ad', delay: 3.8, offset: 600, zIndex: 2, stiffness: 180 },
     { height: 110, backgroundColor: '#CEDFD9', delay: 3.4, offset: 600, zIndex: 3, stiffness: 160 },
     { height: 70, backgroundColor: '#EDAF82', delay: 3.0, offset: 600, zIndex: 4, stiffness: 140 },
     { height: 40, backgroundColor: '#EECC98', delay: 2.6, offset: 600, zIndex: 5, stiffness: 120 },
-    { height: 20, backgroundColor: '#3A5D42', delay: 2.2, offset: 600, zIndex: 6, stiffness: 100 },
+    { height: 20, backgroundColor: '#615196', delay: 2.2, offset: 600, zIndex: 6, stiffness: 100 },
   ];
 
   const squares = squaresData.map((square, i) => (
