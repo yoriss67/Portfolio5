@@ -140,7 +140,7 @@ const Works = ({ isJapanese }) => {
             <h3>{WorksData[0].title}</h3>
 
             <a
-              className={` toggleBox-en ${ isJapanese ? 'display-none' : ''}`}
+              className={`  toggleBox-en ${ isJapanese ? 'display-none' : ''}`}
               // 🙋‍♀️
               href={`${WorksData[0].siteLink}`}
               target="_blank"
@@ -541,3 +541,4 @@ console.log(PomodoroImagesArray)
 };
 
 export default Works;
+

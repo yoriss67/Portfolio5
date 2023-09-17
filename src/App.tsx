@@ -15,6 +15,7 @@ const App = () => {
         <Works isJapanese={isJapanese} />
         <Currently  isJapanese={isJapanese}/>
         <Footer  />
+        <div className="container"></div>
       </>
     );
 }

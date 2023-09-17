@@ -10,7 +10,6 @@
 }
 
 .works_bg {
-  
 }
 
 .works_bg::before {
@@ -54,9 +53,7 @@
 .works_image {
   position: relative;
   background-size: cover;
-  background: -moz-linear-gradient(top left, #d2d984, #da7daf);
-  background: -webkit-linear-gradient(top left, #73fb12, #553a8f);
-  background: linear-gradient(to bottom right, #eee8cc, #c3dcde);
+  background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
   width: 50%;
   height: 100%;
   border-radius: 20px;
@@ -74,8 +71,6 @@
   object-position: center 0%;
 }
 
-
-
 .works_tablet_image {
   position: absolute;
   top: 0%;
@@ -86,8 +81,6 @@
   object-position: center 0%;
 }
 
-
-
 .works_sp_image {
   position: absolute;
   top: -100%;
@@ -97,18 +90,6 @@
   object-fit: cover;
   object-position: center 0%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .works_text {
   width: 50%;
@@ -135,13 +116,44 @@
 
 .works_text_title a {
   font-size: 1.2rem;
-  background-color: var(--text);
+  background-color: #3a5d429e;
   border-radius: 10px;
   color: white;
   width: fit-content;
   padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 99;
+}
+.works_text_title a::after {
+  content: '';
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  clip-path: circle(20% at 50% 100%);
+  background: linear-gradient(to top right, #c36074, #c3dcde);
+  border: 0;
+  border-radius: 10px;
+
+  transition: all 0.3s ease-in-out;
+  z-index: 98;
 }
 
+.works_text_title a:hover {
+  display: hidden;
+}
+
+.works_text_title a:hover::after {
+  clip-path: circle(100%);
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to top right, #f68553, #fc9f03, #fae10e); */
+  /* background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f,  #563d7c7d); */
+
+  text-align: center;
+  content: 'view site';
+}
 
 .works_text_sent {
   width: 100%;
@@ -153,8 +165,6 @@
   margin: 0;
   padding: 0;
 }
-
-
 
 .language-meter {
   width: 100%;
@@ -197,12 +207,14 @@
   border-radius: 0 20px 20px 0;
 }
 
-
-.html, .css, .ts, .js {
+.html,
+.css,
+.ts,
+.js {
   display: flex;
   align-items: center;
-  gap: .2rem;
-  margin: 0 .5rem;
+  gap: 0.2rem;
+  margin: 0 0.5rem;
 }
 
 .html-circle,
@@ -231,8 +243,6 @@
   background-color: #f1e05a;
 }
 
-
-
 @media all and (max-width: 767px) {
   .works h2 {
     padding: 15vw 0 0;
@@ -244,12 +254,11 @@
     padding: 5%;
     height: auto;
     width: 80%;
-}
+  }
   .works_image {
     height: 40vh;
     width: 100%;
   }
-
 
   .works_pc_image {
     position: absolute;
@@ -260,9 +269,7 @@
     object-fit: cover;
     object-position: center 0%;
   }
-  
-  
-  
+
   .works_tablet_image {
     position: absolute;
     top: 40%;
@@ -272,9 +279,7 @@
     object-fit: cover;
     object-position: center 0%;
   }
-  
-  
-  
+
   .works_sp_image {
     position: absolute;
     top: -100%;
@@ -284,11 +289,6 @@
     object-fit: cover;
     object-position: center 0%;
   }
-  
-
-
-
-
 
   .works_text {
     margin-top: 5vh;
@@ -303,7 +303,6 @@
   .works_text_title a.toggleBox-jp {
     font-size: 1.1rem;
     padding: 0.5rem 0.75rem;
-  
   }
 
   .works_text_sent {

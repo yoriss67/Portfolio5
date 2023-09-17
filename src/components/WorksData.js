@@ -8,9 +8,9 @@ const ProjectsData = [
 
     siteLink: 'https://yoriss67lean.netlify.app/',
     descriptionEn:
-      "I created this project to learn how to use a little more advanced React. I've got a good understanding of framer motion and parallax effect. Also, making a shopping cart function for the first time was pretty challenging!",
+      "I created this project to learn how to use a little more advanced React. I've got a good understanding of framer motion, parallax effect and a shopping cart function for the first time!",
     descriptionJp:
-      'このプロジェクトは、もう少し高度なReactの使い方を学ぶために作りました。framer motionやparallax effectについてよく理解できました。 また、初めてショッピングカート機能を作るのは結構難しかったです！',
+      'このプロジェクトは、もう少し高度なReactの使い方を学ぶために作りました。framer motionやparallax effectについてよく理解できました。 また、ショッピングカート機能も初めて学びました！',
     languages: {
       html: true,
       css: true,

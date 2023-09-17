@@ -21,19 +21,19 @@ whileHover={{
 /> */
 }
 
-const Image = ({}) => (
-  <motion.img
-    style={{
-      position: 'absolute',
-      height: 'auto',
-      objectFit: 'cover',
-      objectPosition: 'center 0%',
-      top: `${top}%`,
-      left: `${left}%`,
-      width: `${width}%`,
-    }}
-  />
-);
+// const Image = ({}) => (
+//   <motion.img
+//     style={{
+//       position: 'absolute',
+//       height: 'auto',
+//       objectFit: 'cover',
+//       objectPosition: 'center 0%',
+//       top: `${top}%`,
+//       left: `${left}%`,
+//       width: `${width}%`,
+//     }}
+//   />
+// );
 
 const Works = ({ isJapanese }) => {
   const ImagesArray = [
@@ -153,7 +153,7 @@ const Works = ({ isJapanese }) => {
               <h3>{work.title}</h3>
 
               <a
-                className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}
+                className={`toggleBox-en ${isJapanese ? 'display-none' : ''}`}
                 href={work.siteLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -161,7 +161,7 @@ const Works = ({ isJapanese }) => {
                 view site
               </a>
               <a
-                className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
+                className={`heading toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
                 href={work.siteLink}
                 target="_blank"
                 rel="noopener noreferrer"
