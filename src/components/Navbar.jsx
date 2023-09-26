@@ -15,6 +15,7 @@ const socialLinks = [
   { href: 'https://www.linkedin.com/in/iori-kawano-131a4122a/', src: 'icons/linkedin.svg' },
   { href: 'https://github.com/yoriss67', src: 'icons/github-orgnl.svg'},
   { href: 'https://note.com/yoriss_b0607', src: 'icons/note.svg'},
+  { href: 'https://student.redesigner.jp/students/afd0d567a69657ea22e57f9faf589f10', src: 'icons/ReDesigner.svg'}
 ];
 
 export default function Navbar() {
