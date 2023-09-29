@@ -31,19 +31,17 @@ function Hero({ isJapanese }) {
     triggerOnce: true,
   });
 
-
-
   const isPhone = window.innerWidth <= 768; // or any width that you consider makes the device a phone
 
-const phoneTransition = {
-  duration: 3,
-  delay: .8,  // Adjust this delay for phone
-};
+  const phoneTransition = {
+    duration: 3,
+    delay: 0.8, // Adjust this delay for phone
+  };
 
-const defaultTransition = {
-  duration: 3,
-  delay: 2.8,  // Your original delay
-};
+  const defaultTransition = {
+    duration: 3,
+    delay: 2.8, // Your original delay
+  };
 
   return (
     <div className="hero">
@@ -74,7 +72,7 @@ const defaultTransition = {
           </motion.h3>
         </div>
 
-        <motion.p
+        <motion.div
           className={`I-work-with ${inViewWork ? 'true' : 'false'} `}
           ref={refWork}
           initial={{ opacity: 0, y: '5vh' }}
@@ -82,9 +80,8 @@ const defaultTransition = {
           transition={{ duration: 3, delay: 2.5 }}
         >
           <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}> I live by</p>
-         <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>以下をモットーにしています</p>
-
-        </motion.p>
+          <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>以下をモットーにしています</p>
+        </motion.div>
 
         <div className={`hero-bottom`}>
           <div className={`hero-bc ${inViewBc1 ? 'true' : 'false'}`} ref={refBc1}>
@@ -113,10 +110,8 @@ const defaultTransition = {
               animate={inViewBc2 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={isPhone ? phoneTransition : defaultTransition}
             >
-
               <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Perseverance</h3>
               <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>粘り強さ</h3>
-
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>

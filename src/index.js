@@ -5,6 +5,7 @@ export { default as Works } from './components/Works2';
 export { default as Global } from './components/Global';
 export { default as Navbar } from './components/Navbar';
 export { default as Footer } from './components/Footer';
+export { default as Note } from './components/Note';
 
 
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

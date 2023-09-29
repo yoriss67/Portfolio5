@@ -265,7 +265,7 @@ p {
   width: 30%;
   height: auto;
   margin: 0 auto;
-  background-image: url(../public/expand-long-min.avif);
+  /* background-image: url(../public/expand-long-min.avif); */
   background-position: center 30%;
   border-radius: 50%;
   display: flex;
@@ -485,6 +485,136 @@ p {
   font-size: 1.3rem;
   margin: 3rem auto;
 }
+/* note */
+
+.note {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.note-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.note-heading h2 {
+  white-space: nowrap;
+
+}
+
+.note-heading img {
+  width: 20%;
+}
+
+.note-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+.article-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.article {
+  /* border: 1px solid #ddd; */
+  padding: 2rem;
+  /* border-radius: 0px;
+  border-top-right-radius: 20px; */
+  width: 45%;
+  margin: 2% auto;
+  /* box-shadow:  linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa) 0px 0px 10px;
+  box-shadow: #563d7c7d 5px 10px 10px ; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+
+  /* border-radius: 0px;
+  border-top-right-radius: 20px; */
+
+}
+
+.article h3 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  text-align: left;
+
+}
+
+/* div */
+.article-desc {
+  font-size: 1rem;
+}
+
+.article p {
+  margin:0 auto;
+}
+
+.article p:first-child {
+  margin: 0.1rem auto;
+}
+
+.article a {
+  display: inline-block;
+  
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
+}
+
+.more-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #563d7c7d;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.more-button {
+  border: 0;
+  background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+
+.more-container img {
+  width: 10%;
+}
+
+
+
+
+
+
 
 @media all and (max-width: 768px) {
   h3 {
@@ -625,13 +755,53 @@ p {
   .currently_text p {
     text-align: left;
   }
+
+  /* note */
+  .note {
+
+  }
+
+  .note-container {
+  }
+
+  .note-heading {
+    flex-wrap: wrap;
+  }
+  
+  .note-heading h2 {
+    
+    font-size: 1.5em;
+  }
+
+  .article-container {
+
+  }
+
+  .article {
+    width: 100%;
+    padding: 0;
+    margin: 2rem auto;
+  }
+
+  .more-container {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .more-button {
+    font-size: 1rem;
+    padding: .5rem;
+  }
+
+
+
 }
 
 
 
 @media all and (max-width: 991px) {
   #translate {
-    top: 18rem;
+    top: 21rem;
     right: 3.3rem;
     padding: 0;
   }
@@ -642,11 +812,12 @@ p {
     /* text-orientation: upright; */
     padding: 0;
     margin: 0 auto;
-
   }
+
+
 }
 
-.container:not
+
 
 /* CSS Tips And Tricks I Wish I Knew Before */
 /* https://www.youtube.com/watch?v=2KWdT4PkXgY&ab_channel=LamaDev */
