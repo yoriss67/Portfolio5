@@ -113,21 +113,21 @@ app.get('/latest-articles', async (req, res) => {
   }
 });
 
-// New endpoint for translation
-app.post('/translate', async (req, res) => {
-  try {
-    const { text, targetLang } = req.body;
-    const response = await axios.post('https://libretranslate.com/translate', {
-      q: text,
-      source: 'ja',  // Assuming source language is Japanese
-      target: targetLang
-    });
-    res.json({ translatedText: response.data.translatedText });
-  } catch (error) {
-    console.error('Translation error:', error.message);
-    res.status(500).send(error.message);
-  }
-});
+// // New endpoint for translation
+// app.post('/translate', async (req, res) => {
+//   try {
+//     const { text, targetLang } = req.body;
+//     const response = await axios.post('https://libretranslate.com/translate', {
+//       q: text,
+//       source: 'ja',  // Assuming source language is Japanese
+//       target: targetLang
+//     });
+//     res.json({ translatedText: response.data.translatedText });
+//   } catch (error) {
+//     console.error('Translation error:', error.message);
+//     res.status(500).send(error.message);
+//   }
+// });
 
 app.listen(3002, () => {
   console.log('Server is running on http://localhost:3002');
