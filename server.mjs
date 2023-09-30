@@ -129,6 +129,19 @@ app.get('/latest-articles', async (req, res) => {
 //   }
 // });
 
-app.listen(3002, () => {
-  console.log('Server is running on http://localhost:3002');
+
+
+
+
+// app.listen(3002,  '0.0.0.0',  () => {
+//   console.log('Server is running on http://0.0.0.0:3002');
+// });
+
+
+const HOST = import.meta.env.VITE_HOST || '0.0.0.0';
+const PORT = import.meta.env.VITE_PORT || 3002;
+
+app.listen(PORT, HOST, () => {
+  console.log(`Server is running on http://${HOST}:${PORT}`);
 });
+

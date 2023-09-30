@@ -229,6 +229,7 @@ const Note = ({ isJapanese }) => {
 
   return (
     <div className="note section">
+      <h1>オリジナル</h1>
       <div className="note-container">
         <div className={`note-heading toggleBox-en ${isJapanese ? 'display-none' : ''} `}>
           <h2>I'm frequently on </h2>
