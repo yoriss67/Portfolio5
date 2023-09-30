@@ -100,48 +100,59 @@ const Note = ({ isJapanese }) => {
       }
     }
 
-    // async function translateText(text, targetLang) {
-    //   try {
-    //     const response = await fetch('https://libretranslate.com/translate', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //       },
-    //       body: JSON.stringify({
-    //         q: text,
-    //         source: 'ja',
-    //         target: targetLang,
-    //         api_key: '',  // If the API requires an API key
-    //       })
-    //     });
-    //     const data = await response.json();
-    //     return data.translatedText;
-    //   } catch (error) {
-    //     console.error('Translation failed:', error);
-    //     return text;  // Return the original text if translation fails
-    //   }
-    // }
     async function translateText(text, targetLang) {
       try {
-        const response = await fetch('http://localhost:3002/translate', {
+        const response = await fetch('https://libretranslate.com/translate', {
           method: 'POST',
           headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            text,
-            targetLang,
-          }),
+            q: text,
+            source: 'ja',
+            target: targetLang,
+            api_key: '',  // If the API requires an API key
+          })
         });
         const data = await response.json();
         return data.translatedText;
       } catch (error) {
         console.error('Translation failed:', error);
-        return text; // Return the original text if translation fails
+        return text;  // Return the original text if translation fails
       }
     }
+
+
+    // async function translateText(text, targetLang) {
+    //   try {
+    //     const response = await fetch('http://localhost:3002/translate', {
+    //       method: 'POST',
+    //       headers: {
+    //         Accept: 'application/json',
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({
+    //         text,
+    //         targetLang,
+    //       }),
+    //     });
+    //     const data = await response.json();
+    //     return data.translatedText;
+    //   } catch (error) {
+    //     console.error('Translation failed:', error);
+    //     return text; // Return the original text if translation fails
+    //   }
+    // }
+
+
+
+
+
+
+
+
+
 
     fetchNote();
   }, [isJapanese]);
