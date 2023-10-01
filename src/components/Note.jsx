@@ -211,11 +211,27 @@ const Note = ({ isJapanese }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
+    // async function fetchNote() {
+    //   try {
+    //     const response = await fetch('http://localhost:3002/latest-articles');
+    //     if (!response.ok) {
+    //       throw new Error('Network response was not ok ' + response.statusText);
+    //     }
+    //     const data = await response.json();
+    //     setArticles(data);
+    //   } catch (error) {
+    //     console.error('There has been a problem with your fetch operation:', error);
+    //   }
+    // }
+
+    const url = 'https://without-server.netlify.app/.netlify/functions/latest-articles';
     async function fetchNote() {
       try {
-        const response = await fetch('http://localhost:3002/latest-articles');
+        const response = await fetch(url);
         if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
+          const text = await response.text();
+          console.error('Error response:', text);
+          throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         const data = await response.json();
         setArticles(data);
@@ -229,7 +245,7 @@ const Note = ({ isJapanese }) => {
 
   return (
     <div className="note section">
-      <h1>オリジナル</h1>
+      
       <div className="note-container">
         <div className={`note-heading toggleBox-en ${isJapanese ? 'display-none' : ''} `}>
           <h2>I'm frequently on </h2>
@@ -264,7 +280,7 @@ const Note = ({ isJapanese }) => {
           >
             クリエイターページでもっと見る
           </button>
-          <img src="icons/note.svg" alt="" />
+          <img src="icons/note.svg" alt="note icon" />
         </div>
       </div>
     </div>
