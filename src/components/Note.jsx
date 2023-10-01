@@ -267,23 +267,25 @@ const Note = ({ isJapanese }) => {
             </div>
           ))}
         </div>
-        <div className="more-container">
+        {/* <div className="more-container"> */}
+       
           <button
-            className={`more-button  toggleBox-en ${isJapanese ? 'display-none' : ''} `}
+            className={` more-button  toggleBox-en ${isJapanese ? 'display-none' : ''} `}
             onClick={() => (window.location.href = 'https://note.com/yoriss_b0607')}
           >
-            view more on my creator page
+            <img src="icons/note.svg" alt="note icon" />
+            <p>view more</p>
           </button>
           <button
             className={`more-button  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
             onClick={() => (window.location.href = 'https://note.com/yoriss_b0607')}
           >
-            クリエイターページでもっと見る
+            <img src="icons/note.svg" alt="note icon" />
+            <p>もっと見る</p>
           </button>
-          <img src="icons/note.svg" alt="note icon" />
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

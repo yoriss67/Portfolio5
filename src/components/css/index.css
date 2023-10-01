@@ -300,7 +300,6 @@ p {
   );
 
   background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f,  #563d7c7d, #615196aa);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -474,16 +473,49 @@ p {
 .footer {
   width: 100%;
   height: 3rem;
-  background-color: #fbf4ea;
   padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+
+.footer::before {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(183, 175, 148, 0.468);
+    filter: blur(3px);
 }
 
 .footer .bio_name {
   font-size: 1.3rem;
   margin: 3rem auto;
+
+  text-align: center;
+  font-weight: 500;
+  /* background: linear-gradient(
+    90deg,
+    rgb(98, 121, 129) 0%,
+    rgb(103, 138, 163) 20%,
+    rgb(91, 121, 83) 35%,
+    rgba(188, 168, 120, 0.842) 71%,
+    rgba(202, 197, 152, 0.842) 85%,
+    rgba(190, 161, 88, 0.808) 100%
+  );
+  background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f,  #563d7c7d, #615196aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  background: transparent;
+  z-index: 99;
 }
 /* note */
 
@@ -576,15 +608,67 @@ p {
 
 .article a {
   display: inline-block;
-  
+/*   
   color: #fff;
   padding: .5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
   background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
+ */
+  
 }
 
-.more-container {
+.article a:hover {
+  display: hidden;
+}
+
+/* ------ */
+.article a {
+  font-size: 1.2rem;
+  background-color: #3a5d429e;
+  background-color: #78957b;
+  border-radius: 10px;
+  color: white;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 99;
+}
+.article a::after {
+  content: '';
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  clip-path: circle(20% at 50% 100%);
+  background: linear-gradient(to top right, #c36074, #c3dcde);
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  z-index: 98;
+  opacity: .8;
+}
+
+/* .article a:hover {
+  display: hidden;
+} */
+
+.article a:hover::after {
+  clip-path: circle(100%);
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to top right, #f68553, #fc9f03, #fae10e); */
+  /* background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f,  #563d7c7d); */
+  text-align: center;
+  content: '続きをみる';
+  opacity: 1;
+}
+
+
+
+
+/* .more-container {
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -594,9 +678,50 @@ p {
   border: 1px solid #563d7c7d;
   border-radius: 5px;
   padding: 0;
-}
+} */
 
 .more-button {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #563d7c7d;
+  border-radius: 10px;
+  padding: 0.5rem -0;
+  position: relative;
+}
+
+.more-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  clip-path: circle(15% at 50% 150%);
+  background: linear-gradient(to top right, #c36074, #c3dcde);
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  z-index: 98;
+  opacity: .8;
+}
+
+
+
+.more-button:hover::after {
+  clip-path: circle(100%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: 'もっと見る';
+  color: #fff;
+  opacity: 1;
+}
+
+.more-button p {
   border: 0;
   background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
   -webkit-background-clip: text;
@@ -605,8 +730,7 @@ p {
   font-weight: bold;
 }
 
-
-.more-container img {
+.more-button img {
   width: 10%;
 }
 
@@ -761,6 +885,11 @@ p {
 
   }
 
+  .note.section {
+padding: 6rem 0 3rem;
+  }
+  
+
   .note-container {
   }
 
@@ -783,14 +912,15 @@ p {
     margin: 2rem auto;
   }
 
-  .more-container {
+  /* .more-container {
     width: 100%;
     margin: 1rem auto;
-  }
+  } */
 
   .more-button {
     font-size: 1rem;
     padding: .5rem;
+    width: 45%;
   }
 
 

@@ -7,7 +7,7 @@ import './components/css/index.css';
 import {  Hero, Bio, Currently, Works, Global, Navbar, Footer, Note} from './index';
 
 const App = () => {
-    const [isJapanese, setLanguage] = useState(false);
+    const [isJapanese, setLanguage] = useState(true);
     return  (
       <>
         <Global isJapanese={isJapanese} setLanguage={setLanguage} />

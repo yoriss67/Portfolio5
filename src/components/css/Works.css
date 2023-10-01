@@ -21,6 +21,7 @@
   height: 100%;
   z-index: 0;
   background-color: rgba(183, 175, 148, 0.468);
+  filter: blur(3px);
 }
 
 .works h2 {
@@ -139,6 +140,7 @@
 
   transition: all 0.3s ease-in-out;
   z-index: 98;
+  opacity: .8;
 }
 
 .works_text_title a:hover {
@@ -151,9 +153,9 @@
   height: 100%;
   /* background: linear-gradient(to top right, #f68553, #fc9f03, #fae10e); */
   /* background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f,  #563d7c7d); */
-
   text-align: center;
   content: 'view site';
+  opacity: 1;
 }
 
 .works_text_title a.toggleBox-jp:hover::after {
