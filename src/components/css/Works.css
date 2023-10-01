@@ -140,7 +140,7 @@
 
   transition: all 0.3s ease-in-out;
   z-index: 98;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .works_text_title a:hover {
@@ -165,7 +165,6 @@
   text-align: center;
   content: 'サイトを見る';
 }
-
 
 .works_text_sent {
   width: 100%;
@@ -236,7 +235,7 @@
   width: min(2vw, 1rem);
   height: min(2vw, 1rem);
   border-radius: 50%;
-  margin: 0 auto 1rem;
+  margin: 0 auto ;
 }
 
 .html-circle {
@@ -331,4 +330,6 @@
     width: 100%;
     flex-wrap: wrap;
   }
+
+
 }
