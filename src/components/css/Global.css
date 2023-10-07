@@ -63,9 +63,9 @@
   left: 0;
 }
 
-.sun {
-  width: 40vw;
-  height: 40vw;
+.global-sun {
+  width: 30vw;
+  height: 30vw;
   margin: 0 auto;
   animation: rotate 10s ease infinite;
 }

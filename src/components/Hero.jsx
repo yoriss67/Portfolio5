@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
+import { useTransform, useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+// import { useScroll } from 'react-fns';
 
-import Waves from './Waves';
+
+// import Waves from './Waves';
 
 function Hero({ isJapanese }) {
   const [refH1, inViewH1] = useInView({
@@ -43,11 +45,53 @@ function Hero({ isJapanese }) {
     delay: 2.8, // Your original delay
   };
 
+  // 🌸
+  // const [sunRef, inView] = useInView({
+  //   triggerOnce: false,
+  //   threshold: 0,
+  // });
+
+  // const controls = useAnimation();
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start({ rotate: 360, transition: { duration: 10, loop: Infinity } });
+  //   } else {
+  //     controls.stop();
+  //   }
+  // }, [controls, inView]);
+
+  // 🌸🌸
+  // const { y } = useScroll();
+  // const rotation = useTransform(y, (value) => value * 0.1);
+
+  // 🌸🌸🌸
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="hero">
       <div className="hero-bg"></div>
 
-      <Waves />
+      {/* <Waves /> */}
+      {/* <img className="sun-image" src="/sun2.png" alt="sun" /> */}
+      {/* <motion.img ref={sunRef} className="sun-image" src="/sun2.png" alt="sun" animate={controls} /> */}
+      {/* <motion.img className="sun-image" src="/sun2.png" alt="sun" style={{ rotate: rotation }} /> */}
+      <motion.img
+        className="sun-image"
+        src="/sun2.png"
+        alt="sun"
+        style={{ rotate: scrollPosition * 0.1 }} // Adjust multiplier to control rotation speed
+      />
 
       <div className="hero-container">
         <div className={`hero-top`}>

@@ -21,7 +21,7 @@ const socialLinks = [
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg ">
-      <img className="navbar-brand" src="sun2.png" alt="logo" />
+      <img style={{ visibility: "hidden"}} className="navbar-brand" src="sun2.png" alt="logo" />
       <ul className="navbar-nav">
         {socialLinks.map((link, index) => (
           <li className="nav-item position-relative" key={index} >
