@@ -4,7 +4,6 @@ import { useTransform, useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 // import { useScroll } from 'react-fns';
 
-
 // import Waves from './Waves';
 
 function Hero({ isJapanese }) {
@@ -105,7 +104,7 @@ function Hero({ isJapanese }) {
             Hi, I'm Iori !
           </motion.h1>
 
-          <motion.h3
+          {/* <motion.h3
             className={` ${inViewH3 ? 'true' : 'false'}`}
             ref={refH3}
             initial={{ opacity: 0, y: '20vw' }}
@@ -113,10 +112,10 @@ function Hero({ isJapanese }) {
             transition={{ ease: 'easeInOut', duration: 1.5, delay: 1.2 }}
           >
             Front-end learner
-          </motion.h3>
+          </motion.h3>  */}
         </div>
 
-        <motion.div
+        {/* <motion.div
           className={`I-work-with ${inViewWork ? 'true' : 'false'} `}
           ref={refWork}
           initial={{ opacity: 0, y: '5vh' }}
@@ -125,7 +124,7 @@ function Hero({ isJapanese }) {
         >
           <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}> I live by</p>
           <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>以下をモットーにしています</p>
-        </motion.div>
+        </motion.div> */}
 
         <div className={`hero-bottom`}>
           <div className={`hero-bc ${inViewBc1 ? 'true' : 'false'}`} ref={refBc1}>
@@ -134,15 +133,16 @@ function Hero({ isJapanese }) {
               animate={inViewBc1 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={{ duration: 3, delay: 2.8 }}
             >
-              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Curiosity</h3>
-              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>好奇心</h3>
+              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>UI / UX</h3>
+              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>UI / UX</h3>
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
-                  Driven by curiosity to gain knowledge, I strive to turn my insights into impactful actions.
+                  I aim to create services that adapt to the changing times and that meet the needs of business and
+                  people.
                 </p>
                 <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                  知識を得るための好奇心に突き動かされ、自分なりの考えをインパクトのある行動につなげようと努力しています。
+                  時代の変化に適応したビジネスと人々のニーズに寄り添ったサービス作りを目指します。
                 </p>
               </div>
             </motion.div>
@@ -154,16 +154,16 @@ function Hero({ isJapanese }) {
               animate={inViewBc2 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={isPhone ? phoneTransition : defaultTransition}
             >
-              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Perseverance</h3>
-              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>粘り強さ</h3>
+              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Frontend</h3>
+              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>フロントエンド</h3>
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
-                  Using the habits of self-analysis and reflection, I continue to take structured actions for personal
-                  growth with perseverance.
+                  I am attracted to the fusion of design aesthetics and technology. In the future, I hope to create
+                  services that inspire users through the power of design and technology.
                 </p>
                 <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                  自己分析と振り返りの習慣を用いて、計画性のある自己成長のための行動を根気強く続けています。
+                  デザインの美学と技術の融合に魅力を感じています。将来的には、デザインと技術の力でユーザーに感動を与えるサービスを創出したいと考えています。
                 </p>
               </div>
             </motion.div>

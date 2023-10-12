@@ -155,14 +155,19 @@ p {
   overflow: hidden;
 }
 
+.hero p {
+  line-height: 1.7;
+}
+
 .hero-container {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 8rem;
+
 }
 
 /* absolute */
@@ -194,7 +199,7 @@ p {
   width: 100%;
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero-top h1 {
@@ -217,22 +222,28 @@ p {
 /* hero bottom */
 .hero-bottom {
   text-align: left;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
+  transform: translateX(10%);
+ 
 }
 
 /* hero bottom container */
 .hero-bc {
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   padding: 0;
+  line-height: 2rem;
 }
 
 /* h3 */
 .hero-bc-h {
-  font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.hero-bc-h.heading.toggleBox-jp {
+  font-size: 2rem;
 }
 
 /* div */
@@ -555,7 +566,7 @@ p {
 
 .note-heading h2 {
   white-space: nowrap;
-
+  font-size: 2.5rem;
 }
 
 .note-heading img {
@@ -792,22 +803,22 @@ p {
   .hero-container {
     width: 80%;
     justify-content: center;
-    gap: 1rem;
+    gap: 4rem;
   }
 
   .hero-top {
     flex-direction: column;
     align-items: center;
     gap: 0rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .hero-top h1 {
     font-size: 3rem;
   }
 
-  .hero-top h3 {
-    font-size: 2rem;
+  .hero-bc-h.heading.toggleBox-jp {
+    font-size: 1.2rem;
   }
 
   .hero-bottom {
@@ -816,6 +827,8 @@ p {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    transform: translate(0);
+    gap: 1rem;
   }
 
   .hero-bc {
@@ -825,6 +838,14 @@ p {
   .hero-bc-p p {
     padding: 0.5rem 0;
   }
+
+
+  .hero .sun-image {
+    width: 80vw;
+    opacity: .6;
+    left: -20%;
+    top: 60%;
+}
 
   /* BIO */
   .bio.section {

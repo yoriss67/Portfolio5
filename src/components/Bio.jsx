@@ -39,11 +39,12 @@ function Bio({ isJapanese }) {
               transition={{ duration: 1 }}
             >
               <div className={`bio_snt bio_snt1 left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
-                I started studying programming in July 2022. I am completely self-taught as I belong to a liberal arts
-                department. This sparked my interest in IT.
+                I started studying programming on my own in July 2022. This sparked my interest in IT.
+               <br /> What I prioritize in terms of work values are internationalism and the future prospects of the business.
               </div>
               <div className={`bio_snt bio_snt1 left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                2022年7月からプログラミングの勉強を始めました。私は文系学部に所属しているため、完全に独学で勉強しています。これをきっかけにITに興味を持ち始めました。
+                2022年7月から独学でプログラミングの勉強を始めました。これをきっかけにITに興味を持ち始めました。
+                <br /> 私が仕事の価値観として優先するのは、国際性とサービスの将来性です。
               </div>
             </motion.div>
           </div>
@@ -80,13 +81,12 @@ function Bio({ isJapanese }) {
               transition={{ duration: 1 }}
             >
               <div className={`bio_snt bio_snt3  left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
-                What I prioritize in terms of work values are internationalism and the future prospects of the business.
-                I have a strong interest in English and different cultures, and aspire to work with an international
-                perspective. Eventually, I want to work beyond the borders of Japan, gaining experiences around the
+                As for internationalism, I have a strong interest in English and different cultures, and aspire to work with diverse
+                perspectives. In the future, I want to work beyond the borders of Japan, gaining experiences around the
                 world.
               </div>
               <div className={`bio_snt bio_snt3 left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                私が仕事の価値観として優先するのは、国際性と事業の将来性です。私には英語や異文化に対する強い興味と、国際的な視野を持って働きたいという思いがあります。将来的には、日本の枠を超えて、世界各地での経験を積みながら働きたいと考えています。
+                国際性に関して、私には英語や異文化に対する強い興味と、多角的な視野を持って働きたいという思いがあります。将来的には、日本の枠を超えて世界各地での経験を積みながら働きたいと考えています。
               </div>
             </motion.div>
           </div>
@@ -99,10 +99,10 @@ function Bio({ isJapanese }) {
             >
               <div className={`bio_snt bio_snt4 left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
                 My second priority is the potential of the business. Through IT, I aim to improve the interaction
-                between humans and computers, and engage in projects that can provide convenience and happiness.
+                between humans and computers, and engage in services that can provide convenience and happiness.
               </div>
               <div className={`bio_snt bio_snt4 left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-                第二の優先順位は、仕事の可能性です。ITを通じて人とコンピュータのインタラクションを向上させ、便利さや幸福を提供できるプロジェクトに携わりたいと考えています。
+                第二の優先順位は、仕事の可能性です。ITを通じて人とコンピュータのインタラクションを向上させ、便利さや幸福を提供できるサービスに携わりたいと考えています。
               </div>
             </motion.div>
           </div>
