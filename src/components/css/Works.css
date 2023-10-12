@@ -21,7 +21,6 @@
   height: 100%;
   z-index: 0;
   background-color: rgba(183, 175, 148, 0.468);
-  filter: blur(3px);
 }
 
 .works h2 {

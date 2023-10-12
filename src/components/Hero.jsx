@@ -133,8 +133,8 @@ function Hero({ isJapanese }) {
               animate={inViewBc1 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={{ duration: 3, delay: 2.8 }}
             >
-              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>UI / UX</h3>
-              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>UI / UX</h3>
+              <h3 className={`hero-bc-h uiux  `}>UI / UX</h3>
+              {/* <h3 className={`hero-bc-h uiux  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>UI / UX</h3> */}
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
@@ -154,8 +154,8 @@ function Hero({ isJapanese }) {
               animate={inViewBc2 ? { y: '0vw', opacity: 1, scale: 1 } : {}}
               transition={isPhone ? phoneTransition : defaultTransition}
             >
-              <h3 className={`hero-bc-h heading  toggleBox-en ${isJapanese ? 'display-none' : ''}`}>Frontend</h3>
-              <h3 className={`hero-bc-h heading  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>フロントエンド</h3>
+              <h3 className={`hero-bc-h frontend  `}>Frontend</h3>
+              {/* <h3 className={`hero-bc-h frontend  toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>フロントエンド</h3> */}
 
               <div className="hero-bc-p">
                 <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
