@@ -254,7 +254,7 @@ const Note = ({ isJapanese }) => {
 
         <div className={`note-heading  toggleBox-jp ${isJapanese ? '' : 'display-none'} `}>
           <img src="icons/square.svg" alt="note square" />
-          <h2>よく使ってます</h2>
+          {/*<h2>よく使ってます</h2>*/}
         </div>
 
         <div className="article-container">
