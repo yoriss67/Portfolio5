@@ -248,7 +248,7 @@ const Note = ({ isJapanese }) => {
       
       <div className="note-container">
         <div className={`note-heading toggleBox-en ${isJapanese ? 'display-none' : ''} `}>
-          <h2>I'm frequently on </h2>
+          {/* <h2>I'm frequently on </h2> */}
           <img src="icons/square.svg" alt="note square" />
         </div>
 
