@@ -188,6 +188,16 @@ z-index: 2;
 
 @media all and  (max-width: 768px) {
 
+  .dn-in-pc {
+    display: block;
+    width: 10%;
+  }
+  
+  .dn-in-sp {
+    display: none;
+  }
+  
+
   .loading-bg, .loading-wave {
     position: absolute;
     top: 40vh;

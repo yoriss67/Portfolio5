@@ -65,6 +65,8 @@ p {
   margin-bottom: 0;
 }
 
+
+
 .heading {
   background-color: var(--text);
   background-color: #3a5d429e;
@@ -82,6 +84,7 @@ p {
 /* TRANSLATE */
 
 #translate {
+  z-index: 99;
   position: fixed;
   border: none;
   background-color: transparent;
