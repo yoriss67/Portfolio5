@@ -43,7 +43,7 @@ function Global({ isJapanese, setLanguage }) {
       <div ref={stalkerRef} id="stalker"></div>
 
       <div ref={loaderRef} id="loader">
-        <img className="global-sun" src="/sun2.png" alt="sun" />
+        <img className="iconn" src="/icons/icon.png" alt="icon" />
       </div>
 
       <button

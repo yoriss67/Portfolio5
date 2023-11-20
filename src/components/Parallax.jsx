@@ -1,7 +1,7 @@
-import { useState, useRef, useLayoutEffect,  } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion';
 
-const Parallax = ({ children, offset, stiffness  }) => {
+const Parallax = ({ children, offset, stiffness }) => {
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
   const ref = useRef(null);
@@ -11,14 +11,9 @@ const Parallax = ({ children, offset, stiffness  }) => {
   const initial = elementTop - clientHeight;
   const final = elementTop + offset;
 
-
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
 
   const y = useSpring(yRange, { stiffness: 900, damping: 800 });
-  
-  // const modifiedOffset = offset * (zIndex + 1);  // zIndexに応じてオフセットを調整
-  // const yRange = useTransform(scrollY, [initial, final], [modifiedOffset, -modifiedOffset]);
-
 
   useLayoutEffect(() => {
     const element = ref.current;
@@ -33,11 +28,16 @@ const Parallax = ({ children, offset, stiffness  }) => {
 
   const shouldReduceMotion = useReducedMotion();
 
-
   return shouldReduceMotion ? (
     <>{children}</>
   ) : (
-    <motion.div   ref={ref} style={{ y: useSpring(useTransform(scrollY, [initial, final], [offset, -offset]),{ stiffness: stiffness, damping: 80 }) }} className="paramotion" >
+    <motion.div
+      ref={ref}
+      style={{
+        y: useSpring(useTransform(scrollY, [initial, final], [offset, -offset]), { stiffness: stiffness, damping: 80 }),
+      }}
+      className="paramotion"
+    >
       {children}
     </motion.div>
   );

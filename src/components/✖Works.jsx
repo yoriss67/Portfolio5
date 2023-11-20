@@ -60,17 +60,7 @@ const Works = ({ isJapanese }) => {
   const renderWorks = () => {
     return ImagesArray.map((project, index) => {
       const { pcImage, tabletImage, spImage } = project;
-
-      // console.log(ImagesArray[0].pcImage);
-
       console.log(ImagesArray[0].pcImage);
-
-      // for ( let i = 0; i < ImagesArray.length; i++) {
-      //   for ( let j = 0; j < ImagesArray[i].length; j++) {
-      //     console.log(ImagesArray[i][j]);
-      //   }
-      //   // console.log(ImagesArray[i]);
-      // }
 
       return (
         <div key={index} className="project-container">
@@ -84,9 +74,9 @@ const Works = ({ isJapanese }) => {
               <Parallax key={i} offset={parallaxProps[i].offset} stiffness={parallaxProps[i].stiffness}>
                 {/* <img src={image} alt={`${type} image`} className={`works_${type}_image`} /> */}
 
-                <img src={ImagesArray[i].pcImage} alt={`${type} image`} className={`works_pc_image`} />
-                <img src={ImagesArray[i].tabletImage} alt={`${type} image`} className={`works_tablet_image`} />
-                <img src={ImagesArray[i].spImage} alt={`${type} image`} className={`works_${type}_image`} />
+                <img src={ImagesArray[i].pcImage} alt={`${type} image`} className={`works-pc-image`} />
+                <img src={ImagesArray[i].tabletImage} alt={`${type} image`} className={`works-tablet-image`} />
+                <img src={ImagesArray[i].spImage} alt={`${type} image`} className={`works-${type}-image`} />
               </Parallax>
             );
           })}
@@ -96,60 +86,19 @@ const Works = ({ isJapanese }) => {
   };
 
   return (
-    <div className="works section works_bg">
-      {/* <div className="works_bg"></div> */}
+    <div className="works section works-bg">
       <h2>Works</h2>
 
       {WorksData.map((work) => (
-        <div key={work.id} className={`works_flex`}>
-          {/* 使わない<div className="works_image" ref={ref}> */}
-          <div className="works_image">
-            {/* <motion.img
-              className="works_pc_image"
-              src={work.pcImage}
-              alt={`${work.title} image `}
-              initial={{ opacity: 0.8, scale: 1 }}
-              // animate={inView ? { opacity: 1, scale: 1 } : {}}
-              whileHover={{
-                scale: 1.05,
-                opacity: 1,
-                transition: { duration: 0.5 },
-              }}
-            />
-            <motion.img
-              className="works_tablet_image"
-              src={work.tabletImage}
-              alt={`${work.title} image `}
-              initial={{ opacity: 0.8, scale: 1 }}
-              // animate={inView ? { opacity: 1, scale: 1 } : {}}
-              whileHover={{
-                scale: 1.05,
-                opacity: 1,
-                transition: { duration: 0.5 },
-              }}
-            />
-
-            <motion.img
-              className="works_sp_image"
-              src={work.spImage}
-              alt={`${work.title} image `}
-              initial={{ opacity: 0.8, scale: 1 }}
-              // animate={inView ? { opacity: 1, scale: 1 } : {}}
-              whileHover={{
-                scale: 1.05,
-                opacity: 1,
-                transition: { duration: 0.5 },
-              }}
-            /> */}
-
-            {/* 🙋‍♀️🙋‍♀️🙋‍♀️ */}
+        <div key={work.id} className={`works-flex`}>
+         
+          <div className="worksーmage">
             <div className="works-container">{renderWorks()}</div>
-
-            {/* {console.log(inView)} */}
           </div>
 
-          <div className="works_text">
-            <div className="works_text_title">
+          <div className="works-text">
+
+            <div className="works-text-title">
               <h3>{work.title}</h3>
 
               <a
@@ -170,9 +119,9 @@ const Works = ({ isJapanese }) => {
               </a>
             </div>
 
-            <div className="works_text_sent">
-              <p className={`left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>{work.descriptionEn}</p>
-              <p className={`left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>{work.descriptionJp}</p>
+            <div className="works-text-sent">
+              <p className={` toggleBox-en ${isJapanese ? 'display-none' : ''}`}>{work.descriptionEn}</p>
+              <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>{work.descriptionJp}</p>
             </div>
 
             <div className="language-meter">
@@ -234,6 +183,7 @@ const Works = ({ isJapanese }) => {
                 </>
               )}
             </div>
+
           </div>
         </div>
       ))}
@@ -242,14 +192,3 @@ const Works = ({ isJapanese }) => {
 };
 
 export default Works;
-
-
-
-
-
-
-
-
-
-
-
