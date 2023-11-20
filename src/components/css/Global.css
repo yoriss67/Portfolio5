@@ -48,7 +48,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  z-index: 10;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,11 +56,13 @@
   width: 100%;
   height: 100vh;
   position: fixed;
+  /* position: relative; */
   top: 0;
   left: 0;
 }
 
-.icon {
+
+/* .icon {
   width: 30vw;
   height: 30vw;
   margin: 0 auto;
@@ -69,16 +71,94 @@
 
 @keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    scale: .5;
+    transform: translateY(100px);
   }
 
   to {
-    transform: rotate(360deg);
+   scale: 1.1;
+    transform: translateY(0px);
+  }
+} */
+
+.loading-img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.loading-bg, .loading-wave {
+  position: absolute;
+  top: 25vh;
+  left: 35vw;
+  width: 25vw;
+}
+
+.loading-bg {
+  animation: changingColor 10s ease infinite;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 500px;
+  
+}
+
+@keyframes changingColor {
+  0% {
+    background-color: #c9c8c4;
+  }
+  60% {
+    background-color: #FACCBA;
+    }  
+
+
+  100% {
+    background-color: #b0d3de;
+    }
+}
+
+
+
+
+.loading-wave {
+z-index: 2;
+}
+
+.loading-sun {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 5vw;
+  z-index: 1;
+  animation: dawn 3s ease infinite;
+}
+
+
+@keyframes dawn {
+  from {
+    scale: .5;
+    transform: translateY(20px);
+  }
+
+  to {
+   scale: 1.1;
+    transform: translateY(-20px);
   }
 }
 
+
+
+
+
+
+
+
+
+
+
 #loader.loaded {
-  animation: fadeOut 3s forwards;
+  animation: fadeOut 5s forwards;
 }
 
 @keyframes fadeOut {

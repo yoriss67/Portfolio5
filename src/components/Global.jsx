@@ -43,7 +43,15 @@ function Global({ isJapanese, setLanguage }) {
       <div ref={stalkerRef} id="stalker"></div>
 
       <div ref={loaderRef} id="loader">
-        <img className="iconn" src="/icons/icon.png" alt="icon" />
+        {/* <img className="icon" src="/icons/icon.png" alt="icon" /> */}
+
+        <div className="loading-img-container">
+          {/* <img className='loading-bg' src="icons/loading-circle.svg" alt="background" /> */}
+          <div className="loading-bg"></div>
+          <img className='loading-sun' src="icons/loading-sun.svg" alt="sun" />
+          <img className='loading-wave' src="icons/loading-wave.svg" alt="wave" />
+        </div>
+
       </div>
 
       <button
