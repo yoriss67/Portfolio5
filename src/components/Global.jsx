@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './css/Global.css';
 
 function Global({ isJapanese, setLanguage }) {
@@ -48,17 +48,14 @@ function Global({ isJapanese, setLanguage }) {
         <div className="loading-img-container">
           {/* <img className='loading-bg' src="icons/loading-circle.svg" alt="background" /> */}
           <div className="loading-bg"></div>
-          <img className='loading-sun' src="icons/loading-sun.svg" alt="sun" />
-          <img className='loading-wave' src="icons/loading-wave.svg" alt="wave" />
+          <img className="loading-sun" src="icons/loading-sun.svg" alt="sun" />
+          <img className="loading-wave" src="icons/loading-wave.svg" alt="wave" />
         </div>
-
       </div>
 
-      <button
-        id="translate"
-        onClick={handleTranslateClick}
-      >
-        <p>EN-JP</p>
+      <button id="translate" onClick={handleTranslateClick}>
+        {/* <p>EN-JP</p> */}
+        EN-JP
       </button>
     </>
   );

@@ -7,7 +7,9 @@ font-family: 'Spline Sans Mono', monospace;
 */
 :root {
   --hero-bg: #eecc98;
-  --text: #3a5d42;
+  /* --text: #3a5d42; */
+  --text: #002a38;
+
   --working-gradient: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa);
 }
 
@@ -50,7 +52,7 @@ h3 {
 }
 
 a {
-  color: #3a5d42;
+  color: var(--text);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -103,11 +105,11 @@ p {
   backdrop-filter: blur(33px);
   background-blend-mode: overlay;
 
+  -ms-writing-mode: lr-bt;
+  writing-mode: horizontal-tb;
 }
 
 #translate p {
-  -ms-writing-mode: lr-bt;
-  writing-mode: horizontal-tb;
 }
 
 /* NAVBAR */
@@ -454,7 +456,7 @@ p {
 }
 
 .more-button p {
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 /* FOOTER */
@@ -496,23 +498,22 @@ p {
 
   #translate {
     top: 5rem;
-    right: 0.5rem;
+    right: 1.5rem;
     padding: 1rem 0.5rem;
   }
-
-  #translate p {
+  
+  #translate {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    /* text-orientation: upright; */
-    padding: 0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    /* width: 20px; */
   }
 
   /* HERO */
   .hero {
-    min-height: 53rem;
     padding: 0;
     width: 96%;
+    height: 90vh;
   }
 
   .hero-bg-wave {
@@ -529,9 +530,9 @@ p {
 
   .hero-container {
     width: 80%;
-    justify-content: center;
-    gap: 4rem;
-  }
+    justify-content: flex-start;
+    padding: 8rem 0;
+}
 
   .hero-title {
     text-align: left;

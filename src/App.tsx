@@ -85,7 +85,7 @@ const App = () => {
     // スタイルを動的に設定
     const socialStyle = {
       // isMobile ? 'sp' : 'pc'　広がる
-      gap: stickySocial ? (isMobile ? '2.5rem' : '4rem') : (isMobile ? '1.8rem' : '3rem') ,
+      gap: stickySocial ? (isMobile ? '1.9rem' : '4rem') : (isMobile ? '1.5rem' : '3rem') ,
       scale: stickySocial ? '1' : '1'
     };
 

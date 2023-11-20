@@ -111,66 +111,17 @@
   gap: 2rem;
 }
 
-.works-text-title h3 {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-}
 
-.works-text-title a {
-  /* background-color: #3a5d429e; */
-  /* background-color: #78957b; */
-  /* background-color: #1F8D8E; */
-  /* border-radius: 50px; */
-  /* width: fit-content; */
+
+/* .works-text-title a {
   position: relative;
-  /* z-index: 99; */
   padding: 0.5rem 1rem;
 
-
-  /* background-color: #ffffff7d; */
   box-sizing: border-box;
   backdrop-filter: blur(33px);
   background-blend-mode: overlay;
-}
-/* .works-text-title a::after {
-  content: '';
-  position: absolute;
-  bottom: 0rem;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  clip-path: circle(20% at 50% 100%);
-  background: linear-gradient(to top right, #c36074, #c3dcde);
-  border: 0;
-  border-radius: 10px;
-
-  transition: all 0.3s ease-in-out;
-  z-index: 98;
-  opacity: 0.8;
-}
-
-.works-text-title a:hover {
-  display: hidden;
-}
-
-.works-text-title a:hover::after {
-  clip-path: circle(100%);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  content: 'view site';
-  opacity: 1;
-}
-
-.works-text-title a.toggleBox-jp:hover::after {
-  clip-path: circle(100%);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  content: 'サイトを見る';
 } */
+
 
 .works-text-sent {
   width: 80%;
@@ -326,6 +277,10 @@
   .works-text-title a.toggleBox-jp {
     font-size: 1.1rem;
     padding:  0.5rem 1rem;
+  }
+
+  .works-text-title h2 {
+    font-size: 2rem;
   }
 
   .works-text-sent {
