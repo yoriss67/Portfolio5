@@ -133,7 +133,7 @@ function Hero({ isJapanese }) {
             services that provide convenience and happiness to people.
           </p>
           <p className={` toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
-            デザインとテクノロジーの掛け合わせを 日々考えています。
+            デザインとテクノロジーの掛け合わせを日々考えています。
             <br />
             人に便利さや幸せを提供するサービス作りに貢献することを目指しています。
           </p>
