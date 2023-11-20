@@ -83,7 +83,6 @@ p {
 
 #translate {
   position: fixed;
-  z-index: 9999;
   border: none;
   background-color: transparent;
   top: 0.8rem;
@@ -498,7 +497,7 @@ p {
 
   #translate {
     top: 5rem;
-    right: 1.5rem;
+    right: .5rem;
     padding: 1rem 0.5rem;
   }
   
@@ -513,7 +512,7 @@ p {
   .hero {
     padding: 0;
     width: 96%;
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .hero-bg-wave {
@@ -532,6 +531,7 @@ p {
     width: 80%;
     justify-content: flex-start;
     padding: 8rem 0;
+    gap: 3rem;
 }
 
   .hero-title {
