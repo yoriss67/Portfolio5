@@ -8,8 +8,8 @@
   overflow: hidden;
 }
 
-.works-bg {
-}
+
+
 
 .works-bg::before {
   position: absolute;
@@ -20,7 +20,8 @@
   height: 100%;
   z-index: 0;
   /* background-color: rgba(183, 175, 148, 0.468); */
-  background: #00668873;
+  /* background: #00668873; */
+  background:transparent;
 }
 
 .works h2 {
@@ -40,7 +41,8 @@
   padding: 2.5rem;
   z-index: 9;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.373);
+  background-color: rgba(145, 125, 125, 0.373);
+  background-color: #C5D7CE ;
   border-radius: 20px;
 }
 
@@ -63,6 +65,9 @@
   border-radius: 20px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 1.25rem;
+background-color: rgba(255, 255, 255, 0.50);
+  
 }
 
 .works-pc-img {

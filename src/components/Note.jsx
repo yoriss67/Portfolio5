@@ -3,14 +3,6 @@ import './css/Global.css';
 
 
 
-
-
-
-
-
-
-
-
 const Note = ({ isJapanese }) => {
   const [articles, setArticles] = useState([]);
 
@@ -55,9 +47,11 @@ const Note = ({ isJapanese }) => {
     return (
       <div className="article" onClick={handleArticleClick}>
         <img src={thumbnail} alt={title} />
+        <div className="article-text">
         <p className='article-date'>{formatDate(pubDate)}</p>
         <h3 className='article-title'>{title}</h3>
         <div dangerouslySetInnerHTML={{ __html: description }} className="article-desc" />
+        </div>
       </div>
     );
   };

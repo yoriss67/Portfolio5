@@ -348,6 +348,8 @@ p {
   flex-direction: column;
   gap: 16px;
   flex-wrap: nowrap;
+  background-color: #238F76;
+  background-color: rgb(244, 243, 239);
 }
 
 .note-container {
@@ -377,14 +379,11 @@ p {
 }
 
 .article {
-  /* border: 2px solid #eecc98 ; */
-  border: 2px solid #1f8d8e;
-  border: 2px solid #8CBAC9;
-
+  /* border: 2px solid #1f8d8e;
+  border: 2px solid #8CBAC9; */
   border-radius: 20px;
-  padding: 1rem;
-  /* border-radius: 0px;
-  border-top-right-radius: 20px; */
+  background-color: rgba(255, 255, 255, 0.50);
+
   width: 45%;
   margin: 2% auto;
   display: flex;
@@ -401,6 +400,13 @@ p {
   border-radius: 10px;
 }
 
+.article-text {
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .article-date {
 }
 
@@ -410,19 +416,29 @@ p {
   margin: 0 auto;
   font-size: 1.2rem;
   text-align: left;
-  /* background-color: #939393; */
-  /* border: 2px solid #ddd; */
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   border-radius: 50px;
 }
 
 /* div */
 .article-desc {
   font-size: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 表示する行数 */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
+
 .article p {
   margin: 0 auto;
+  width: 100%;
+  /* 以下のスタイルを削除またはコメントアウト */
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
 }
+
 
 .article a {
   display: none;
@@ -444,18 +460,17 @@ p {
   align-items: center;
   background-color: transparent;
   /* border: 2px solid #eecc98; */
-  border: 2px solid #8CBAC9;
-  color: #8CBAC9;
-  border-radius: 50px;
+  /* border: 2px solid #8CBAC9; */
+  color: #fff;
   padding: 0.5rem;
   gap: 1rem;
   position: relative;
+  background-color: #238f76;
+  border: 0;
+  border-radius: 10px;
 }
 
-.more-button img {
-  border-radius: 50px;
-  width: 15%;
-}
+
 
 .more-button p {
   white-space: nowrap;
