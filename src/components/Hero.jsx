@@ -89,20 +89,33 @@ function Hero({ isJapanese }) {
 
       <motion.div
         className="hero-bg-wave8"
-        style={{ y: -scrollPosition * 0.001 }}
+        style={{ 
+          y: -scrollPosition * 0.001,
+          x: isPhone ? scrollPosition * 0.04 : -scrollPosition * 0
+         }}
       ></motion.div>
 
       <motion.div
         className="hero-bg-wave7"
-        style={{ y: -scrollPosition * 0.04, x: scrollPosition * 0.4 }}
+        style={{
+          y: -scrollPosition * 0.04,
+          x: isPhone ? 0 : -scrollPosition * 0.04,
+        }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave6"
-        style={{ y: -scrollPosition * 0.05, x: scrollPosition * 0.2  }}
+        style={{
+          y: -scrollPosition * 0.05,
+          x: isPhone ? scrollPosition * 0.04 : scrollPosition * 0.02,
+        }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave5"
-        style={{ y: -scrollPosition * 0.08, x: scrollPosition * 0.2  }}
+        style={{
+          // y: -scrollPosition * 0.08,
+          y: isPhone ?  -scrollPosition * 0.16 : -scrollPosition * 0.08,
+          x: isPhone ? 0 : scrollPosition * 0.2,
+        }}
       ></motion.div>
 
       {/* <motion.div
@@ -121,7 +134,6 @@ function Hero({ isJapanese }) {
         className="hero-bg-wave1"
         style={{ y: -scrollPosition * 0.18 }}
       ></motion.div> */}
-
 
       {/* <motion.img
         className="girl-img"
@@ -152,9 +164,9 @@ function Hero({ isJapanese }) {
           transition={isPhone ? phoneTransition : pcTransition}
           className={`hero-message ${inViewMssg ? "true" : "false"}`}
           ref={refMssg}
-        >I'm a self-taught learner of </motion.div>
-
-
+        >
+          I'm a self-taught learner of{" "}
+        </motion.div>
 
         <div className={`hero-title`}>
           <motion.div
