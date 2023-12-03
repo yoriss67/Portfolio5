@@ -8,12 +8,9 @@
   overflow: hidden;
 }
 
-
-
-
 .works-bg::before {
   position: absolute;
-  content: ' ';
+  content: " ";
   top: 0;
   left: 0;
   width: 100%;
@@ -21,29 +18,34 @@
   z-index: 0;
   /* background-color: rgba(183, 175, 148, 0.468); */
   /* background: #00668873; */
-  background:transparent;
+  background: transparent;
 }
 
 .works h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   position: relative;
 }
 
 .work-flex {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  /* height: 70vh; */
-  width: 60%;
-  margin: 5rem auto;
+  gap: 2rem;
+  width: 80%;
+  height: 50vh;
+  margin: 8rem auto;
   padding: 2.5rem;
   z-index: 9;
   position: relative;
-  background-color: rgba(145, 125, 125, 0.373);
-  background-color: #C5D7CE ;
   border-radius: 20px;
+  /* background: linear-gradient(180deg, rgba(178, 214, 232, 0.50) 17.59%, rgba(112, 176, 181, 0.50) 99.87%); */
+  /* background: linear-gradient(180deg, rgba(244, 243, 239, 0.50) -11.91%, rgba(10, 130, 198, 0.50) 99.91%);  border-radius: 40px; */
+  background: linear-gradient(
+    180deg,
+    rgba(244, 243, 239, 0.5) -17.38%,
+    rgba(10, 130, 198, 0.5) 145.96%
+  );
+  background: linear-gradient(180deg, rgba(182, 215, 236, 0.327) -17.38%, rgba(83, 196, 208, 0.243) 145.96%);
 }
 
 .work-flex .paramotion {
@@ -54,27 +56,22 @@
 
 .works-img-container {
   position: relative;
-  background-size: cover;
-  /* background: linear-gradient(to bottom left, #eee8cc, #fbb06a7c, #bf4c866f, #563d7c7d, #615196aa); */
+  /* background-size: cover;
   background: url(/bubblewave.svg);
   background-repeat: no-repeat;
-  background-position: 50% 100%;
-  /* background-size: 300% 100%; */
+  background-position: 50% 100%; */
   width: 100%;
-  height: 70vh;
-  border-radius: 20px;
+  height: 100%;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 1.25rem;
-background-color: rgba(255, 255, 255, 0.50);
-  
 }
 
 .works-pc-img {
   position: absolute;
   top: 5vh;
-  left: 5%;
-  width: 50%;
+  left: -10%;
+  width: 70%;
   height: auto;
   object-fit: cover;
   object-position: center 0%;
@@ -83,8 +80,8 @@ background-color: rgba(255, 255, 255, 0.50);
 .works-tablet-img {
   position: absolute;
   top: 17vh;
-  left: 50%;
-  width: 30%;
+  left: 60%;
+  width: 40%;
   height: auto;
   object-fit: cover;
   object-position: center 0%;
@@ -92,21 +89,21 @@ background-color: rgba(255, 255, 255, 0.50);
 
 .works-sp-img {
   position: absolute;
-  top: 10vh;
-  left: 80%;
-  width: 15%;
+  top: 12vh;
+  left: 40%;
+  width: 7vw;
   height: auto;
   object-fit: cover;
   object-position: center 0%;
 }
 
 .works-text {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .works-text-title {
@@ -116,7 +113,10 @@ background-color: rgba(255, 255, 255, 0.50);
   gap: 2rem;
 }
 
-
+.works-text h3 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 2.5rem;
+}
 
 /* .works-text-title a {
   position: relative;
@@ -127,9 +127,8 @@ background-color: rgba(255, 255, 255, 0.50);
   background-blend-mode: overlay;
 } */
 
-
 .works-text-sent {
-  width: 80%;
+  width: 100%;
   padding: 1.5rem 0 2rem;
   margin: 0 auto;
 }
@@ -140,10 +139,11 @@ background-color: rgba(255, 255, 255, 0.50);
 }
 
 .language-meter {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   height: 1.5rem;
+  gap: 0.5rem;
 }
 
 .language-meter-info {
@@ -152,7 +152,7 @@ background-color: rgba(255, 255, 255, 0.50);
   margin: 1rem 0 0;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 0rem;
 }
 
 .language-meter-info p {
@@ -165,20 +165,22 @@ background-color: rgba(255, 255, 255, 0.50);
 
 .meter-html {
   background-color: #e56559;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px;
 }
 
 .meter-css {
   background-color: #563d7c;
+  border-radius: 20px;
 }
 
 .meter-ts {
   background-color: #007acc;
+  border-radius: 20px;
 }
 
 .meter-js {
   background-color: #f0e05a;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
 }
 
 .html,
@@ -226,8 +228,9 @@ background-color: rgba(255, 255, 255, 0.50);
   .work-flex {
     padding: 5%;
     height: auto;
-    width: 90%;
-    margin:  4rem auto 2rem;
+    width: 96%;
+    margin: 4rem auto 2rem;
+    flex-direction: column;
   }
 
   .works-img-container {
@@ -281,7 +284,7 @@ background-color: rgba(255, 255, 255, 0.50);
   }
   .works-text-title a.toggleBox-jp {
     font-size: 1.1rem;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .works-text-title h2 {
@@ -302,6 +305,6 @@ background-color: rgba(255, 255, 255, 0.50);
     width: 100%;
     flex-wrap: wrap;
     margin: 0 auto;
-    gap: .1rem;
+    gap: 0.1rem;
   }
 }

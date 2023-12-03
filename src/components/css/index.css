@@ -22,6 +22,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   color: var(--text);
+  background-color: #F9F7EA;
+  background-color: #F4F3EF;
+  background-color: #EFF9F7;
 }
 
 ::selection {
@@ -31,6 +34,7 @@ body {
 
 h1 {
   font-size: 4rem;
+  font-family: 'Crimson Pro', serif;
 }
 
 h2 {
@@ -38,11 +42,14 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
+  font-family: 'Crimson Pro', serif;
+
 }
 
 /* works サイトを見る */
 h3 {
   font-size: 2rem;
+
 }
 
 .section {
@@ -58,7 +65,7 @@ a {
 }
 
 a:hover {
-  /* color: #fff; */
+  color: #0A82C6;
 }
 
 p {
@@ -94,8 +101,10 @@ p {
   writing-mode: horizontal-tb;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-family: 'Crimson Pro', serif;
+  
   /* color: rgb(238, 204, 152); */
-  color: #8CBAC9;
+  color: #0A82C6;
   border-radius: 50px;
   /* border: #eecc98 2px solid; */
   /* border: #8CBAC9 2px solid; */
@@ -168,20 +177,20 @@ p {
 .hero {
   display: flex;
   height: 110vh;
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  padding: 3rem;
+  padding: 3rem 0;
   overflow: hidden;
-  margin: 2% auto 4%;
-  border-radius: 40px;
+  margin: 0% auto ;
+  /* border-radius: 40px; */
 }
 
 .hero-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   background-color: #f2dec4;
   z-index: -1;
   top: 0;
@@ -189,27 +198,160 @@ p {
 }
 
 /* absolute */
-.hero-bg-wave {
+
+.hero-bg-sky {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background: url(/wave2.svg); */
-  background: url(/bubblewave.svg);
+  background: url(/hero/sky.png);
 
   opacity: 90%;
   background-repeat: no-repeat;
   background-position: 5% 5%;
-  top: 40%;
+  top: -25%;
   left: 0%;
 }
 
+.tropical1 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: url(/hero/tropical-leaf1.png);
+  opacity: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0%;
+  left: 0%;
+}
+
+.tropical2 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: url(/hero/tropical-leaf2.png);
+  opacity: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0%;
+  right: 0%;
+}
+
+
+.hero-bg-wave8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave8_2.svg);
+  /* opacity: 90%; */
+  background-repeat: no-repeat;
+  background-position: 0% 5%;
+  top: 83%;
+  left: 0%;
+  z-index: 8;
+  scale: 1.05;
+}
+
+.hero-bg-wave7 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave7_2.svg);
+  /* opacity: 90%; */
+  background-repeat: no-repeat;
+  background-position: 0% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 7;
+  scale: 1.05;
+}
+
+
+.hero-bg-wave6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave6_2.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 5%;
+  top: 78%;
+  left: 0%;
+  z-index: 6;
+}
+
+.hero-bg-wave5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave5_2.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 5;
+}
+
+.hero-bg-wave4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave4_2.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 4;
+}
+
+.hero-bg-wave3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave3_2.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 3;
+}
+
+.hero-bg-wave2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave2_2.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 2;
+}
+
+.hero-bg-wave1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/hero/wave/wave1.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  top: 75%;
+  left: 0%;
+  z-index: 1;
+}
+
+
+
+
+
+/* 
 .hero .girl-img {
   position: absolute;
   width: 20vw;
   opacity: 0.7;
   left: -10%;
   top: 40%;
-}
+} */
+
+
 /* absolute */
 
 .hero-container {
@@ -221,11 +363,23 @@ p {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
+
+  padding-top: 6rem;
 }
 
 .hero-name {
-  font-size: 4rem;
+  font-size: 5rem;
 }
+
+
+
+
+.hero-message {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
 
 .hero-title {
   margin: 0 auto;
@@ -244,6 +398,8 @@ p {
 
 .uiux-text,
 .frontend-text {
+  font-size: 4rem;
+
 }
 
 .uiux-icon {
@@ -258,10 +414,11 @@ p {
 .frontend-text {
 }
 
-.hero-message {
+/* .hero-message {
   width: 80%;
   text-align: center;
-}
+} */
+
 
 /* BIO */
 .bio {
@@ -307,8 +464,7 @@ p {
   opacity: 1;
 }
 
-.social {
-}
+
 
 .social-icons {
   /* gap: 2rem; */
@@ -321,6 +477,7 @@ p {
 
 .social {
   /* margin: 2rem auto; */
+  box-sizing: border-box;
   display: flex;
   transition: all 0.5s ease;
   position: -webkit-sticky;
@@ -332,10 +489,11 @@ p {
   z-index: 10;
 
   background-color: #ffffff7d;
-  padding: 1rem 0;
+  background-color: #f4f3ef65;
+  /* padding: 1rem 0; */
   box-sizing: border-box;
   width: 100%;
-  backdrop-filter: blur(33px);
+  backdrop-filter: blur(35px);
   background-blend-mode: overlay;
 }
 
@@ -350,6 +508,11 @@ p {
   flex-wrap: nowrap;
   background-color: #238F76;
   background-color: rgb(244, 243, 239);
+  background: linear-gradient(180deg, #F4F3EF 0%, rgba(239, 249, 247, 0.00) 100%);
+}
+
+.note h2 {
+  font-size: 4rem;
 }
 
 .note-container {
@@ -381,14 +544,12 @@ p {
 .article {
   /* border: 2px solid #1f8d8e;
   border: 2px solid #8CBAC9; */
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.50);
-
   width: 45%;
   margin: 2% auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-sizing: border-box;
 }
 
 .article:hover {
@@ -397,14 +558,21 @@ p {
 
 .article img {
   max-width: 100%;
-  border-radius: 10px;
+  transform: translateY(2rem);
+  border-radius: 20px 20px 0 0;
+
 }
 
 .article-text {
-  padding: 0 1rem 1rem 1rem;
+  /* padding: 0 1.5rem 1.5rem 1rem; */
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.99);
+  border-radius: 0 0 20px 20px;
+
 }
 
 .article-date {
@@ -458,16 +626,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  /* border: 2px solid #eecc98; */
-  /* border: 2px solid #8CBAC9; */
-  color: #fff;
-  padding: 0.5rem;
+  /* background-color: #F4F3EE; */
+  background-color: #fff;
+  border: 0;
+  backdrop-filter: blur(33px);
+
+  color: #0A82C6;
+  color: var(--text);
+  padding: 1rem;
   gap: 1rem;
   position: relative;
-  background-color: #238f76;
-  border: 0;
-  border-radius: 10px;
+  /* border:2px solid #0A82C6; */
+  border-radius: 100px;
+  font-size: 1.2rem;
 }
 
 
@@ -490,15 +661,18 @@ p {
 .footer::before {
   position: absolute;
   content: ' ';
-  top: 0;
+  bottom: -50%;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  background: url(/bubblewave.svg);
-  background-position: 20% 10%;
+  z-index: -1;
+  background: url(/hero/wave/wave8_2.svg);
+  background-position: 20% 5%;
   background-repeat: no-repeat;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1) translateY( -50%); */
+  transform: scaleX(1);
+
+  padding: 0;
 }
 
 .footer .bio_name {
@@ -528,7 +702,6 @@ p {
   /* HERO */
   .hero {
     padding: 0;
-    width: 96%;
     min-height: 90vh;
   }
 
@@ -548,11 +721,12 @@ p {
     justify-content: flex-start;
     padding: 6rem 0;
     gap: 3rem;
+    z-index: 99;
 }
 
   .hero-title {
     text-align: left;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -565,12 +739,26 @@ p {
     margin-bottom: 0;
   }
 
-  .hero .girl-img {
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .uiux, .frontend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+  /* .hero .girl-img {
     width: 60vw;
     opacity: 0.6;
     left: -20%;
     top: 40%;
-  }
+  } */
 
   .social {
     /* top: 2.2rem; */
@@ -617,7 +805,7 @@ p {
 
   .articles-container {
     margin: 0rem auto;
-    gap: 2rem 1rem;
+    gap: 0rem 1rem;
   }
 
   .article {

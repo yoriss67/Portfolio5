@@ -73,7 +73,7 @@ const Works = ({ isJapanese }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2>{WorksData[0].title}</h2>
+              <h3>{WorksData[0].title}</h3>
             </a>
 
             {/* <a
@@ -192,7 +192,7 @@ const Works = ({ isJapanese }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2>{WorksData[1].title}</h2>
+              <h3>{WorksData[1].title}</h3>
             </a>
 
             {/* <a
@@ -317,7 +317,7 @@ const Works = ({ isJapanese }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2>{WorksData[2].title}</h2>
+              <h3>{WorksData[2].title}</h3>
             </a>
 
             {/* <a

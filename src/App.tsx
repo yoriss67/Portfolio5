@@ -84,9 +84,10 @@ const App = () => {
 
     // スタイルを動的に設定
     const socialStyle = {
-      // isMobile ? 'sp' : 'pc'　広がる
-      gap: stickySocial ? (isMobile ? '1.9rem' : '4rem') : (isMobile ? '1.5rem' : '3rem') ,
-      scale: stickySocial ? '1' : '1'
+      // isMobile ? 'sp' : 'pc'　今広がる仕様になっている
+      gap: stickySocial ? (isMobile ? '1.9rem' : '6rem') : (isMobile ? '1.5rem' : '5rem') ,
+      scale: stickySocial ? '1' : '1',
+      padding: stickySocial ? (isMobile ? '1rem 0' : '1rem') : (isMobile ? '1.5rem 0' : '2rem'),
     };
 
 
@@ -100,7 +101,6 @@ const App = () => {
 
       {/* <div className="social" style={{ gap: stickySocial ? '4rem' : '3rem', scale: stickySocial ?  '1.1' : '1'  }}> */}
       <div className="social" style={socialStyle}>
-        {/* <div className="social-icons"> */}
         {socialLinks.map((link, index) => (
           <a
             key={index}
@@ -113,7 +113,6 @@ const App = () => {
             <img src={link.src} alt={link.label} className="social-icon" />
           </a>
         ))}
-        {/* </div> */}
       </div>
       <Bio isJapanese={isJapanese} />
       <Works isJapanese={isJapanese} />

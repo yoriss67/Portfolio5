@@ -66,13 +66,14 @@ const Note = ({ isJapanese }) => {
       
       <div className="note-container">
 
-        <div className={`note-heading toggleBox-en ${isJapanese ? 'display-none' : ''} `}>
+        <h2>note</h2>
+        {/* <div className={`note-heading toggleBox-en ${isJapanese ? 'display-none' : ''} `}>
           <img src="icons/square2.png" alt="note square" />
         </div>
 
         <div className={`note-heading  toggleBox-jp ${isJapanese ? '' : 'display-none'} `}>
           <img src="icons/square2.png" alt="note square" />
-        </div>
+        </div> */}
 
         <div className="articles-container">
           {articles.map((article, index) => (
@@ -94,7 +95,7 @@ const Note = ({ isJapanese }) => {
             onClick={() => (window.location.href = 'https://note.com/yoriss_b0607')}
           >
             {/* <img src="creator.png" alt="creator image"  /> */}
-            <p>クリエイターページへ</p>
+            <p>もっと見る</p>
           </button>
         </div>
       </div>
