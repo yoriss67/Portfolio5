@@ -8,7 +8,7 @@ function Global({ isJapanese, setLanguage }) {
 
   useEffect(() => {
     const loaderElement = loaderRef.current;
-    // loaderElement.classList.add('loaded');
+    loaderElement.classList.add('loaded');
 
     const cursorElement = cursorRef.current;
     const stalkerElement = stalkerRef.current;

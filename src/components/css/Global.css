@@ -265,7 +265,7 @@
       transform: translateY(10px);
     }
     40% {
-      transform: translateY(0px);
+      transform: translateY(5px);
       scale: 2.8;
     }
     100% {
