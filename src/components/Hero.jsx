@@ -94,17 +94,18 @@ function Hero({ isJapanese }) {
 
       <motion.div
         className="hero-bg-wave7"
-        style={{ y: -scrollPosition * 0.01 }}
+        style={{ y: -scrollPosition * 0.04, x: scrollPosition * 0.4 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave6"
-        style={{ y: -scrollPosition * 0.05 }}
+        style={{ y: -scrollPosition * 0.05, x: scrollPosition * 0.2  }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave5"
-        style={{ y: -scrollPosition * 0.08 }}
+        style={{ y: -scrollPosition * 0.08, x: scrollPosition * 0.2  }}
       ></motion.div>
-      <motion.div
+
+      {/* <motion.div
         className="hero-bg-wave4"
         style={{ y: -scrollPosition * 0.1 }}
       ></motion.div>
@@ -119,7 +120,8 @@ function Hero({ isJapanese }) {
       <motion.div
         className="hero-bg-wave1"
         style={{ y: -scrollPosition * 0.18 }}
-      ></motion.div>
+      ></motion.div> */}
+
 
       {/* <motion.img
         className="girl-img"
