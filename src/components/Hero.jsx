@@ -61,7 +61,7 @@ function Hero({ isJapanese }) {
 
   // 使い方
   const startColor = [244, 243, 239]; // #F4F3EF
-  const endColor = [246, 154, 118]; // #F69A76
+  const endColor = [83, 195, 208]; // #F69A76
   const maxScrollValue = 1000; // この値は必要に応じて調整
 
   // コンポーネント内での使用例
@@ -89,36 +89,36 @@ function Hero({ isJapanese }) {
 
       <motion.div
         className="hero-bg-wave8"
-        style={{ y: -scrollPosition * 0.1 }}
+        style={{ y: -scrollPosition * 0.001 }}
       ></motion.div>
 
-      {/* <motion.div
+      <motion.div
         className="hero-bg-wave7"
-        style={{ y: -scrollPosition * 0.1 }}
-      ></motion.div> */}
+        style={{ y: -scrollPosition * 0.01 }}
+      ></motion.div>
       <motion.div
         className="hero-bg-wave6"
-        style={{ y: -scrollPosition * 0.15 }}
+        style={{ y: -scrollPosition * 0.05 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave5"
-        style={{ y: -scrollPosition * 0.18 }}
+        style={{ y: -scrollPosition * 0.08 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave4"
-        style={{ y: -scrollPosition * 0.2 }}
+        style={{ y: -scrollPosition * 0.1 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave3"
-        style={{ y: -scrollPosition * 0.25 }}
+        style={{ y: -scrollPosition * 0.12 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave2"
-        style={{ y: -scrollPosition * 0.28 }}
+        style={{ y: -scrollPosition * 0.16 }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave1"
-        style={{ y: -scrollPosition * 0.3 }}
+        style={{ y: -scrollPosition * 0.18 }}
       ></motion.div>
 
       {/* <motion.img
