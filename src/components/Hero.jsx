@@ -114,7 +114,7 @@ function Hero({ isJapanese }) {
         style={{
           // y: -scrollPosition * 0.08,
           y: isPhone ?  -scrollPosition * 0.16 : -scrollPosition * 0.08,
-          x: isPhone ? 0 : scrollPosition * 0.2,
+          x: isPhone ? scrollPosition * 0.1 : scrollPosition * 0.2,
         }}
       ></motion.div>
 
