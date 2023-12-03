@@ -8,7 +8,7 @@ function Global({ isJapanese, setLanguage }) {
 
   useEffect(() => {
     const loaderElement = loaderRef.current;
-    loaderElement.classList.add('loaded');
+    // loaderElement.classList.add('loaded');
 
     const cursorElement = cursorRef.current;
     const stalkerElement = stalkerRef.current;
@@ -47,9 +47,10 @@ function Global({ isJapanese, setLanguage }) {
 
         <div className="loading-img-container">
           {/* <img className='loading-bg' src="icons/loading-circle.svg" alt="background" /> */}
-          <div className="loading-bg"></div>
-          <img className="loading-sun" src="icons/loading-sun.svg" alt="sun" />
-          <img className="loading-wave" src="icons/loading-wave.svg" alt="wave" />
+          <div className='loading-waves'>
+            <img className='loading-wave8' src="hero/wave/wave8_2.svg" alt="" />
+            <img className='loading-wave5' src="hero/wave/wave5_2.svg" alt="" />
+          </div>
         </div>
       </div>
 

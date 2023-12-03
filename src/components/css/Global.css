@@ -61,7 +61,6 @@
   left: 0;
 }
 
-
 /* .icon {
   width: 30vw;
   height: 30vw;
@@ -85,10 +84,13 @@
   width: 100%;
   height: 100%;
   position: relative;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
 }
 
-.loading-bg, .loading-wave {
+/* .loading-bg, .loading-wave {
   position: absolute;
   top: 25vh;
   left: 35vw;
@@ -101,27 +103,92 @@
   height: 25vw;
   border-radius: 500px;
   
+} */
+
+.loading-waves {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  z-index: 1;
+  border-radius: 1000px;
+  animation: changingColor 10s ease infinite;
+  overflow: hidden;
 }
 
 @keyframes changingColor {
   0% {
-    background-color: #c9c8c4;
+    /* background-color: #c9c8c4; */
+    background: linear-gradient(
+      180deg,
+      rgba(249, 247, 234, 0) 0%,
+      #f9f7ea 100%
+    );
   }
   60% {
-    background-color: #FACCBA;
-    }  
-
-
+    background-color: #faccba;
+  }
+  /* 80% {
+    background: linear-gradient(180deg, rgba(182, 215, 236, 0.50) -17.38%, rgba(83, 195, 208, 0.50) 145.96%);
+    } */
   100% {
-    background-color: #b0d3de;
-    }
+    /* background-color: #c9c8c4; */
+    background: linear-gradient(
+      180deg,
+      rgba(249, 247, 234, 0) 0%,
+      #f9f7ea 100%
+    );
+  }
 }
 
+.loading-wave8 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  transform: translateY(10px);
+  scale: 1.5;
+  z-index: 2;
+  animation: wave8 9s ease-in-out infinite;
+}
 
+@keyframes wave8 {
+  0% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform: translateY(-5px);
+    scale: 3;
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 
+.loading-wave5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  transform: translateY(20px);
+  animation: wave5 9s ease-in-out infinite;
+}
+
+@keyframes wave5 {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
 
 .loading-wave {
-z-index: 2;
+  z-index: 2;
 }
 
 .loading-sun {
@@ -133,28 +200,17 @@ z-index: 2;
   animation: dawn 3s ease infinite;
 }
 
-
 @keyframes dawn {
   from {
-    scale: .5;
+    scale: 0.5;
     transform: translateY(20px);
   }
 
   to {
-   scale: 1.1;
+    scale: 1.1;
     transform: translateY(-20px);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 #loader.loaded {
   animation: fadeOut 5s forwards;
@@ -184,46 +240,37 @@ z-index: 2;
   display: none;
 }
 
-
-
-@media all and  (max-width: 768px) {
-
+@media all and (max-width: 768px) {
   .dn-in-pc {
     display: block;
     width: 10%;
   }
-  
+
   .dn-in-sp {
     display: none;
   }
-  
 
-  .loading-bg, .loading-wave {
-    position: absolute;
-    top: 40vh;
-    left: 22.5vw;
-    width: 50vw;
-  }
-  
-  .loading-bg {
-    animation: changingColor 10s ease infinite;
-    width: 50vw;
-    height: 50vw;
-    border-radius: 500px;
-    
-  }
-
-  .loading-wave {
-    z-index: 2;
-    }
-
-  .loading-sun {
-    position: absolute;
-    top: 55vh;
-    left: 50vw;
-    width: 10vw;
+  .loading-waves {
+    position: relative;
+    width: 40vw;
+    height: 40vw;
     z-index: 1;
-    animation: dawn 5s ease infinite;
+    border-radius: 1000px;
+    animation: changingColor 10s ease infinite;
+    overflow: hidden;
+  }
+
+  @keyframes wave8 {
+    0% {
+      transform: translateY(10px);
+    }
+    40% {
+      transform: translateY(0px);
+      scale: 2.8;
+    }
+    100% {
+      transform: translateY(10px);
+    }
   }
 
 }
