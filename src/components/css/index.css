@@ -250,7 +250,6 @@ p {
   left: 0%;
   z-index: 8;
   scale: 1;
-
 }
 
 .hero-bg-wave7 {
@@ -271,26 +270,26 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(/hero/wave/w6.svg);
+  background: url(/hero/wave/_4/w6_4.svg);
   background-repeat: no-repeat;
-  background-position: -50% 5%;
-  top: 103%;
+  background-position: 65% 5%;
+  top: 115%;
   left: 0%;
   z-index: 6;
-  scale: 1.5;
+  scale: 1.8;
 }
 
 .hero-bg-wave5 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(/hero/wave/w5_3.svg);
+  background: url(/hero/wave/_4/w5_4.svg);
   background-repeat: no-repeat;
-  background-position: 94% 5%;
-  top: 75%;
+  background-position: 50% 5%;
+  top: 110%;
   left: 0%;
   z-index: 5;
-  scale: 1;
+  scale: 1.8;
 }
 
 /* --------- */
@@ -368,13 +367,13 @@ p {
 }
 
 .hero-name {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .hero-message {
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .hero-title {
@@ -394,7 +393,7 @@ p {
 
 .uiux-text,
 .frontend-text {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .uiux-icon {
@@ -637,29 +636,31 @@ p {
 /* FOOTER */
 .footer {
   width: 100%;
-  height: 30vh;
+  height: 36vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .footer::before {
   position: absolute;
   content: " ";
-  bottom: -50%;
+  bottom: -10%;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url(/hero/wave/wave8_2.svg);
-  background-position: 20% 5%;
+  background: url(/hero/sky.png);
+  background-position: 20% 75%;
   background-repeat: no-repeat;
-  /* transform: scaleX(-1) translateY( -50%); */
-  transform: scaleX(1);
-
+  transform: scale(-1);
+  /* transform: scaleX(1); */
   padding: 0;
+  scale: ;
+  background-size: cover;
 }
 
 .footer .bio_name {
@@ -692,6 +693,21 @@ p {
     min-height: 90vh;
   }
 
+  .tropical1 {
+    top: 17%;
+    width: 25%;
+    opacity: .7;
+  }
+
+  .hero-bg-sky {
+    background-repeat: no-repeat;
+    background-position: 0% 41%;
+    top: -25%;
+    left: 0%;
+    background-size: contain;
+    scale: 1.5;
+}
+
   .hero-bg-wave {
     position: absolute;
     width: 100%;
@@ -717,14 +733,15 @@ p {
   }
 
   .hero-bg-wave6 {
-    background-position: 32% 5%;
-    top: 96%;
+    background-position: 4% 5%;
+    top: 95%;
+    scale: 1.5;
   }
 
   .hero-bg-wave5 {
-    background-position: 45% 5%;
-    top: 75%;
-    background-size: 150%;
+    background-position: 0% 5%;
+    top: 96%;
+    scale: 1.5;
   }
 
   .hero-container {
@@ -748,6 +765,10 @@ p {
   .hero-name {
     font-size: 3.5rem;
     margin-bottom: 0;
+  }
+
+  .hero-message {
+    font-size: 2rem;
   }
 
   .hero h2 {
@@ -838,6 +859,25 @@ p {
   .footer {
     align-items: flex-start;
     padding-top: 3rem;
+    height: 30vh;
+  }
+
+
+  .footer::before {
+    position: absolute;
+    content: " ";
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(/hero/sky.png);
+    background-position: 20% 75%;
+    background-repeat: no-repeat;
+    transform: scale(-1);
+    /* transform: scaleX(1); */
+    padding: 0;
+    background-size: contain;
   }
 }
 

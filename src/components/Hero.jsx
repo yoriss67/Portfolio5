@@ -106,15 +106,15 @@ function Hero({ isJapanese }) {
         className="hero-bg-wave6"
         style={{
           y: -scrollPosition * 0.05,
-          x: isPhone ? scrollPosition * 0.04 : scrollPosition * 0.02,
+          x: isPhone ? scrollPosition * 0.1 : scrollPosition * 0.08,
         }}
       ></motion.div>
       <motion.div
         className="hero-bg-wave5"
         style={{
           // y: -scrollPosition * 0.08,
-          y: isPhone ?  -scrollPosition * 0.16 : -scrollPosition * 0.08,
-          x: isPhone ? scrollPosition * 0.1 : scrollPosition * 0.2,
+          y: isPhone ?  -scrollPosition * 0.08 : -scrollPosition * 0.08,
+          x: isPhone ? scrollPosition * 0.15 : scrollPosition * 0.1,
         }}
       ></motion.div>
 

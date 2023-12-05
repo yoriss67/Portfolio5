@@ -1,16 +1,16 @@
-import WorksData from './WorksData';
-import './css/Works.css';
+import WorksData from "./WorksData";
+import "./css/Works.css";
 
-import Parallax from './Parallax';
-import { motion } from 'framer-motion';
+import Parallax from "./Parallax";
+import { motion } from "framer-motion";
 
 const Image = ({}) => (
   <motion.img
     style={{
-      position: 'absolute',
-      height: 'auto',
-      objectFit: 'cover',
-      objectPosition: 'center 0%',
+      position: "absolute",
+      height: "auto",
+      objectFit: "cover",
+      objectPosition: "center 0%",
       top: `${top}%`,
       left: `${left}%`,
       width: `${width}%`,
@@ -20,15 +20,27 @@ const Image = ({}) => (
 
 const Works = ({ isJapanese }) => {
   const LeanImagesArray = [
-    { pcImage: WorksData[0].pcImage, tabletImage: WorksData[0].tabletImage, spImage: WorksData[0].spImage },
+    {
+      pcImage: WorksData[0].pcImage,
+      tabletImage: WorksData[0].tabletImage,
+      spImage: WorksData[0].spImage,
+    },
   ];
 
   const PomodoroImagesArray = [
-    { pcImage: WorksData[1].pcImage, tabletImage: WorksData[1].tabletImage, spImage: WorksData[1].spImage },
+    {
+      pcImage: WorksData[1].pcImage,
+      tabletImage: WorksData[1].tabletImage,
+      spImage: WorksData[1].spImage,
+    },
   ];
 
   const NinbaiImagesArray = [
-    { pcImage: WorksData[2].pcImage, tabletImage: WorksData[2].tabletImage, spImage: WorksData[2].spImage },
+    {
+      pcImage: WorksData[2].pcImage,
+      tabletImage: WorksData[2].tabletImage,
+      spImage: WorksData[2].spImage,
+    },
   ];
 
   const parallaxProps = [
@@ -41,22 +53,34 @@ const Works = ({ isJapanese }) => {
     <div className="works section works-bg">
       <h2>Works</h2>
 
-      <div className={`work-flex`}>
+      <div className={`work-flex minus-x`}>
         <div className="works-img-container">
           {LeanImagesArray.map((project, index) => (
             <div key={index} className="project-container">
-              {['pc', 'tablet', 'sp'].map((type, i) => {
+              {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;
 
-                if (type === 'pc') image = pcImage;
-                if (type === 'tablet') image = tabletImage;
-                if (type === 'sp') image = spImage;
+                if (type === "pc") image = pcImage;
+                if (type === "tablet") image = tabletImage;
+                if (type === "sp") image = spImage;
 
                 return (
-                  <Parallax key={i} offset={parallaxProps[i].offset} stiffness={parallaxProps[i].stiffness}>
-                    <a href={`${WorksData[0].siteLink}`} target="_blank" rel="noopener noreferrer">
-                      <img src={image} alt={`${type} image`} className={`works-img works-${type}-img`} />
+                  <Parallax
+                    key={i}
+                    offset={parallaxProps[i].offset}
+                    stiffness={parallaxProps[i].stiffness}
+                  >
+                    <a
+                      href={`${WorksData[0].siteLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={image}
+                        alt={`${type} image`}
+                        className={`works-img works-${type}-img`}
+                      />
                     </a>
                   </Parallax>
                 );
@@ -76,29 +100,21 @@ const Works = ({ isJapanese }) => {
               <h3>{WorksData[0].title}</h3>
             </a>
 
-            {/* <a
-              className={`toggleBox-en ${isJapanese ? 'display-none' : ''}`}
-              href={`${WorksData[0].siteLink}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              view site
-            </a>
-            <a
-              className={`toggleBox-jp ${isJapanese ? '' : 'display-none'}`}
-              href={`${WorksData[0].siteLink}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              サイトを見る
-            </a> */}
           </div>
 
           <div className="works-text-sent">
-            <p className={`left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
+            <p
+              className={`left-align toggleBox-en ${
+                isJapanese ? "display-none" : ""
+              }`}
+            >
               {WorksData[0].descriptionEn}
             </p>
-            <p className={`left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+            <p
+              className={`left-align toggleBox-jp ${
+                isJapanese ? "" : "display-none"
+              }`}
+            >
               {WorksData[0].descriptionJp}
             </p>
           </div>
@@ -119,11 +135,17 @@ const Works = ({ isJapanese }) => {
             )}
 
             {WorksData[0].languages.ts && (
-              <div className={`lean-meter-ts meter-ts`} style={{ width: WorksData[0].languageDistribution.ts }}></div>
+              <div
+                className={`lean-meter-ts meter-ts`}
+                style={{ width: WorksData[0].languageDistribution.ts }}
+              ></div>
             )}
 
             {WorksData[0].languages.js && (
-              <div className={`lean-meter-js meter-js`} style={{ width: WorksData[0].languageDistribution.js }}></div>
+              <div
+                className={`lean-meter-js meter-js`}
+                style={{ width: WorksData[0].languageDistribution.js }}
+              ></div>
             )}
           </div>
 
@@ -160,22 +182,34 @@ const Works = ({ isJapanese }) => {
       </div>
 
       {/* Pomodoro */}
-      <div className={`work-flex`}>
+      <div className={`work-flex plus-x`}>
         <div className="works-img-container">
           {PomodoroImagesArray.map((project, index) => (
             <div key={index} className="project-container">
-              {['pc', 'tablet', 'sp'].map((type, i) => {
+              {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;
                 console.log(PomodoroImagesArray);
-                if (type === 'pc') image = pcImage;
-                if (type === 'tablet') image = tabletImage;
-                if (type === 'sp') image = spImage;
+                if (type === "pc") image = pcImage;
+                if (type === "tablet") image = tabletImage;
+                if (type === "sp") image = spImage;
 
                 return (
-                  <Parallax key={i} offset={parallaxProps[i].offset} stiffness={parallaxProps[i].stiffness}>
-                    <a href={`${WorksData[1].siteLink}`} target="_blank" rel="noopener noreferrer">
-                      <img src={image} alt={`${type} image`} className={`works-img works-${type}-img`} />
+                  <Parallax
+                    key={i}
+                    offset={parallaxProps[i].offset}
+                    stiffness={parallaxProps[i].stiffness}
+                  >
+                    <a
+                      href={`${WorksData[1].siteLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={image}
+                        alt={`${type} image`}
+                        className={`works-img works-${type}-img`}
+                      />
                     </a>
                   </Parallax>
                 );
@@ -214,10 +248,18 @@ const Works = ({ isJapanese }) => {
           </div>
 
           <div className="works-text-sent">
-            <p className={`left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
+            <p
+              className={`left-align toggleBox-en ${
+                isJapanese ? "display-none" : ""
+              }`}
+            >
               {WorksData[1].descriptionEn}
             </p>
-            <p className={`left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+            <p
+              className={`left-align toggleBox-jp ${
+                isJapanese ? "" : "display-none"
+              }`}
+            >
               {WorksData[1].descriptionJp}
             </p>
           </div>
@@ -285,22 +327,34 @@ const Works = ({ isJapanese }) => {
       </div>
 
       {/* Ninbai */}
-      <div className={`work-flex`}>
+      <div className={`work-flex minus-x`}>
         <div className="works-img-container">
           {NinbaiImagesArray.map((project, index) => (
             <div key={index} className="project-container">
-              {['pc', 'tablet', 'sp'].map((type, i) => {
+              {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;
 
-                if (type === 'pc') image = pcImage;
-                if (type === 'tablet') image = tabletImage;
-                if (type === 'sp') image = spImage;
+                if (type === "pc") image = pcImage;
+                if (type === "tablet") image = tabletImage;
+                if (type === "sp") image = spImage;
 
                 return (
-                  <Parallax key={i} offset={parallaxProps[i].offset} stiffness={parallaxProps[i].stiffness}>
-                    <a href={`${WorksData[2].siteLink}`} target="_blank" rel="noopener noreferrer">
-                      <img src={image} alt={`${type} image`} className={`works-${type}-img`} />
+                  <Parallax
+                    key={i}
+                    offset={parallaxProps[i].offset}
+                    stiffness={parallaxProps[i].stiffness}
+                  >
+                    <a
+                      href={`${WorksData[2].siteLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={image}
+                        alt={`${type} image`}
+                        className={`works-${type}-img`}
+                      />
                     </a>
                   </Parallax>
                 );
@@ -339,10 +393,18 @@ const Works = ({ isJapanese }) => {
           </div>
 
           <div className="works-text-sent">
-            <p className={`left-align toggleBox-en ${isJapanese ? 'display-none' : ''}`}>
+            <p
+              className={`left-align toggleBox-en ${
+                isJapanese ? "display-none" : ""
+              }`}
+            >
               {WorksData[2].descriptionEn}
             </p>
-            <p className={`left-align toggleBox-jp ${isJapanese ? '' : 'display-none'}`}>
+            <p
+              className={`left-align toggleBox-jp ${
+                isJapanese ? "" : "display-none"
+              }`}
+            >
               {WorksData[2].descriptionJp}
             </p>
           </div>
