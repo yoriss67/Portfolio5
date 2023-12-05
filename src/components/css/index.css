@@ -260,8 +260,8 @@ p {
   background: url(/hero/wave/w7.svg);
   /* opacity: 90%; */
   background-repeat: no-repeat;
-  background-position: 16% 5%;
-  top: 125%;
+  background-position: -9% 5%;
+  top: 120%;
   left: 0%;
   z-index: 7;
   scale: 2;
@@ -706,6 +706,14 @@ p {
   .hero-bg-wave8 {
     scale: 1.3;
     top: 95%;
+  }
+
+  .hero-bg-wave7 {
+    background-position: 0 5%;
+    top: 120%;
+    left: 0%;
+    z-index: 7;
+    scale: 2;
   }
 
   .hero-bg-wave6 {

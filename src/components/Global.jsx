@@ -48,8 +48,9 @@ function Global({ isJapanese, setLanguage }) {
         <div className="loading-img-container">
           {/* <img className='loading-bg' src="icons/loading-circle.svg" alt="background" /> */}
           <div className='loading-waves'>
-            <img className='loading-wave8' src="hero/wave/wave8_2.svg" alt="" />
-            <img className='loading-wave5' src="hero/wave/wave5_2.svg" alt="" />
+            {/* <img className='loading-wave8' src="hero/wave/w8_3.svg" alt="wave8" />
+            <img className='loading-wave5' src="hero/wave/w5_3.svg" alt="wave5" /> */}
+            <img className='loading-wave6' src="hero/sky.png" alt="wave6" />
           </div>
         </div>
       </div>

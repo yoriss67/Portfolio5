@@ -187,7 +187,19 @@
   }
 }
 
-.loading-wave {
+
+.loading-wave6 {
+  position: absolute;
+  bottom: -13%;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  transform: translateY(20px);
+  animation: wave6 9s ease-in-out infinite;
+  transform: scaleX(-1);
+}
+
+/* .loading-wave {
   z-index: 2;
 }
 
@@ -198,7 +210,7 @@
   width: 5vw;
   z-index: 1;
   animation: dawn 3s ease infinite;
-}
+} */
 
 @keyframes dawn {
   from {
