@@ -101,6 +101,15 @@
   z-index: -1;
 }
 
+.works-pc-img, .works-tablet-img, .works-sp-img {
+  transition: filter 0.3s ease; 
+}
+
+.works-pc-img:hover, .works-tablet-img:hover, .works-sp-img:hover {
+  filter: brightness(101%) contrast(80%); 
+
+}
+
 
 
 .works-pc-img {
@@ -132,6 +141,9 @@
   object-fit: cover;
   object-position: center 0%;
 }
+
+
+
 
 .works-text {
   width: 40vw;
@@ -352,5 +364,6 @@
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 0.1rem;
+    justify-content: flex-start;
   }
 }

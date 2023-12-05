@@ -35,12 +35,39 @@ const Note = ({ isJapanese }) => {
   }
 
 
+  // 翻訳APIを使ってテキストを翻訳する
+  async function translateText(text, sourceLang, targetLang) {
+    const url = 'https://libretranslate.com/translate';
+  
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          q: text,
+          source: sourceLang,
+          target: targetLang,
+          format: 'text'
+        }),
+      });
+  
+      const result = await response.json();
+      return result.translatedText;
+    } catch (error) {
+      console.error('Translation error:', error);
+      return text;
+    }
+  }
+  
+
 
 
 
   const Article = ({ title, link, description, thumbnail, pubDate }) => {
     const handleArticleClick = () => {
-      // window.location.href = link; // ここでリンク先に遷移
       window.open(link, '_blank'); 
     };
   
@@ -55,6 +82,35 @@ const Note = ({ isJapanese }) => {
       </div>
     );
   };
+  
+
+  // tryしてみたけど、エラーが出てしまう
+  // const Article = ({ title, description, thumbnail, pubDate, link, isJapanese }) => {
+  //   const [translatedTitle, setTranslatedTitle] = useState('');
+  //   const [translatedDescription, setTranslatedDescription] = useState('');
+  
+  //   useEffect(() => {
+  //     if (!isJapanese) {
+  //       translateText(title, 'ja', 'en').then(setTranslatedTitle);
+  //       translateText(description, 'ja', 'en').then(setTranslatedDescription);
+  //     }
+  //   }, [title, description, isJapanese]);
+  
+  //   const handleArticleClick = () => {
+  //     window.open(link, '_blank');
+  //   };
+  
+  //   return (
+  //     <div className="article" onClick={handleArticleClick}>
+  //       <img src={thumbnail} alt={title} />
+  //       <div className="article-text">
+  //         <p className='article-date'>{formatDate(pubDate)}</p>
+  //         <h3 className='article-title'>{isJapanese ? title : translatedTitle}</h3>
+  //         <div dangerouslySetInnerHTML={{ __html: isJapanese ? description : translatedDescription }} className="article-desc" />
+  //       </div>
+  //     </div>
+  //   );
+  // };
   
   
   
@@ -78,7 +134,7 @@ const Note = ({ isJapanese }) => {
         <div className="articles-container">
           {articles.map((article, index) => (
   
-              <Article key={index} {...article} />
+              <Article key={index} {...article} isJapanese={isJapanese}/>
       
           ))}
         </div>

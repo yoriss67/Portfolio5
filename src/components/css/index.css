@@ -71,6 +71,7 @@ a {
 
 a:hover {
   color: #0a82c6;
+  
 }
 
 p {
@@ -462,8 +463,8 @@ p {
 }
 
 .social img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .social {
@@ -615,22 +616,27 @@ p {
   justify-content: center;
   align-items: center;
   /* background-color: #F4F3EE; */
-  background-color: #fff;
+  background-color: #238f76;
   border: 0;
   backdrop-filter: blur(33px);
-
-  color: #0a82c6;
   color: var(--text);
   padding: 1rem;
   gap: 1rem;
   position: relative;
   /* border:2px solid #0A82C6; */
-  border-radius: 100px;
+  border-radius: 10px;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.more-button:hover {
+  cursor: pointer;
+  background-color: #176352;
 }
 
 .more-button p {
   white-space: nowrap;
+  color: #fff;
 }
 
 /* FOOTER */
@@ -654,7 +660,7 @@ p {
   height: 100%;
   z-index: -1;
   background: url(/hero/sky.png);
-  background-position: 20% 75%;
+  background-position: 20% 80%;
   background-repeat: no-repeat;
   transform: scale(-1);
   /* transform: scaleX(1); */
@@ -809,6 +815,11 @@ p {
   }
 
   .bio-name {
+  }
+
+  .social img {
+    width: 2rem;
+    height: 2rem;
   }
 
   /* note */
