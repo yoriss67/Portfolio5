@@ -1,7 +1,47 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useTransform, useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import StarBackground from "./StarBackground";
+// import StarParallax from "./StarParallax";
+
+
+// const Star = ({ size, left, top, backgroundColor }) => (
+//   <div
+//     style={{
+//       position: "absolute",
+//       width: `${size}px`,
+//       height: `${size}px`,
+//       borderRadius: "50%",
+//       // backgroundColor: 'white',
+//       backgroundColor,
+//       left: `${left}%`,
+//       top: `${top}%`,
+//     }}
+//   />
+// );
+
+// import PropTypes from 'prop-types';
+
+// // Add prop types validation
+// Star.propTypes = {
+//   size: PropTypes.number.isRequired,
+//   left: PropTypes.number.isRequired,
+//   top: PropTypes.number.isRequired,
+//   backgroundColor: PropTypes.string.isRequired,
+// };
+
+// function getRandomColor() {
+//   const baseValue = 200;
+//   var red = baseValue + Math.floor(Math.random() * 30);
+//   var green = baseValue + Math.floor(Math.random() * 30);
+//   var blue = baseValue + Math.floor(Math.random() * 30);
+
+//   // Create a CSS color string using the RGB values
+//   var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+
+//   return color;
+// }
 
 function Hero({ isJapanese }) {
   const [refH1, inViewH1] = useInView({
@@ -36,7 +76,6 @@ function Hero({ isJapanese }) {
     delay: 2,
   };
 
-  // 🌸🌸🌸
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -72,6 +111,18 @@ function Hero({ isJapanese }) {
     maxScrollValue
   );
 
+  // // Star
+  // const stars = Array.from({ length: 10 }).map((_, i) => (
+  //   <Star
+  //     key={i}
+  //     backgroundColor={getRandomColor()}
+  //     size={Math.random() * 20}
+  //     // 幅と高さ
+  //     left={Math.random() * 100}
+  //     top={Math.random() * 100}
+  //   />
+  // ));
+
   return (
     <div className="hero">
       <div className="hero-bg-sky"></div>
@@ -81,7 +132,16 @@ function Hero({ isJapanese }) {
         className="hero-bg"
         style={{ backgroundColor: bgColor }}
       ></motion.div>
+      <StarBackground />
 
+      {/* 
+      <div className="parallax_container">
+        <div style={{ position: "relative", width: "100%", height: "100%" }}>
+            <StarParallax offset={10}>{stars}</StarParallax>
+        </div>
+      </div> */}
+
+      {/* 使わない */}
       {/* <motion.div className="hero-bg-wave7" style={{ scale: 1 + scrollPosition * 0.001 }}></motion.div>
       <motion.div className="hero-bg-wave6" style={{ scale: 1 + scrollPosition * 0.002 }}></motion.div>
 <motion.div className="hero-bg-wave5" style={{ scale: 1 + scrollPosition * 0.003 }}></motion.div>
@@ -89,10 +149,10 @@ function Hero({ isJapanese }) {
 
       <motion.div
         className="hero-bg-wave8"
-        style={{ 
+        style={{
           y: -scrollPosition * 0.001,
-          x: isPhone ? scrollPosition * 0.04 : -scrollPosition * 0
-         }}
+          x: isPhone ? scrollPosition * 0.04 : -scrollPosition * 0,
+        }}
       ></motion.div>
 
       <motion.div
@@ -102,6 +162,7 @@ function Hero({ isJapanese }) {
           x: isPhone ? 0 : -scrollPosition * 0.04,
         }}
       ></motion.div>
+
       <motion.div
         className="hero-bg-wave6"
         style={{
@@ -109,15 +170,17 @@ function Hero({ isJapanese }) {
           x: isPhone ? scrollPosition * 0.1 : scrollPosition * 0.08,
         }}
       ></motion.div>
+
       <motion.div
         className="hero-bg-wave5"
         style={{
           // y: -scrollPosition * 0.08,
-          y: isPhone ?  -scrollPosition * 0.08 : -scrollPosition * 0.08,
+          y: isPhone ? -scrollPosition * 0.08 : -scrollPosition * 0.08,
           x: isPhone ? scrollPosition * 0.15 : scrollPosition * 0.1,
         }}
       ></motion.div>
 
+      {/* 使わない */}
       {/* <motion.div
         className="hero-bg-wave4"
         style={{ y: -scrollPosition * 0.1 }}

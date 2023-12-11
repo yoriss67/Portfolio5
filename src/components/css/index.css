@@ -174,6 +174,8 @@ p {
   fill: #c3dcde;
 }
 
+
+
 /* HERO */
 
 .hero {
@@ -186,6 +188,14 @@ p {
   overflow: hidden;
   margin: 0% auto;
   /* border-radius: 40px; */
+}
+
+/* STAR BG */
+.star-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .hero-bg {
@@ -413,6 +423,23 @@ p {
   width: 80%;
   text-align: center;
 } */
+
+/* stars parallax */
+/* .parallax_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.child_parallax_container {
+  background-color: transparent;
+}
+
+.paramotion {
+  height: 100%;
+} */
+
+
 
 /* BIO */
 .bio {

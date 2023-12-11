@@ -8,7 +8,7 @@ export { default as Footer } from './components/Footer';
 export { default as Note } from './components/Note';
 
 export { default as ParallaxComponent } from './components/ParallaxComponent';
-
+export { default as StarBackground } from './components/StarBackground';
 
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // export { default as Home } from './components/pages/Home';

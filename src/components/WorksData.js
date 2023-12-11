@@ -6,7 +6,7 @@ const ProjectsData = [
     tabletImage: 'works/lean/lean-tablet.png',
     spImage: 'works/lean/lean-sp.png',
 
-    siteLink: 'https://yoriss67lean.netlify.app/',
+    siteLink: 'https://yoriss67lean2.netlify.app/',
     descriptionEn:
       "I created this project to learn how to use a little more advanced React. I've got a good understanding of framer motion, parallax effect. Amd I also implemented a shopping cart function for the first time!",
     descriptionJp:

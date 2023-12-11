@@ -1,7 +1,8 @@
 import WorksData from "./WorksData";
 import "./css/Works.css";
+import StarBackground from "./StarBackground";
 
-import Parallax from "./Parallax";
+import Parallax from "./XParallax";
 import { motion } from "framer-motion";
 
 const Image = ({}) => (
@@ -57,6 +58,7 @@ const Works = ({ isJapanese }) => {
         <div className="works-img-container">
           {LeanImagesArray.map((project, index) => (
             <div key={index} className="project-container">
+              <StarBackground />
               {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;
@@ -186,6 +188,7 @@ const Works = ({ isJapanese }) => {
         <div className="works-img-container">
           {PomodoroImagesArray.map((project, index) => (
             <div key={index} className="project-container">
+              <StarBackground />
               {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;
@@ -331,6 +334,7 @@ const Works = ({ isJapanese }) => {
         <div className="works-img-container">
           {NinbaiImagesArray.map((project, index) => (
             <div key={index} className="project-container">
+              <StarBackground />
               {["pc", "tablet", "sp"].map((type, i) => {
                 const { pcImage, tabletImage, spImage } = project;
                 let image;

@@ -18,34 +18,6 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       // const socialPosition = document.querySelector('.social').getBoundingClientRect().bottom + window.scrollY;
-
-  //       // if (window.scrollY > socialPosition) {
-  //       //   setStickySocial(true); // sticky状態になった時
-  //       // } else {
-  //       //   setStickySocial(false); // sticky状態でない時
-  //       // }
-  //       const socialElement = document.querySelector('.social');
-  //       if (socialElement) {
-  //         const socialPosition = socialElement.getBoundingClientRect().bottom + window.scrollY;
-
-  //         if (window.scrollY > socialPosition) {
-  //           setStickySocial(true); // sticky状態になった時
-  //         } else {
-  //           setStickySocial(false); // sticky状態でない時
-  //         }
-  //       }
-  //     };
-
-  //   //   window.addEventListener('scroll', handleScroll);
-  //   //   return () => window.removeEventListener('scroll', handleScroll);
-  //   // }, []);
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [isJapanese]); // 依存配列に状態を追加（必要に応じて）
-
   useEffect(() => {
     const handleScroll = () => {
       const socialElement = document.querySelector('.social');
@@ -97,6 +69,7 @@ const App = () => {
     <>
       <Global isJapanese={isJapanese} setLanguage={setLanguage} />
       {/* <Navbar  /> */}
+
       <Hero isJapanese={isJapanese} />
 
       {/* <div className="social" style={{ gap: stickySocial ? '4rem' : '3rem', scale: stickySocial ?  '1.1' : '1'  }}> */}
