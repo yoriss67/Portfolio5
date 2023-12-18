@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Header, Hero, Bio, Works, Footer, Note, Lottie1 } from "../../index";
-import Skeleton from "react-loading-skeleton";
+import { Header, Hero, Bio, Works, Footer, Note } from "../../index";
 
-import App from "./Skeleton/App";
 
 function Home({ isJapanese}) {
   const [scrollY, setScrollY] = useState(0);

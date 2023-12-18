@@ -381,14 +381,11 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   gap: 3rem;
   position: relative;
   /* padding: 6rem 0; */
-=======
   gap: 2rem;
   position: relative;
->>>>>>> bcd281b (Portfolio5)
 }
 
 .svgator1 {
