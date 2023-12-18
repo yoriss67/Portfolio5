@@ -59,6 +59,8 @@ function Global({ isJapanese, setLanguage }) {
       <button id="translate" onClick={handleTranslateClick}>
         EN-JP
       </button>
+
+      
     </>
   );
 }

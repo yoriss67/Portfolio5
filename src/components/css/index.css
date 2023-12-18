@@ -384,6 +384,8 @@ p {
   gap: 3rem;
   position: relative;
   /* padding: 6rem 0; */
+  gap: 2rem;
+  position: relative;
 }
 
 .svgator1 {
@@ -716,6 +718,20 @@ p {
   width: 100%;
   height: 100%;
 }
+
+/* Lottie */
+.lottie-container {
+  width: 100%;
+}
+
+.lottie {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
 
 @media all and (max-width: 768px) {
   h3 {
