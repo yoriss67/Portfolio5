@@ -10,7 +10,15 @@ export { default as Header } from './components/pages/Header.jsx';
 export { default as ParallaxComponent } from './components/pages/ParallaxComponent.jsx';
 export { default as StarBackground } from './components/pages/StarBackground.jsx';
 
+<<<<<<< HEAD
 export { default as Lottie1 } from './components/pages/Lottie1.jsx';
+=======
+export { default as Lottie1 } from './components/Lottie1';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// export { default as Home } from './components/pages/Home';
+// export { default as About } from './components/pages/About';
+// export { default as Contact } from './components/pages/Contact';
+>>>>>>> bcd281b (Portfolio5)
 
 export { default as Home } from './components/pages/Home.jsx';
 
