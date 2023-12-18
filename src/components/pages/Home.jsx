@@ -42,9 +42,9 @@ function Home({ isJapanese}) {
   const profileStyle = isMobile
     ? {
         // スマートフォン用のスタイル
-        top: "50vh", // スマートフォン用の値
-        left: "10%", // スマートフォン用の値
-        width: "80vw", // スマートフォン用の値
+        top: "50vh", 
+        left: "10%", 
+        width: "80vw", 
         position: "absolute",
         objectFit: "cover",
       }
@@ -74,7 +74,7 @@ function Home({ isJapanese}) {
     const profileAnimation = isMobile
     ? {
         // スマートフォン用のアニメーション
-        top: scrollY > 60 ? "108vh" : "70vh",
+        top: scrollY > 60 ? "110vh" : "70vh",
         left: scrollY > 60 ? "28%" : "16%",
         width: scrollY > 60 ? "45vw" : "40vw",
         height: scrollY > 60 ? "45vw" : "60vw",

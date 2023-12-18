@@ -726,6 +726,7 @@ p {
     top: 5rem;
     right: 0.5rem;
     padding: 0.5rem 0.25rem;
+    font-size: 1rem;
   }
 
   #translate {
@@ -739,8 +740,8 @@ p {
   .hero {
     padding: 0;
     min-height: 90vh;
+    align-items: flex-start;
   }
-
 
 
 
@@ -792,27 +793,27 @@ p {
   .img-high-scool1 {
     width: 39vw;
     height: auto;
-    transform: translate(-10vw, 0vh);
+    transform: translate(-18vw, 5vh);
 }
 
 
   
   .img-ig {
-    width: 30vw;
+    width: 34vw;
     height: auto;
-    transform: translate(-23vw, -17vh);
+    transform: translate(-28vw, -17vh);
   }
   
   .img-aus1 {
     width: 52vw;
     height: auto;
-    transform: translate(0vw, 6vh);
+    transform:translate(-2vw, 10vh);
   }
   
   .img-aus3 {
-    width: 45vw;
+    width: 46vw;
     height: auto;
-    transform: translate(-66vw, -19vh);
+    transform: translate(-77vw, -19vh);
   }
   
   /* row2 */
@@ -833,7 +834,7 @@ p {
   .img-bali {
     width: 50vw;
     height: auto;
-    transform: translate(-8vw, 15vh);
+    transform: translate(-5vw, 17vh);
   }
   
   .img-aus2 {
@@ -850,6 +851,7 @@ p {
     padding: 6rem 0;
     gap: 2rem;
     z-index: 99;
+    margin: 3rem auto;
   }
 
   .hero__title {
@@ -860,7 +862,7 @@ p {
     flex-direction: column;
     transform: translate(0);
     gap: 0rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero__name {
@@ -880,7 +882,7 @@ p {
   }
 
   .hero__title .hero__message {
-    padding-left: 5rem;
+    padding-left: 0rem;
   }
 
   .hero__frontend-emoji, .hero__uiux-emoji {
@@ -982,6 +984,13 @@ p {
     width: 15vw;
     height: 15vw;
   }
+
+  .view-more-container {
+    padding: 0.5rem 1rem;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 0rem;
+}
 
   .footer {
     align-items: center;
